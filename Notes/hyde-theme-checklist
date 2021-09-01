@@ -1,0 +1,56 @@
+Things I need to change/improve/intergrate to finish the website.
+
+
+--- DO MOBILE STUFF LATER --- 
+
+CSS CLASSES TO ADD STYLE TO
+- sidebar-img
+- image-desc
+
+HOMEPAGE
+
+SIDEBAR	
+- Make image size responsive for smaller screens
+- Maybe a picture of me | RANDOM LOGO PUT IN
+- better description of myself 
+- most popular contact methods | :wq
+
+SINGLE POST PAGE
+- add author
+- category
+- tags (bottom of page maybe)
+- maybe author
+- lastmod maybe
+
+TAGS PAGE
+- maybe remove tags page and just keep tags at the end of each post
+
+CATEGORIES PAGE
+
+CONTACT PAGE
+- all contact methods
+- maybe this page maybe not, theres already sidebar
+
+ABOUT PAGE
+- longer description of me
+- project i'm working on/have worked on
+- passions
+- made with hugo thing at the bottom
+
+RESUME PAGE
+- maybe resume page, its pretty empty rn
+
+SEO & ANALYTICS
+- plausible analytics with home server
+- 
+
+STYLING
+- change fonts maybe
+- give user option to press icon to change from light to dark mode (deafault dark)
+- emojis everywhere!
+	- in post previews on homepage clocks etc.
+- proper logos and favicon
+
+MISC
+- have random non-seo pages to use personally and are not known to anyone unless shared
+eg. a personal wishlist etc.

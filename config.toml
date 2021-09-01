@@ -1,0 +1,92 @@
+# Basic Hugo Config
+BaseURL = "https://connectwithmusa.com"
+languageCode = "en-us"
+title = "Musa Ahmed"
+theme = "hyde"
+enableEmoji = true
+enableRobotsTXT = true
+rssLimit = 100
+summaryLength = 70
+
+[Menus]
+# Menu entry items with less/smaller weight are ordered first.
+  main = [
+      {Name = " 📧 Email", URL = "mailto:connectwithmusa@protonmail.com", weight = 1},
+      {Name = "🖥️ Github", URL = "https://github.com/m-GDEV", weight = 2},
+      {Name = "💼 LinkedIn", URL = "https://www.linkedin.com/in/musa-ahmed-239a97203", weight = 3},
+      {Name = "📔 RSS", URL = "http://localhost:1313/index.xml", weight = 4}
+  ]
+
+# User created and defined config params
+[params]
+  description = "Musa Ahmed's personal website and blog."
+  themeColor = "theme-base-0f"
+  layoutReverse = false
+  #disqusShortname = "spf13"
+  #googleAnalytics = "Your tracking code"
+  copyright = "Since 2021. Copyright Musa Ahmed."
+
+
+     GitHub = "xxxx"
+    Linkedin = ""
+    Twitter = "xxxx"
+    Instagram = "xxxx"
+    Facebook = "xxxx"
+    Telegram = "xxxx"
+    Medium = ""
+    Gitlab = ""
+    Youtubelegacy = ""
+    Youtubecustom = ""
+    Youtubechannel = ""
+    Tumblr = ""
+    Quora = ""
+    Keybase = ""
+    Pinterest = ""
+    Reddit = ""
+    Codepen = ""
+    FreeCodeCamp = ""
+    Bitbucket = ""
+    Stackoverflow = ""
+    Weibo = ""
+    Odnoklassniki = ""
+    VK = ""
+    Flickr = ""
+    Xing = ""
+    Snapchat = ""
+    Soundcloud = ""
+    Spotify = ""
+    Bandcamp = ""
+    Paypal = ""
+    Fivehundredpx = ""
+    Mix = ""
+    Goodreads = ""
+    Lastfm = ""
+    Foursquare = ""
+    Hackernews = ""
+    Kickstarter = ""
+    Patreon = ""
+    Steam = ""
+    Twitch = ""
+    Strava = ""
+    Skype = ""
+    Whatsapp = ""
+    Zhihu = ""
+    Douban = ""
+    Angellist = ""
+    Slidershare = ""
+    Jsfiddle = ""
+    Deviantart = ""
+    Behance = ""
+    Dribbble = ""
+    Wordpress = ""
+    Vine = ""
+    Googlescholar = ""
+    Researchgate = ""
+    Mastodon = ""
+    Thingiverse = ""
+    Devto = ""
+    Gitea = ""
+    XMPP = ""
+    Matrix = ""
+    Bilibili = ""
+    Email = "xxxx@xxxx.com"

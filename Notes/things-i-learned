@@ -1,0 +1,7 @@
+Collection of things I learned while developing this website with hugo.
+
+You cant add another param to the menu, it has set params you must use
+https://gohugo.io/variables/menus/#readout
+
+You cannot use .Site things in partials but you can use site. 
+https://gohugo.io/variables/site/#readout

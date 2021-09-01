@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.84.4" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Second &middot; Musa Ahmed</title>
+  <meta name="description" content="second post" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://connectwithmusa.comcss/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://connectwithmusa.comcss/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://connectwithmusa.comcss/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://connectwithmusa.comcss/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-0f ">
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      <a href="https://connectwithmusa.com"><h1>Musa Ahmed</h1></a>
+      
+      <img class="sidebar-img" src="/images/whoami/me.png">
+      <p class="lead"> Musa Ahmed&#39;s personal website and blog. </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://connectwithmusa.com">Home</a> </li>
+        <li><a href="mailto:connectwithmusa@protonmail.com">  📧 Email </a></li><li><a href="https://www.linkedin.com/in/musa-ahmed-239a97203"> 💼 LinkedIn </a></li><li><a href="https://connectwithmusa.com/index.xml"> 📔 RSS </a></li><li><a href="https://github.com/m-GDEV"> 🖥 Github </a></li>
+      </ul>
+    </nav>
+
+    <p></p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Second</h1>
+  <time datetime=2021-08-27T19:29:38-0400 class="post-date">Fri, Aug 27, 2021 | Last Modified: 2021-08-27 19:29:38 -0400 EDT</time>
+
+
+  	<article>
+		<p> Tags: [Development golang] </p>
+      	  <img src="" alt="" />
+	  <p class="image-desc">  </p>
+	  "Last Modified: Aug 27, 2021"
+	  <h1 id="front-matter">Front Matter</h1>
+<p>Hugo allows you to add front matter in yaml, toml, or json to your content files.
+Front matter allows you to keep metadata attached to an instance of a content type—i.e., embedded inside a content file—and is one of the many features that gives Hugo its strength.</p>
+<p>Front Matter Formats
+Hugo supports four formats for front matter, each with their own identifying tokens.</p>
+<p>TOML
+identified by opening and closing +++.
+YAML
+identified by opening and closing &mdash;.
+JSON
+a single JSON object surrounded by ‘{’ and ‘}’, followed by a new line.
+ORG
+a group of Org mode keywords in the format ‘#+KEY: VALUE’. Any line that does not start with #+ ends the front matter section. Keyword values can be either strings (#+KEY: VALUE) or a whitespace separated list of strings (#+KEY[]: VALUE_1 VALUE_2).
+Example
+yaml
+toml
+json</p>
+<p>categories = [&lsquo;Development&rsquo;, &lsquo;VIM&rsquo;]
+date = &lsquo;2012-04-06&rsquo;
+description = &lsquo;spf13-vim is a cross platform distribution of vim plugins and resources for Vim.&rsquo;
+slug = &lsquo;spf13-vim-3-0-release-and-new-website&rsquo;
+tags = ['.vimrc', &lsquo;plugins&rsquo;, &lsquo;spf13-vim&rsquo;, &lsquo;vim&rsquo;]
+title = &lsquo;spf13-vim 3.0 release and new website&rsquo;</p>
+<p>Front Matter Variables
+Predefined
+There are a few predefined variables that Hugo is aware of. See Page Variables for how to call many of these predefined variables in your templates.</p>
+<p>aliases
+an array of one or more aliases (e.g., old published paths of renamed content) that will be created in the output directory structure . See Aliases for details.
+audio
+an array of paths to audio files related to the page; used by the opengraph internal template to populate og:audio.
+cascade
+a map of Front Matter keys whose values are passed down to the page’s descendents unless overwritten by self or a closer ancestor’s cascade. See Front Matter Cascade for details.
+date
+the datetime assigned to this page. This is usually fetched from the date field in front matter, but this behaviour is configurable.
+description
+the description for the content.
+draft
+if true, the content will not be rendered unless the &ndash;buildDrafts flag is passed to the hugo command.
+expiryDate
+the datetime at which the content should no longer be published by Hugo; expired content will not be rendered unless the &ndash;buildExpired flag is passed to the hugo command.
+headless
+if true, sets a leaf bundle to be headless.
+images
+an array of paths to images related to the page; used by internal templates such as _internal/twitter_cards.html.
+isCJKLanguage
+if true, Hugo will explicitly treat the content as a CJK language; both .Summary and .WordCount work properly in CJK languages.
+keywords
+the meta keywords for the content.
+layout
+the layout Hugo should select from the lookup order when rendering the content. If a type is not specified in the front matter, Hugo will look for the layout of the same name in the layout directory that corresponds with a content’s section. See “Defining a Content Type”
+lastmod
+the datetime at which the content was last modified.
+linkTitle
+used for creating links to content; if set, Hugo defaults to using the linktitle before the title. Hugo can also order lists of content by linktitle.
+markup
+experimental; specify &ldquo;rst&rdquo; for reStructuredText (requiresrst2html) or &ldquo;md&rdquo; (default) for Markdown.
+outputs
+allows you to specify output formats specific to the content. See output formats.
+publishDate
+if in the future, content will not be rendered unless the &ndash;buildFuture flag is passed to hugo.
+resources
+used for configuring page bundle resources. See Page Resources.
+series
+an array of series this page belongs to, as a subset of the series taxonomy; used by the opengraph internal template to populate og:see_also.
+slug
+appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
+summary
+text used when providing a summary of the article in the .Summary page variable; details available in the content-summaries section.
+title
+the title for the content.
+type
+the type of the content; this value will be automatically derived from the directory (i.e., the section) if not specified in front matter.
+url
+the full path to the content from the web root. It makes no assumptions about the path of the content file. It also ignores any language prefixes of the multilingual feature.
+videos
+an array of paths to videos related to the page; used by the opengraph internal template to populate og:video.
+weight
+used for ordering your content in lists. Lower weight gets higher precedence. So content with lower weight will come first. If set, weights should be non-zero, as 0 is interpreted as an unset weight.
+<!-- raw HTML omitted -->
+field name of the plural form of the index. See tags and categories in the above front matter examples. Note that the plural form of user-defined taxonomies cannot be the same as any of the predefined front matter variables.</p>
+
+	</article>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
