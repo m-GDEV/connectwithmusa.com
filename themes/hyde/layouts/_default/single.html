@@ -1,0 +1,47 @@
+{{ define "main" -}}
+<div class="post">
+  
+	<!--Title-->
+	<h1>{{ .Title }}</h1>
+
+	<!--Dates-->
+	<span class="post-meta">Written by: {{ .Site.Params.Author }} on <time datetime={{ .Date.Format "2006-01-02T15:04:05Z0700" }}>{{ .Date.Format "January 2, 2006" }}</time></span>
+  
+		<!--Displaying Tags-->
+  		<div class="post-meta">
+		<span> 🔖 Tags: </span>
+  		{{ range .Params.Tags -}}
+  		<span><a href="{{ site.BaseURL }}/tags/{{. | urlize}}">{{.}}</a></span>
+		<span>&nbsp;</span>
+  		{{- end }}
+  		</div>
+
+		<!--Displaying Categories-->
+  		<div class="post-meta">
+		<span> 📁 Categories: </span>
+  		{{ range .Params.Categories -}}
+		<span><a href="{{ site.BaseURL }}/categories/{{. | urlize}}">{{.}}</a></span>
+		<span>&nbsp;</span>
+  		{{- end }}
+  		</div>
+	
+	<!--Featured Image-->
+	<img src="{{ .Params.FeaturedImage }}" alt="{{ .Params.FeaturedImageDescription }}" />
+	<p class="image-desc"> {{ .Params.FeaturedImageDescription }} </p>
+	
+	<!--Post Content--> 
+	<article>
+	  {{ .Content }}
+	</article>
+
+
+</div>
+<button onclick="topFunction()" id="top-button" title="Go to top">Top</button>
+
+{{ if .Site.DisqusShortname -}}
+<h2>Comments</h2>
+{{ template "_internal/disqus.html" . }}
+{{- end }}
+{{- end }}
+
+

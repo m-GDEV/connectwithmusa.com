@@ -1,0 +1,24 @@
+<aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      <a href="{{ .Site.BaseURL }}"><h1>{{ .Site.Title }}</h1></a>
+      
+      <img class="sidebar-img" src="/images/whoami/me.png">
+      <p class="lead"> {{ .Site.Params.description }} </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        {{ range .Site.Menus.main -}}
+	<li><a href="{{.URL}}"> {{ .Name }} </a></li>
+	{{- end }}
+        <span> --- <span> 
+	{{ range .Site.Menus.contact -}}
+	<li><a href="{{.URL}}"> {{ .Name }} </a></li>
+	{{- end }}
+      </ul>
+    </nav>
+
+    <p>{{ .Site.Params.copyright }}</p>
+  </div>
+</aside>
