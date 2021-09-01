@@ -13,7 +13,7 @@
  * https://github.com/poole/hyde.
  */
 
-
+/* HI MUSA, YOU CHANGED THIS FILE AND ADDED A FEW CLASSES */
 /*
  * Contents
  *
@@ -264,3 +264,15 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+
+/* CUSTOM ADDED */
+
+/* Purple */
+.theme-purple .sidebar {
+  background-color: #322461;
+}
+.theme-purple .content a,
+.theme-purple .related-posts li a:hover {
+  color: #322461;
+}
+

@@ -3,6 +3,7 @@ Title = "First"
 Date = "2021-08-27T01:05:48-04:00"
 LastMod = "today!"
 Draft = false
+Post = true
 Description = "This is a test."
 FeaturedImage = "/images/posts/pic.png"
 FeaturedImageAltText = "/images/posts/pic.png"

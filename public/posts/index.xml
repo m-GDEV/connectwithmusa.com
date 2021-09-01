@@ -6,8 +6,17 @@
     <description>Recent content in Posts on Musa Ahmed</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Since 2021. Copyright Musa Ahmed.</copyright>
-    <lastBuildDate>Fri, 27 Aug 2021 19:29:38 -0400</lastBuildDate><atom:link href="https://connectwithmusa.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Aug 2021 22:13:13 -0400</lastBuildDate><atom:link href="https://connectwithmusa.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Install Linux</title>
+      <link>https://connectwithmusa.com/posts/how-to-install-linux/</link>
+      <pubDate>Tue, 31 Aug 2021 22:13:13 -0400</pubDate>
+      
+      <guid>https://connectwithmusa.com/posts/how-to-install-linux/</guid>
+      <description>Guide to Installing Linux (for beginners) Introduction Hello, this guide is for Linux beginners who are looking to try Linux out don&amp;rsquo;t know where to start. Below is a table of contents that outlines all the things we will be covering in this guide.
+Table of Contents - So what is Linux anyways? - What is a Desktop Environment? - Choosing a Distribution - So how do I install Linux? - How to install programs?</description>
+    </item>
+    
     <item>
       <title>Second</title>
       <link>https://connectwithmusa.com/posts/second/</link>
@@ -17,6 +26,15 @@
       <description>Front Matter Hugo allows you to add front matter in yaml, toml, or json to your content files. Front matter allows you to keep metadata attached to an instance of a content type—i.e., embedded inside a content file—and is one of the many features that gives Hugo its strength.
 Front Matter Formats Hugo supports four formats for front matter, each with their own identifying tokens.
 TOML identified by opening and closing +++.</description>
+    </item>
+    
+    <item>
+      <title>Fifth</title>
+      <link>https://connectwithmusa.com/posts/fifth/</link>
+      <pubDate>Fri, 27 Aug 2021 01:05:48 -0400</pubDate>
+      
+      <guid>https://connectwithmusa.com/posts/fifth/</guid>
+      <description>This is a part of me that yoyu print(&amp;quot;HEllo world!&amp;quot;) Ok sir! this is re3ally ⛺ list of things i want to change (core). the whole homepage, maybe add the about page to it. maybe remove the tags page, only have it available on the bottom of posts change footer to remove hugo and leave it stuff. change the fucking heart emoji/logo thing. change button to change theme and move it to the menu my picture on the homepage.</description>
     </item>
     
     <item>

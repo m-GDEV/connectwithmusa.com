@@ -1,9 +1,8 @@
 +++
 Title = "{{ replace .Name "-" " " | title }}"
-Author = "Musa Ahmed"
 Date = "{{ .Date }}"
-LastMod = "{{ .Date }}"
 Draft = true
+Post = true
 Description = ""
 FeaturedImage = ""
 FeaturedImageDescription = ""

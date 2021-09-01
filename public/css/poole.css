@@ -13,7 +13,7 @@
  * https://github.com/poole/poole.
  */
 
-
+/* HI MUSA, YOU CHANGED THIS FILE AND ADDED A FEW CLASSES */
 /*
  * Contents
  *
@@ -319,12 +319,30 @@ tbody tr:nth-child(odd) th {
 }
 
 /* Meta data line below post title */
-.post-date {
+.post-meta {
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #757575;
+  overflow: auto;
 }
+
+/* Post categories & tags (tax means taxonomy) */
+.tax-wrapper {
+  width: 100%;
+  overflow: auto;
+  padding-bottom: 2rem;
+}
+
+/*.post-categories {*/
+  /*width: 50%;*/
+  /*float: left;*/
+/*}*/
+
+/*.post-tags {*/
+  /*width: 50%;*/
+  /*float: right;*/
+/*}*/
 
 /* Related posts */
 .related {

@@ -28,7 +28,65 @@
   
 </head>
 
-  <body class="theme-base-0f ">
+
+
+<html>
+	
+
+<style>
+
+#top-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: #322461;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 8px;
+}
+</style>
+
+
+
+
+<button onclick="topFunction()" id="top-button" title="Go to top">Top</button>
+
+<script>
+
+var mybutton = document.getElementById("top-button");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+</html>
+
+
+
+
+  <body class="theme-purple ">
   <aside class="sidebar">
   <div class="container">
     <div class="sidebar-about">
@@ -40,39 +98,32 @@
 
     <nav>
       <ul class="sidebar-nav">
-        <li><a href="https://connectwithmusa.com">Home</a> </li>
-        <li><a href="mailto:connectwithmusa@protonmail.com">  📧 Email </a></li><li><a href="https://www.linkedin.com/in/musa-ahmed-239a97203"> 💼 LinkedIn </a></li><li><a href="https://connectwithmusa.com/index.xml"> 📔 RSS </a></li><li><a href="https://github.com/m-GDEV"> 🖥 Github </a></li>
+        <li><a href="/"> 🏠 Home </a></li><li><a href="/about"> 📄 About </a></li><li><a href="/posts"> ✍️ All Posts </a></li><li><a href="/index.xml"> 📔 RSS </a></li>
+        <span> --- <span> 
+	<li><a href="mailto:connectwithmusa@protonmail.com"> 📧 Email </a></li><li><a href="https://github.com/m-GDEV"> 🖥️ Github </a></li><li><a href="https://www.linkedin.com/in/musa-ahmed-239a97203"> 💼 LinkedIn </a></li>
       </ul>
     </nav>
 
-    <p></p>
+    <p>Since 2021. Copyright Musa Ahmed 2021.</p>
   </div>
 </aside>
 
     <main class="content container">
     <div class="posts">
+
+</div>
+
+</div>
+
+</div>
+
 <article class="post">
-  <h1 class="post-title">
-    <a href="https://connectwithmusa.com/posts/second/">Second</a>
-  </h1>
-  
-  <time style=float:left; datetime="2021-08-27T19:29:38-0400" class="post-date">Fri, Aug 27, 2021</time> 
-  <p class="post-date">| Author:  </p>
-  Front Matter Hugo allows you to add front matter in yaml, toml, or json to your content files. Front matter allows you to keep metadata attached to an instance of a content type—i.e., embedded inside a content file—and is one of the many features that gives Hugo its strength.
-Front Matter Formats Hugo supports four formats for front matter, each with their own identifying tokens.
-TOML identified by opening and closing +++.
-  
-  <div class="read-more-link">
-    <a href="/posts/second/">Read More…</a>
-  </div>
-  
-</article><article class="post">
   <h1 class="post-title">
     <a href="https://connectwithmusa.com/posts/first/">First</a>
   </h1>
   
   <time style=float:left; datetime="2021-08-27T01:05:48-0400" class="post-date">Fri, Aug 27, 2021</time> 
-  <p class="post-date">| Author:  </p>
+  <p class="post-date"> | Author:  </p>
   This is a part of me that yoyu print(&quot;HEllo world!&quot;) Ok sir! this is re3ally ⛺ list of things i want to change (core). the whole homepage, maybe add the about page to it. maybe remove the tags page, only have it available on the bottom of posts change footer to remove hugo and leave it stuff. change the fucking heart emoji/logo thing. change button to change theme and move it to the menu my picture on the homepage.
   
   <div class="read-more-link">
@@ -81,6 +132,9 @@ TOML identified by opening and closing +++.
   
 </article>
 </div>
+
+</div>
+
     </main>
 
     

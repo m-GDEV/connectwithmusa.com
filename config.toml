@@ -11,20 +11,26 @@ summaryLength = 70
 [Menus]
 # Menu entry items with less/smaller weight are ordered first.
   main = [
-      {Name = " 📧 Email", URL = "mailto:connectwithmusa@protonmail.com", weight = 1},
+      {Name = "🏠 Home", URL = "/", weight = 1},
+      {Name = "📄 About", URL = "/about", weight = 2},
+      {Name = "✍️ All Posts", URL = "/posts", weight = 3},
+      {Name = "📔 RSS", URL = "/index.xml", weight = 4}
+  ]
+  contact = [
+      {Name = "📧 Email", URL = "mailto:connectwithmusa@protonmail.com", weight = 1},
       {Name = "🖥️ Github", URL = "https://github.com/m-GDEV", weight = 2},
-      {Name = "💼 LinkedIn", URL = "https://www.linkedin.com/in/musa-ahmed-239a97203", weight = 3},
-      {Name = "📔 RSS", URL = "http://localhost:1313/index.xml", weight = 4}
+      {Name = "💼 LinkedIn", URL = "https://www.linkedin.com/in/musa-ahmed-239a97203", weight = 3}
   ]
 
 # User created and defined config params
 [params]
+  Author = "Musa Ahmed"
   description = "Musa Ahmed's personal website and blog."
-  themeColor = "theme-base-0f"
+  themeColor = "theme-purple"
   layoutReverse = false
-  #disqusShortname = "spf13"
+  disqusShortname = "spf13"
   #googleAnalytics = "Your tracking code"
-  copyright = "Since 2021. Copyright Musa Ahmed."
+  copyright = "Since 2021. Copyright Musa Ahmed 2021."
 
 
      GitHub = "xxxx"
