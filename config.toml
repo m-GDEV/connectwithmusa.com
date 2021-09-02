@@ -27,6 +27,8 @@ summaryLength = 70
 [params]
   Author = "Musa Ahmed"
   description = "Musa Ahmed's personal website and blog."
+  sidebarImage = "/images/whoami/me.png"
+  sidebarImageDesc = "Cool logo used as placeholder for proper image."
   themeColor = "theme-purple"
   layoutReverse = false
   #disqusShortname = "spf13"

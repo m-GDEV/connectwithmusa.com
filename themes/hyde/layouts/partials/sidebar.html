@@ -3,7 +3,7 @@
     <div class="sidebar-about">
       <a href="{{ .Site.BaseURL }}"><h1>{{ .Site.Title }}</h1></a>
       
-      <img class="sidebar-img" src="/images/whoami/me.png">
+      <img class="sidebar-image" src="{{ .Site.Params.sidebarImage }}" alt="{{ .Site.Params.sidebarImageDesc }}">
       <p class="lead"> {{ .Site.Params.description }} </p>
     </div>
 

@@ -7,8 +7,12 @@
 	<!--Block quote wrapper-->
 	<div class="meta-wrapper">
 		<!--Dates-->
-		<span class="post-meta">✏️ Written by: {{ .Site.Params.Author }} on <time datetime={{ .Date.Format "2006-01-02T15:04:05Z0700" }}>{{ .Date.Format "January 2, 2006" }}</time></span>
-  	
+		<span class="post-meta">✏️ Written by: {{ .Site.Params.Author }}</span>
+		<span class="post-meta">📅 <time datetime={{ .Date.Format "2006-01-02T15:04:05Z0700" }}>{{ .Date.Format "January 2, 2006" }}</time></span>
+		<span class="post-meta">⏳ Estimated reading time: {{ .ReadingTime }} Minutes</span>
+		
+		<span class="post-meta">---</span>
+  			
 		<!--Displaying Tags-->
  		<div class="post-meta">
 		<span> 🔖<a href="{{ site.BaseURL }}/tags" style="color: var(--text-color);">Tags:</a> </span>
