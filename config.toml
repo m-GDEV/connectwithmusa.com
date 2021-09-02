@@ -1,5 +1,5 @@
 # Basic Hugo Config
-BaseURL = "https://connectwithmusa.com"
+BaseURL = "https://connectwithmusa.com/"
 languageCode = "en-us"
 title = "Musa Ahmed"
 theme = "hyde"
