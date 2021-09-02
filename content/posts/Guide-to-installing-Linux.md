@@ -1,15 +1,15 @@
 +++
-Title = "How to Install Linux"
-Author = "Musa Ahmed"
-Date = "2021-08-31T22:13:13-04:00"
-LastMod = "2021-08-31T22:13:13-04:00"
+Title = "Guide to Installing Linux (for beginners)"
+Date = "2021-09-02T03:17:54-04:00"
 Draft = false
-Description = "This blog post explains how to install Linux."
-FeaturedImage = ""
-FeaturedImageDescription = ""
-Categories = ["Linux", "Tutorial", "Blog"]
-Tags = ["Linux", "Tutorial", "Blog"]
+Post = true
+Description = "This is a simple guide to installing Linux targeted specifically at beginners. This post covers most of the basic principles of Linux and how it differs from Windows and MacOS."
+FeaturedImage = "/images/posts/guide-to-installing-linux.png"
+FeaturedImageDescription = "Graphic of a penguin, the well-known Linux mascot."
+Tags = ["Linux", "Install"]
+Categories = ["Tutorial", "Linux"]
 +++
+
 
 # Guide to Installing Linux (for beginners)
 
@@ -81,7 +81,7 @@ Although Ubuntu is the most popular, many Linux enthusiasts recommend Zorin OS f
 
 #### Elementary OS
 
-Elementary OS is quite a popular Linux Distribution. It is has little to no bloat pre-installed and it closely resembles Mac OS. With simplicity in mind the developers chose to design the entire operating system around productivity and un-intrusive. This is a great Distribution for begginers because of its easy-to-use user interface and simple process to installing many useful applications. 
+Elementary OS is quite a popular Linux Distribution. It is has little to no bloat pre-installed and it closely resembles Mac OS. With simplicity in mind the developers chose to design the entire operating system around productivity and un-intrusive. This is a great Distribution for begginers because of its easy-to-use user interface and simple process to installing many useful applications.
 
 #### Peppermint OS
 
@@ -104,16 +104,16 @@ All of the aforementioned Distributions are based on Ubuntu, meaning that at the
 Based on the size of the ISO we will need a 4-8 GB USB. 4 GB will most likely be fine. This is essential as we need space for all the required files and programs to help us install Linux.
 
 ### Finding an ISO
-Regardless of which Linux Distribution you have chosen the installion ISO will be neccesary. Google will be your best friend in this matter. The best way to find your ISO will be to google "*Distribution Name* ISO". 
+Regardless of which Linux Distribution you have chosen the installion ISO will be neccesary. Google will be your best friend in this matter. The best way to find your ISO will be to google "*Distribution Name* ISO".
 
 Now download the ISO and store it somewhere you can find it later.
 
 ### Flashing the ISO onto the USB
-This is a very step and requries a few simple clicks of a mouse. Visit [Balena Etcher](https://www.balena.io/etcher/) and click download. 
+This is a very step and requries a few simple clicks of a mouse. Visit [Balena Etcher](https://www.balena.io/etcher/) and click download.
 
-Launch the program and plug in your USB, make sure there are no important files on it as the program will format the USB. 
+Launch the program and plug in your USB, make sure there are no important files on it as the program will format the USB.
 
-Click "Flash from file" and select your downloaded ISO. 
+Click "Flash from file" and select your downloaded ISO.
 
 Click "Select target" and select your USB.
 
@@ -127,7 +127,7 @@ Once the USB is finished flashing, exit the program and turn off your computer.
 
 #### Step 1: Enter your bios
 
-This is quite simple if you know what you are doing. If not, google "How to enter bios on *your computers model number and brand*". 
+This is quite simple if you know what you are doing. If not, google "How to enter bios on *your computers model number and brand*".
 
 Typically, from a powered off state you turn on the computer and quicly press a specific key; usually this is the Delete key or on of the F* keys. This specific key varies from computer to computer.
 
@@ -137,7 +137,7 @@ Once you have entered the bios there should a tab at the top that reads "Boot" o
 
 #### Step 3: Make your USB the top Boot priority
 
-At the bottom of your screen you should see controls that tell you how to change your boot priorities. This varies computer to computer. 
+At the bottom of your screen you should see controls that tell you how to change your boot priorities. This varies computer to computer.
 
 Find you USB in the boot priority list and move it too the top.
 
@@ -149,7 +149,7 @@ When your computer restarts you should be prompted by a welcome screen of sorts 
 
 ### Installing Linux
 
-This process is very simple and needs no guidance. Simply follow the instructions on the installer and install. After doing so turn off your computer and remove the USB. 
+This process is very simple and needs no guidance. Simply follow the instructions on the installer and install. After doing so turn off your computer and remove the USB.
 
 Now restart your computer.
 
@@ -169,9 +169,9 @@ Note: commands are inputted into the terminal, the terminal is a desktop app ins
 
 ```sudo apt install *program name*```
 
-The above command is an example of how to install a program, of course there is a lot behind this command but as an introduction this is a great example. 
+The above command is an example of how to install a program, of course there is a lot behind this command but as an introduction this is a great example.
 
-To learn more I would suggest typing ```man apt```. 
+To learn more I would suggest typing ```man apt```.
 
 ```man``` is the in-house guide book installed on all linux Distributions. A large majority of programs have a    ```man ``` page that explains how to use the program and how to use all of its features.
 

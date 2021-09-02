@@ -4,8 +4,8 @@ Date = "{{ .Date }}"
 Draft = true
 Post = true
 Description = ""
-FeaturedImage = ""
+FeaturedImage = "/images"
 FeaturedImageDescription = ""
-Tags = ["Development", "golang"]
-Categories = ["Development", "GoLang"]
+Tags = [""]
+Categories = [""]
 +++

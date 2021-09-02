@@ -35,6 +35,38 @@
  * Update the foundational and global aspects of the page.
  */
 
+/* Defined light and dark themes */
+.theme-light {
+  --text-color: #515151;
+  --bg-color: #fff;
+  --title-color: #303030;
+  --heading-color: #313131;
+  --meta-color: #757575;
+  --title-link: #322461;
+  --line-color: #e2e2e2;
+}
+
+.theme-dark {
+  --text-color: #e2e2e2;
+  --bg-color: #0f0e0e;
+  --title-color: #fff;
+  --heading-color: #8b67ef;
+  --meta-color: #595959;
+  --title-link: #8b67ef;
+  --line-color: #e2e2e2;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: var(--bg-color);
+}
+
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -59,12 +91,13 @@ html {
 }
 
 body {
-  color: #515151;
-  background-color: #fff;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
           text-size-adjust: 100%;
 }
+
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
@@ -82,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-weight: bold;
   line-height: 1.25;
-  color: #313131;
+  color: var(--heading-color);
   text-rendering: optimizeLegibility;
 }
 h1 {
@@ -153,9 +186,9 @@ pre {
 code {
   padding: .25em .5em;
   font-size: 85%;
-  color: #b3555e;
-  background-color: #f9f9f9;
-  border-radius: 3px;
+  color: var(--bg-color);
+  background-color: var(--text-color);
+  border-radius: 20px;
 }
 pre {
   display: block;
@@ -168,12 +201,12 @@ pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #f9f9f9;
+  background-color: var(--text-color);
 }
 pre code {
   padding: 0;
   font-size: 100%;
-  color: inherit;
+  /*color: inherit;*/
   background-color: transparent;
 }
 .highlight {
@@ -204,7 +237,7 @@ blockquote p:last-child {
 img {
   display: block;
   margin: 0 0 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
   max-width: 100%;
 }
 
@@ -311,7 +344,7 @@ tbody tr:nth-child(odd) th {
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  color: var(--title-color);
 }
 .page-title,
 .post-title {
@@ -321,28 +354,26 @@ tbody tr:nth-child(odd) th {
 /* Meta data line below post title */
 .post-meta {
   display: block;
-  margin-top: -.5rem;
-  margin-bottom: 1rem;
-  color: #757575;
+  margin-bottom: 0.2rem;
+  color: var(--meta-color);
   overflow: auto;
 }
 
-/* Post categories & tags (tax means taxonomy) */
-.tax-wrapper {
-  width: 100%;
-  overflow: auto;
-  padding-bottom: 2rem;
+.meta-wrapper {
+  border-style: solid;
+  border-width: 0rem 0px 0px 0.15rem;
+  border-color: var(--line-color);
+  padding-left: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-/*.post-categories {*/
-  /*width: 50%;*/
-  /*float: left;*/
-/*}*/
-
-/*.post-tags {*/
-  /*width: 50%;*/
-  /*float: right;*/
-/*}*/
+/* Featured image description */
+.image-desc {
+  text-align: center;
+  color: var(--meta-color);
+  margin-bottom: 3rem;
+}
 
 /* Related posts */
 .related {

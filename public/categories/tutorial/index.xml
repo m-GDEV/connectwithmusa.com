@@ -6,15 +6,28 @@
     <description>Recent content in Tutorial on Musa Ahmed</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Aug 2021 22:13:13 -0400</lastBuildDate><atom:link href="https://connectwithmusa.com/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Sep 2021 03:17:54 -0400</lastBuildDate><atom:link href="https://connectwithmusa.com/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How to Install Linux</title>
-      <link>https://connectwithmusa.com/posts/how-to-install-linux/</link>
-      <pubDate>Tue, 31 Aug 2021 22:13:13 -0400</pubDate>
+      <title>Guide to Installing Linux (for beginners)</title>
+      <link>https://connectwithmusa.com/posts/guide-to-installing-linux/</link>
+      <pubDate>Thu, 02 Sep 2021 03:17:54 -0400</pubDate>
       
-      <guid>https://connectwithmusa.com/posts/how-to-install-linux/</guid>
+      <guid>https://connectwithmusa.com/posts/guide-to-installing-linux/</guid>
       <description>Guide to Installing Linux (for beginners) Introduction Hello, this guide is for Linux beginners who are looking to try Linux out don&amp;rsquo;t know where to start. Below is a table of contents that outlines all the things we will be covering in this guide.
 Table of Contents - So what is Linux anyways? - What is a Desktop Environment? - Choosing a Distribution - So how do I install Linux? - How to install programs?</description>
+    </item>
+    
+    <item>
+      <title>Github Pages With Hugo</title>
+      <link>https://connectwithmusa.com/posts/github-pages-with-hugo/</link>
+      <pubDate>Thu, 02 Sep 2021 03:08:08 -0400</pubDate>
+      
+      <guid>https://connectwithmusa.com/posts/github-pages-with-hugo/</guid>
+      <description>This is not finished How to host Hugo site on Github Pre-requisites   Github Account
+  Git (terminal utility)
+  How to change Directories in the terminal
+  Make a repo with the following name [username].github.io Please note that [username] indicates your own personal username.
+Get your Hugo files in order and place it in a folder designated for this project Make all neccesary changes you need to make to your content, config etc.</description>
     </item>
     
   </channel>

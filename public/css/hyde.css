@@ -76,15 +76,10 @@ html {
 	width:10rem;	
 	height: 10rem;
 	/* Make image centered, idk if i want this */
-	display: block;
-	margin-left: auto;  
-	margin-right: auto;
+	/*display: block;*/
+	/*margin-left: auto;  */
+	/*margin-right: auto;*/
 }
-
-
-
-
-
 
 /* Sidebar links */
 .sidebar a {
@@ -273,6 +268,6 @@ a.sidebar-nav-item:focus {
 }
 .theme-purple .content a,
 .theme-purple .related-posts li a:hover {
-  color: #322461;
+  color: var(--title-link);
 }
 

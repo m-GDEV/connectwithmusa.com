@@ -5,7 +5,6 @@ Things I need to change/improve/intergrate to finish the website.
 
 CSS CLASSES TO ADD STYLE TO
 - sidebar-img
-- image-desc
 
 HOMEPAGE
 
@@ -16,19 +15,19 @@ SIDEBAR
 - most popular contact methods | :wq
 
 SINGLE POST PAGE
-- add author
-- category
-- tags (bottom of page maybe)
-- maybe author
-- lastmod maybe
+- add author | done
+- category | done
+- tags (bottom of page maybe) | done
+- maybe author | done
+- lastmod maybe | no
 
 TAGS PAGE
-- maybe remove tags page and just keep tags at the end of each post
+- maybe remove tags page and just keep tags at the end of each post | done
 
 CATEGORIES PAGE
 
 CONTACT PAGE
-- all contact methods
+- all contact methods 
 - maybe this page maybe not, theres already sidebar
 
 ABOUT PAGE
@@ -42,12 +41,12 @@ RESUME PAGE
 
 SEO & ANALYTICS
 - plausible analytics with home server
-- 
+- add og: versions of all meta stuff
 
 STYLING
-- change fonts maybe
-- give user option to press icon to change from light to dark mode (deafault dark)
-- emojis everywhere!
+- change fonts maybe | not right now
+- give user option to press icon to change from light to dark mode (deafault dark) | done, but not default until i can fix the black sun thing
+- emojis everywhere! | yes
 	- in post previews on homepage clocks etc.
 - proper logos and favicon
 

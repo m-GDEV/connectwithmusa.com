@@ -2,28 +2,31 @@
 <div class="post">
   
 	<!--Title-->
-	<h1>{{ .Title }}</h1>
+	<h1 class="post-title">{{ .Title }}</h1>
 
-	<!--Dates-->
-	<span class="post-meta">Written by: {{ .Site.Params.Author }} on <time datetime={{ .Date.Format "2006-01-02T15:04:05Z0700" }}>{{ .Date.Format "January 2, 2006" }}</time></span>
-  
+	<!--Block quote wrapper-->
+	<div class="meta-wrapper">
+		<!--Dates-->
+		<span class="post-meta">✏️ Written by: {{ .Site.Params.Author }} on <time datetime={{ .Date.Format "2006-01-02T15:04:05Z0700" }}>{{ .Date.Format "January 2, 2006" }}</time></span>
+  	
 		<!--Displaying Tags-->
-  		<div class="post-meta">
-		<span> 🔖 Tags: </span>
-  		{{ range .Params.Tags -}}
-  		<span><a href="{{ site.BaseURL }}/tags/{{. | urlize}}">{{.}}</a></span>
+ 		<div class="post-meta">
+		<span> 🔖<a href="{{ site.BaseURL }}/tags" style="color: var(--text-color);">Tags:</a> </span>
+ 		{{ range .Params.Tags -}}
+ 		<span><a href="{{ site.BaseURL }}/tags/{{. | urlize}}">{{.}}</a></span>
 		<span>&nbsp;</span>
-  		{{- end }}
-  		</div>
-
+ 		{{- end }}
+ 		</div>
+	
 		<!--Displaying Categories-->
-  		<div class="post-meta">
-		<span> 📁 Categories: </span>
-  		{{ range .Params.Categories -}}
+ 		<div class="post-meta">
+		<span> 📁 <a href="{{ site.BaseURL }}/categories" style="color: var(--text-color);">Categories:</a> </span>
+ 		{{ range .Params.Categories -}}
 		<span><a href="{{ site.BaseURL }}/categories/{{. | urlize}}">{{.}}</a></span>
 		<span>&nbsp;</span>
-  		{{- end }}
-  		</div>
+ 		{{- end }}
+ 		</div>
+	</div>
 	
 	<!--Featured Image-->
 	<img src="{{ .Params.FeaturedImage }}" alt="{{ .Params.FeaturedImageDescription }}" />
@@ -36,7 +39,6 @@
 
 
 </div>
-<button onclick="topFunction()" id="top-button" title="Go to top">Top</button>
 
 {{ if .Site.DisqusShortname -}}
 <h2>Comments</h2>
