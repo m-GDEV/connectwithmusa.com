@@ -1,5 +1,9 @@
 Things I need to change/improve/intergrate to finish the website.
 
+checkout lighthouse for more tips
+"also, the darkmode thing on mobile is cus the sidebar is first and you can see the button stuff thats why"
+make script to auto push master branch and public branch (with new changes)
+Add proper alt image attributes, check lighthouse for more info.
 FIX MENUSIDEBAR ON MOBIE. MAYBE MAKE IT A COLLAPSIBLE THING.
 fIX DARKMODE THING ON MOBILE. iT LOOKS SHIT ON MY PHONE.
 ADD CALENDAR EMOJI THE INDEX.HTML WHEN LISTING EACH POST.
