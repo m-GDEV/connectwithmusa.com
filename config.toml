@@ -6,7 +6,16 @@ theme = "hyde"
 enableEmoji = true
 enableRobotsTXT = true
 rssLimit = 100
-summaryLength = 70
+#summaryLength = 70
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true
 
 [Menus]
 # Menu entry items with less/smaller weight are ordered first.

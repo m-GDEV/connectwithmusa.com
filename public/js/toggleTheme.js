@@ -6,6 +6,7 @@
 function setTheme(themeName) {
     localStorage.setItem('theme', themeName);
     document.documentElement.className = themeName;
+    var image = document.getElementById("toggle-image").src = `/images/theme/${themeName}.svg`;
 }
 
 // function to toggle between light and dark theme
@@ -19,10 +20,13 @@ function toggleTheme() {
 
 // Immediately invoked function to set the theme on initial load
 // Change the first two darks to light and the light to dark for the page to load on darkmode as default
-(function() {
+function whenLoaded() {
     if (localStorage.getItem('theme') === 'theme-dark') {
         setTheme('theme-dark');
     } else {
         setTheme('theme-light');
     }
-})();
+}
+
+
+window.onload = whenLoaded;
