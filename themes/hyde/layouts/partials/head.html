@@ -27,7 +27,7 @@
   <script src="{{ .Site.BaseURL }}js/progressBar.js" type="text/javascript"></script>
 
   <!-- Plausible Analytics -->
-  <script async defer data-domain="connectwithmusa.com" src="https://analytics.connectwithmusa.com/js/plausible.js"></script>
+  <script async defer data-domain="{{ .Site.BaseURL }}" src="{{ .Site.Params.plausibleAnalytics }}"></script>
 
 
   <!-- Icons -->

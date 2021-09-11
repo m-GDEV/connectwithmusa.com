@@ -42,7 +42,10 @@ rssLimit = 100
   layoutReverse = false
   #disqusShortname = "spf13"
   #googleAnalytics = "Your tracking code"
+  # Put the value of the src attribute in the snippet provided in the var below.
+  plausibleAnalytics = "https://analytics.connectwithmusa.com/js/plausible.js"
   copyright = "Made with ❤️ · Since 2021"
+
 
 
      #GitHub = "xxxx"
