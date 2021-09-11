@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Linux on Musa Ahmed</title>
-    <link>https://connectwithmusa.com/categories/linux/</link>
-    <description>Recent content in Linux on Musa Ahmed</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 02 Sep 2021 03:17:54 -0400</lastBuildDate><atom:link href="https://connectwithmusa.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Guide to Installing Linux (for beginners)</title>
-      <link>https://connectwithmusa.com/posts/guide-to-installing-linux/</link>
-      <pubDate>Thu, 02 Sep 2021 03:17:54 -0400</pubDate>
-      
-      <guid>https://connectwithmusa.com/posts/guide-to-installing-linux/</guid>
-      <description>Guide to Installing Linux (for beginners) Introduction Hello, this guide is for Linux beginners who are looking to try Linux out don&amp;rsquo;t know where to start. Below is a table of contents that outlines all the things we will be covering in this guide.
-Table of Contents - So what is Linux anyways? - What is a Desktop Environment? - Choosing a Distribution - So how do I install Linux? - How to install programs?</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Musa Ahmed</title><link>https://connectwithmusa.com/categories/linux/</link><description>Recent content in Linux on Musa Ahmed</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 02 Sep 2021 03:17:54 -0400</lastBuildDate><atom:link href="https://connectwithmusa.com/categories/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Guide to Installing Linux (for beginners)</title><link>https://connectwithmusa.com/posts/guide-to-installing-linux/</link><pubDate>Thu, 02 Sep 2021 03:17:54 -0400</pubDate><guid>https://connectwithmusa.com/posts/guide-to-installing-linux/</guid><description>Guide to Installing Linux (for beginners) Introduction Hello, this guide is for Linux beginners who are looking to try Linux out don&amp;rsquo;t know where to start. Below is a table of contents that outlines all the things we will be covering in this guide.
+Table of Contents - So what is Linux anyways? - What is a Desktop Environment? - Choosing a Distribution - So how do I install Linux? - How to install programs?</description></item></channel></rss>

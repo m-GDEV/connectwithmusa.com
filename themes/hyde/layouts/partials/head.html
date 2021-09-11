@@ -24,6 +24,7 @@
 
   <!-- JS -->
   <script src="{{ .Site.BaseURL }}js/toggleTheme.js" type="text/javascript"></script>
+  <script src="{{ .Site.BaseURL }}js/progressBar.js" type="text/javascript"></script>
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
@@ -39,4 +40,6 @@
 
 <!-- Custom added buttons -->
 {{ partial "top.html" . }}
+
 <img id="toggle-image" src="/images/theme/theme-light.svg" alt="Image for theme toggle button." onclick="toggleTheme()">
+<div id="progress-bar"></div>

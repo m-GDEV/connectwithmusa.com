@@ -65,6 +65,17 @@
   outline: none;
 }
 
+/* Progress bar */
+#progress-bar {
+	--scrollAmount: 0%;
+	background-color: var(--title-link);
+	width: var(--scrollAmount);
+	height: 0.5rem;
+	position: fixed;
+	top: 0;
+	margin: 0;
+	padding: 0;
+}
 
 * {
   -webkit-box-sizing: border-box;
@@ -77,6 +88,21 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Custom scroll bar colors!! */
+/*REPLACED BY READING PROGRESS BAR*/
+/*html::-webkit-scrollbar {*/
+  /*width: 0.5rem;*/
+/*}*/
+
+/*html::-webkit-scrollbar-thumb {*/
+  /*background-color: var(--title-link);*/
+/*}*/
+
+/*html::-webkit-scrollbar-track {*/
+  /*background-color: transparent;*/
+/*}*/
+
 
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
