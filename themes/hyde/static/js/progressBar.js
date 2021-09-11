@@ -11,3 +11,4 @@ let processScroll = () => {
 }
 
 document.addEventListener('scroll', processScroll);
+
