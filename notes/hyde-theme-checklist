@@ -46,13 +46,16 @@ ABOUT PAGE
 RESUME PAGE
 - maybe resume page, its pretty empty rn
 
+Projects & experience page
+- showcase personal projects and community contributions
+
 SEO & ANALYTICS
-- plausible analytics with home server
+- plausible analytics with home server | done
 - add og: versions of all meta stuff
 
 STYLING
 - change fonts maybe | not right now
-- give user option to press icon to change from light to dark mode (deafault dark) | done, but not default until i can fix the black sun thing
+- give user option to press icon to change from light to dark mode (deafault dark) | done, but not default until i can fix the black sun thing | done
 - emojis everywhere! | yes
 	- in post previews on homepage clocks etc.
 - proper logos and favicon
