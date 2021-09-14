@@ -1,21 +1,23 @@
 {{ define "main" -}}
 
-<h1> All Posts </h1>
+<h1> {{ .Title }} </h1>
+{{ if eq .Title "Posts" }}
+<ul>  
+    {{ range .Pages }}
+    <article>
+        <a href="{{ .RelPermalink }}">- &nbsp; {{ .Title }} &nbsp;</a>
+        <time>· &nbsp; {{ .Date.Format "January 2, 2006" }}</time>
+    </article>
+    {{ end }} 
+</ul>
 
-<section class="post-grid">
-{{ range .Data.Pages -}}
-  <div class="post-card">
-    {{ if .Params.FeaturedImage -}}
-    <a href="{{ .Permalink }}"><img class="post-card-image" src="{{ .Params.FeaturedImage }}" alt="{{ .Params.FeaturedImageDescription }}"></a>
-    {{- else -}}
-    <img class="post-card-image" src=" /images/pages/img-not-found.png" alt="Image not found.">
-    {{- end -}}
-    <div class="post-card-text">
-    	<span><a href="{{ .Permalink }}" class="post-card-title">{{ .Title }}</a></span>
-	<br>
-    	<time class="post-card-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "January 2, 2006" }}</time>
-    </div>
-  </div>
+{{ else }} 
+<ul>  
+    {{ range .Pages }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }} &nbsp;</a></li>
+    {{ end }} 
+</ul>
+{{ end }}
+
 {{- end }}
-</section>
-{{- end }}
+
