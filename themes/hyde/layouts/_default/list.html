@@ -5,7 +5,7 @@
 <ul>  
     {{ range .Pages }}
     <article>
-        <a href="{{ .RelPermalink }}">- &nbsp; {{ .Title }} &nbsp;</a>
+	<span>- &nbsp; </span><a href="{{ .RelPermalink }}">{{ .Title }}</a>
         <time>· &nbsp; {{ .Date.Format "January 2, 2006" }}</time>
     </article>
     {{ end }} 
@@ -14,7 +14,7 @@
 {{ else }} 
 <ul>  
     {{ range .Pages }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }} &nbsp;</a></li>
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end }} 
 </ul>
 {{ end }}

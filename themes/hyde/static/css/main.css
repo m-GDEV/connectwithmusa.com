@@ -220,6 +220,7 @@ code {
   color: var(--bg-color);
   background-color: var(--text-color);
   border-radius: 20px;
+  overflow: auto;
 }
 pre {
   display: block;
