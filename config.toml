@@ -35,7 +35,7 @@ rssLimit = 100
 # User created and defined config params
 [params]
   Author = "Musa Ahmed"
-  description = "Musa Ahmed's personal website and blog."
+  description = "Musa Ahmed's personal website. Here you will find his resume, portfolio, and blog."
   sidebarImage = "/images/whoami/me.webp"
   sidebarImageDesc = "Cool logo used as placeholder for proper image."
   themeColor = "theme-purple"
