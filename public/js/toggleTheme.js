@@ -1,5 +1,6 @@
 // JS script to toggle theme
 // Credit: https://github.com/haxzie
+// DEPRECEATED, USE MAIN.JS
 
 
 // function to set a given theme/color-scheme
@@ -20,13 +21,10 @@ function toggleTheme() {
 
 // Immediately invoked function to set the theme on initial load
 // Change the first two darks to light and the light to dark for the page to load on darkmode as default
-function whenLoaded() {
+function loadTheme() {
     if (localStorage.getItem('theme') === 'theme-dark') {
         setTheme('theme-dark');
     } else {
         setTheme('theme-light');
     }
 }
-
-
-window.onload = whenLoaded;

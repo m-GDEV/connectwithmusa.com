@@ -103,6 +103,25 @@
           box-sizing: border-box;
 }
 
+/* -- Scrollbar Colours -- */
+/* Works on Firefox */
+* {
+  scrollbar-width: 0;
+  scrollbar-color: transparent transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--progress-bar);
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: solid white;
+}
+
 html,
 body {
   margin: 0;

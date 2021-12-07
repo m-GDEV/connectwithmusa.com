@@ -44,6 +44,7 @@
   --meta-color: #757575;
   --title-link: #322461;
   --line-color: #e2e2e2;
+  --progress-bar: #8b67ef;
 }
 
 .theme-dark {
@@ -54,8 +55,10 @@
   --meta-color: #919191;
   --title-link: #8b67ef;
   --line-color: #e2e2e2;
+  --progress-bar: #8b67ef;
 }
 
+/* Theme toggle */
 #toggle-image {  
   position: fixed;
   top: 20px;
@@ -65,18 +68,35 @@
   outline: none;
 }
 
-/* Progress bar */
+/* Reading progress bar */
 #progress-bar {
-	--scrollAmount: 0%;
-	background-color: var(--title-link);
-	width: var(--scrollAmount);
-	height: 0.5rem;
-	position: fixed;
-	top: 0;
-	margin: 0;
-	padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0.3rem;
+  z-index: 99;
+  background-color: var(--progress-bar);
 }
 
+#top-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: #322461;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 8px;
+
+}
+
+/* Start of original CSS */
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -89,21 +109,6 @@ body {
   padding: 0;
 }
 
-/* Custom scroll bar colors!! */
-/*REPLACED BY READING PROGRESS BAR*/
-/*html::-webkit-scrollbar {*/
-  /*width: 0.5rem;*/
-/*}*/
-
-/*html::-webkit-scrollbar-thumb {*/
-  /*background-color: var(--title-link);*/
-/*}*/
-
-/*html::-webkit-scrollbar-track {*/
-  /*background-color: transparent;*/
-/*}*/
-
-
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -113,6 +118,7 @@ html {
   html {
     font-size: 20px;
   }
+
 }
 
 body {
@@ -214,6 +220,7 @@ code {
   color: var(--bg-color);
   background-color: var(--text-color);
   border-radius: 20px;
+  overflow: auto;
 }
 pre {
   display: block;
