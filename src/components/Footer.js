@@ -1,5 +1,4 @@
 import React from "react";
-import { LinkIcon } from "@heroicons/react/solid";
 
 export default function Contact() {
     let date = new Date().getFullYear();

@@ -10,7 +10,7 @@ import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Resume from "./components/Resume";
-import About from "./components/About";
+//import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Missing from "./components/Missing";
