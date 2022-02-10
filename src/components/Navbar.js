@@ -25,15 +25,14 @@ export default function Navbar() {
         className="ml-3 text-xl sm:text-2xl md:text-xl lg:text-2xl font-rock-salt title-font font-medium hover:text-white text-h-brightgreen mb-1 md:mb-0">
         Musa Ahmed
       </Link>
-      <nav className="font-dm-sans sm:text-lg md:text-xl lg:text-2xl hidden sm:block">
+      <nav className="font-dm-sans sm:text-lg md:text-xl lg:text-xl hidden sm:block">
         {navItems}
-        <motion.a
-          href="/contact"
-          whileHover={{scale:0.95, transition: {duration: 0.4}, }}
-          className="text-green-200 inline-flex items-center bg-blue-500 border-0 py-1 px-3 focus:outline-none rounded-xl mt-4 md:mt-0">
+        <Link
+          to="/contact"
+          className="text-h-brightgreen font-medium inline-flex items-center bg-b-darkpurple border-0 py-1 px-3 focus:outline-none hover:bg-b-brightpurple rounded-xl mt-4 md:mt-0">
           Contact Me
           <ChatAlt2Icon className="w-5 h-5 ml-1" />
-        </motion.a>
+        </Link>
       </nav>
       <motion.button className="sm:hidden"
       whileTap={{ scale: 1.7 }}

@@ -21,7 +21,7 @@ render (
   <BrowserRouter>
     <Navbar />
     <Routes>
-      <Route path="/" element={<Home/>} />
+      <Route path="/" element={<Home />} />
       <Route path="*" element={<Missing />} />
       <Route path="projects" element={<Projects />} />
       <Route path="skills" element={<Skills />} />

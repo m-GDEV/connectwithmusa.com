@@ -37,7 +37,8 @@ export const projects = [
     "React.js",
     "HTML, CSS, JS",
     "Python",
-    "C"
+    "C",
+    "Tailwind CSS"
   ];
 
   export const sections = [

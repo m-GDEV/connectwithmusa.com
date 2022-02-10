@@ -5,7 +5,7 @@ export default function About() {
 
     return (
       <section id="about" className="bg-gradient-to-t from-g-dark to-g-light">
-        <div className="sm:mx-auto flex px-20 py-20 md:flex-row flex-col items-center h-screen">
+        <div className="sm:mx-auto flex px-20 py-20 md:flex-row flex-col items-center xl:h-screen">
           <div className=" md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
             <motion.h1 
               whileHover={{scale:0.9, transition: {duration: 0.4}, }} drag dragSnapToOrigin={true}
