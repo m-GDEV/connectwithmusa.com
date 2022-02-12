@@ -3,9 +3,12 @@ import React from "react";
 import { projects } from "../data";
 import { motion } from "framer-motion";
 
+// TODO:
+// - when you click on a skill, open a modal that shows more info (summary from readme), picture/video demo, and link
+
 export default function Projects() {
   return (
-    <section id="projects" className="text-white md:h-screen bg-gradient-to-t from-g-dark to-g-light">
+    <section id="projects" className="text-white bg-gradient-to-t from-g-dark to-g-light">
       <hr className="bg-white h-1 mx-auto" />
       <div className="container px-5 py-10 mx-auto text-center lg:px-40 ">
         <div className="flex flex-col w-full mb-16">
@@ -26,7 +29,7 @@ export default function Projects() {
     
       <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-10 place-items-center break-words">
           {projects.map((projects) => (
-            <div className="w-11/12 sm:w-4/5 md:w-full h-full rounded-[25px] bg-b-darkishpurple pt-3 px-8 sm:px-10" key={projects.title}>
+            <div className="w-11/12 sm:w-4/5 md:w-full h-full rounded-[25px] bg-b-darkishpurple pt-3 px-8 sm:px-10 border-[3px] border-[#BAA6CE]" key={projects.title}>
               <h2 className="font-dm-sans text-h-brightgreen text-xl sm:text-2xl mb-1 mt-3">
                 {projects.title}
               </h2>
@@ -38,7 +41,8 @@ export default function Projects() {
               </p>
             <motion.a 
             whileHover={{scale:1.1, transition: {duration: 0.4}, }}
-            href={projects.link} className="inline-flex rounded-[20px] mt-4 mb-4 font-dm-sans py-1 px-12 text-sm bg-b-darkpurple uppercase">
+            href={projects.link}
+            className="inline-flex rounded-[20px] mt-4 mb-4 font-dm-sans py-1 px-12 text-sm bg-b-darkpurple uppercase">
               Learn More &nbsp;
               <ExternalLinkIcon className="w-5 text-blue-500"/>
             </motion.a>

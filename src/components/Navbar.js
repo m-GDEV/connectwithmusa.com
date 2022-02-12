@@ -15,11 +15,12 @@ export default function Navbar() {
   <li className="py-2 hover:bg-g-light bg-g-dark px-8 hover:border-b" key={section.toString()}> <Link to={'/' + section} onClick={() => setToggled(!toggled)}>{section.replace(/^\w/, (c) => c.toUpperCase())}</Link> </li>
 );
 
+  // mobile nav change class onclick with state
   const [toggled, setToggled] = useState(false);
   const classChange = toggled ? "block" : "hidden";
 
   return (
-    <header className="bg-g-light sticky top-0 z-10">
+    <header className="bg-g-light backrdrop-blur sticky top-0 z-10">
     <p className="bg-red-600 text-white w-full text-center font-dm-sans underline"
     > Site under constrution! Please excuse any issues.</p>
     <div className="container mx-auto flex flex-wrap p-5 md:flex-row items-center justify-between text-white">
@@ -44,7 +45,17 @@ export default function Navbar() {
     </div>
     <div className={classChange}>
       <ul className="text-white sm:hidden">
+        <li className="py-2 hover:bg-g-light bg-g-dark px-8 hover:border-b"><Link to='/' onClick={() => setToggled(!toggled)}>Home</Link> </li>
         {navItemsMobile}
+        <li className="bg-g-dark py-1 px-6">
+          <Link
+            onClick={() => setToggled(!toggled)}
+            to="/contact"
+            className="text-h-brightgreen font-medium inline-flex items-center bg-b-darkpurple border-0 focus:outline-none py-1 mb-1 px-4 rounded-xl">
+            Contact Me
+            <ChatAlt2Icon className="w-5 h-5 ml-1" />
+          </Link>
+        </li>
       </ul>
     </div>
     </header>
