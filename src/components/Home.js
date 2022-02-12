@@ -35,7 +35,7 @@ export default function About() {
             </Link>
           </div>
           <div className={classChange}>
-                <iframe src="https://chrisdothtml.github.io/chrome-dino/" frameborder="0" scrolling="no" width="100%" height="100%" loading="lazy" noreferrer
+                <iframe src="https://chrisdothtml.github.io/chrome-dino/" frameborder="0" scrolling="no" width="100%" height="100%" loading="lazy" noreferrer title="dino game"
                 className="w-[620px] h-[200px] z-999 rounded-2xl"></iframe>
                 <p className="text-white text-2xl text-center mt-2">You found an easter 🥚!</p>
           </div>
