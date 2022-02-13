@@ -7,7 +7,7 @@ export default function About() {
   // dino easter egg toggle
   const [toggled, setToggled] = useState(false);
   // even if user click my name h1, the dino game only shows on screens larger than xl
-  const classChange = toggled ? "hidden xl:block top-32 right-20 absolute" : "hidden";
+  const classChange = toggled ? "hidden xl:block top-32 right-20 absolute focus" : "hidden";
 
   return (
     <section id="about" className="bg-gradient-to-t from-g-dark to-g-light min-h-screen">
@@ -35,9 +35,10 @@ export default function About() {
             </Link>
           </div>
           <div className={classChange}>
-                <iframe src="https://chrisdothtml.github.io/chrome-dino/" frameBorder="0" scrolling="no" width="100%" height="100%" loading="lazy" noreferrer="true" title="dino game"
+                <iframe src="https://m-gdev.github.io/chrome-dino/" frameBorder="0" scrolling="no" width="100%" height="100%" loading="lazy" noreferrer="true" title="dino game"
                 className="w-[620px] h-[200px] z-999 rounded-2xl"></iframe>
                 <p className="text-white text-2xl text-center mt-2">You found an easter 🥚!</p>
+                <p className="text-red-600 text-lg text-center mt-1">Click to start playing! [</p>
           </div>
         </div>
       </div>
