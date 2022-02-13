@@ -17,9 +17,11 @@ import Missing from "./components/Missing";
 
 // i think its bad practice to put all the components directly into the index.js file like
 // this but idk how else to get the home component to be the home page while doing routing
+// also, the hr is cus its the easiest way to put a whilte hr on each page rendered
 render (
   <BrowserRouter>
     <Navbar />
+    <hr className="bg-white h-1 mx-auto" /> 
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="*" element={<Missing />} />

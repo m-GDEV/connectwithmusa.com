@@ -36,9 +36,13 @@ export const projects = [
   export const skills = [
     "React.js",
     "HTML, CSS, JS",
+    "Tailwind CSS",
+    "Hugo",
     "Python",
     "C",
-    "Tailwind CSS"
+    "Git / Github",
+    "Linux / Shell Scripting",
+
   ];
 
   export const sections = [

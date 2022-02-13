@@ -5,10 +5,10 @@ export default function Contact() {
 
     return (
         <footer className="bg-g-dark bottom-0 left-0 text-center w-full text-white text-sm sm:text-lg pb-4">
-            <p>Built by Musa Ahmed - Since {date} - &nbsp;
-            <a href="https://github.com/m-GDEV" className="text-blue-500">Github</a>
-            </p>
-            
+            <p>Built by Musa Ahmed - Since {date}</p>
+            <div>
+                <a href="https://github.com/m-GDEV/connectwithmusa.com" className="text-blue-500">Source Code</a>
+            </div>
         </footer>
       );
 }

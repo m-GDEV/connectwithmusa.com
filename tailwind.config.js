@@ -16,7 +16,9 @@ module.exports = {
         // headings
         'h-brightgreen': '#2EFB1C',
         // text colors
-        't-darkyellow': '#FDD700'
+        't-darkyellow': '#FDD700',
+        // border colors
+        'br-lightpurple': '#693fff',
       },
       fontFamily: {
         'rock-salt': ['"Rock Salt"', 'cursive'],
