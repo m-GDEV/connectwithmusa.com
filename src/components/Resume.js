@@ -9,7 +9,7 @@ const includedList = included.map((item) =>
 
 export default function Resume() {
   return (
-    <section className="text-white md:h-screen bg-gradient-to-t from-g-dark to-g-light min-h-screen">
+    <section className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40 ">
         <div className="flex flex-col w-full mb-16">
           <motion.div
