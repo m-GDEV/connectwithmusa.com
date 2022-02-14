@@ -18,19 +18,28 @@ export default function About() {
             className="mt-80 whitespace-nowrap font-rock-salt text-4xl sm:text-6xl md:text-7xl lg:text-9xl leading-normal mb-6 text-h-brightgreen"
             onClick={() => setToggled(!toggled)}>
             Musa Ahmed
-          </motion.h1>
-          <p className="mb-8 mt-2 sm:mt-4 lg:mt-10 font-bold font-dm-sans text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed text-white ">
-          Welcome to my personal website. Here you will find my resume, portfolio, and blog.
+          </motion.h1>          
+          <p className="mb-8 mt-2 sm:mt-4 lg:mt-10 font-bold font-dm-sans text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed text-white">
+          Welcome to my personal website. Here you will find my resume, portfolio 
+          {/* tf this nobr element is so weird */}
+          <a className="group" href="https://www.grammarbook.com/blog/commas/oxford-comma/" rel="noreferrer" target="_blank">,&nbsp;
+          <div className="absolute w-auto p-2 m-2 min-w-max left-96 rounded-xl border-br-lightpurple border-4 text-white bg-b-darkpurple font-dm-sans font-bold text-sm transition-all duration-500 scale-0 origin-bottom group-hover:scale-100">
+            What's that comma doing there? Click it to find out!
+          </div></a>
+          <nobr>and blog.</nobr>
+
           </p>
           <div className="flex flex-col sm:flex-row justify-center font-dm-sans place-items-center">
             <Link
               to="/projects"
-              className="mb-3 sm:mb-0 inline-flex text-white bg-b-darkpurple rounded-xl border-0 py-2 px-6 focus:outline-none hover:bg-b-brightpurple text-lg md:text-xl sm:whitespace-nowrap">
+              className="mb-3 sm:mb-0 inline-flex text-white bg-b-darkpurple rounded-xl border-0 py-2 px-6 focus:outline-none hover:bg-b-brightpurple text-lg md:text-xl 
+              sm:whitespace-nowrap transition-all duration-500">
               Check out my work!
             </Link>
             <Link
               to="/about"
-              className="sm:ml-4 inline-flex text-white bg-b-darkpurple rounded-xl border-0 py-2 px-6 focus:outline-none hover:bg-b-brightpurple text-lg md:text-xl sm:whitespace-nowrap">
+              className="sm:ml-4 inline-flex text-white bg-b-darkpurple rounded-xl border-0 py-2 px-6 focus:outline-none hover:bg-b-brightpurple text-lg md:text-xl 
+              sm:whitespace-nowrap transition-all duration-500">
               About Me
             </Link>
           </div>
@@ -38,7 +47,7 @@ export default function About() {
                 <iframe src="https://m-gdev.github.io/chrome-dino/" frameBorder="0" scrolling="no" width="100%" height="100%" loading="lazy" noreferrer="true" title="dino game"
                 className="w-[620px] h-[200px] z-999 rounded-2xl"></iframe>
                 <p className="text-white text-2xl text-center mt-2">You found an easter 🥚!</p>
-                <p className="text-red-600 text-lg text-center mt-1">Click to start playing! [</p>
+                <p className="text-red-600 text-lg text-center mt-1">Click to start playing!</p>
           </div>
         </div>
       </div>

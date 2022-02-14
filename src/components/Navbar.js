@@ -32,7 +32,8 @@ export default function Navbar() {
         {navItems}
         <Link
           to="/contact"
-          className="text-h-brightgreen font-medium inline-flex items-center bg-b-darkpurple border-0 py-1 px-3 focus:outline-none hover:bg-b-brightpurple rounded-xl mt-4 md:mt-0">
+          className="text-h-brightgreen font-medium inline-flex items-center bg-b-darkpurple border-0 py-1 px-3 focus:outline-none hover:bg-b-brightpurple 
+          rounded-xl mt-4 md:mt-0 transition-all duration-500">
           Contact Me
           <ChatAlt2Icon className="w-5 h-5 ml-1" />
         </Link>

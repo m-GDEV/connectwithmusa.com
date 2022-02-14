@@ -12,6 +12,7 @@ import Skills from "./components/Skills";
 import Resume from "./components/Resume";
 //import About from "./components/About";
 import Contact from "./components/Contact";
+import Thanks from "./components/Thanks";
 import Footer from "./components/Footer";
 import Missing from "./components/Missing";
 
@@ -29,6 +30,7 @@ render (
       <Route path="skills" element={<Skills />} />
       <Route path="resume" element={<Resume />} />
       <Route path="contact" element={<Contact />} />
+      <Route path="thanks" element={<Thanks />} />
     </Routes>
     <Footer />
   </BrowserRouter>,
