@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <section id="projects" className="text-white bg-gradient-to-t from-g-dark to-g-light">
+    <section id="projects" className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40 ">
         <div className="flex flex-col w-full mb-16">
         <motion.div

@@ -4290,6 +4290,11 @@ fs.realpath@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
   integrity sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
 
+fs@^0.0.1-security:
+  version "0.0.1-security"
+  resolved "https://registry.yarnpkg.com/fs/-/fs-0.0.1-security.tgz#8a7bd37186b6dddf3813f23858b57ecaaf5e41d4"
+  integrity sha1-invTcYa23d84E/I4WLV+yq9eQdQ=
+
 fsevents@^2.3.2, fsevents@~2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
@@ -7070,7 +7075,15 @@ react-router-dom@6:
     history "^5.2.0"
     react-router "6.2.1"
 
-react-router@6.2.1:
+react-router-sitemap-generator@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/react-router-sitemap-generator/-/react-router-sitemap-generator-0.0.8.tgz#df6c2de57693d00b930e7c156fcd754e2239259f"
+  integrity sha512-JC842G0d6CC03IziyvaWvEZ/u52AhGaIoYmezv5dTw1ty1yNmJuEOeYTtyJg21pb3NgImI0Qn9qAasfmbJ7Mdw==
+  dependencies:
+    fs "^0.0.1-security"
+    xml-js "^1.6.11"
+
+react-router@6.2.1, react-router@^6.2.1:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.2.1.tgz#be2a97a6006ce1d9123c28934e604faef51448a3"
   integrity sha512-2fG0udBtxou9lXtK97eJeET2ki5//UWfQSl1rlJ7quwe6jrktK9FCCc8dQb5QY6jAv3jua8bBQRhhDOM/kVRsg==
@@ -7400,7 +7413,7 @@ sass-loader@^12.3.0:
     klona "^2.0.4"
     neo-async "^2.6.2"
 
-sax@~1.2.4:
+sax@^1.2.4, sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
@@ -8751,6 +8764,13 @@ ws@^8.4.2:
   version "8.5.0"
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.5.0.tgz#bfb4be96600757fe5382de12c670dab984a1ed4f"
   integrity sha512-BWX0SWVgLPzYwF8lTzEy1egjhS4S4OEAHfsO8o65WOVsrnSRGaSiUaa9e0ggGlkMTtBlmOpEXiie9RUcBO86qg==
+
+xml-js@^1.6.11:
+  version "1.6.11"
+  resolved "https://registry.yarnpkg.com/xml-js/-/xml-js-1.6.11.tgz#927d2f6947f7f1c19a316dd8eea3614e8b18f8e9"
+  integrity sha512-7rVi2KMfwfWFl+GpPg6m80IVMWXLRjO+PxTq7V2CDhoGak0wzYzFgUY2m4XJ47OGdXd8eLE8EmwfAmdjw7lC1g==
+  dependencies:
+    sax "^1.2.4"
 
 xml-name-validator@^3.0.0:
   version "3.0.0"
