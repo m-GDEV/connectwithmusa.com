@@ -1,50 +1,26 @@
 {
   "name": "connectwithmusa.com",
   "homepage": "https://connectwithmusa.com",
-  "version": "0.1.0",
   "private": true,
+  "version": "0.9",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "@heroicons/react": "^1.0.5",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "framer-motion": "^6.2.3",
+    "autoprefixer": "^10.4.2",
+    "framer-motion": "^6.2.8",
+    "heroicons": "^1.0.5",
+    "postcss": "^8.4.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-router": "^6.2.1",
-    "react-router-dom": "6",
-    "react-scripts": "5.0.0",
-    "web-vitals": "^2.1.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "react-router-dom": "^6.2.1",
+    "tailwindcss": "^3.0.23"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.5",
-    "react-router-sitemap-generator": "^0.0.8",
-    "tailwindcss": "^3.0.15"
+    "@vitejs/plugin-react": "^1.0.7",
+    "vite": "^2.8.0"
   }
 }

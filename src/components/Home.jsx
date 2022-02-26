@@ -19,16 +19,15 @@ export default function About() {
             onClick={() => setToggled(!toggled)}>
             Musa Ahmed
           </motion.h1>          
-          <p className="mb-8 mt-2 sm:mt-4 lg:mt-10 font-bold font-dm-sans text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed text-white">
+          <div className="mb-8 mt-2 sm:mt-4 lg:mt-10 font-bold font-dm-sans text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed text-white">
           Welcome to my personal website. Here you will find my resume, portfolio 
           {/* tf this nobr element is so weird */}
           <a className="group" href="https://www.grammarbook.com/blog/commas/oxford-comma/" rel="noreferrer" target="_blank">,&nbsp;
-          <div className="absolute w-auto p-2 m-2 min-w-max left-96 rounded-xl border-br-lightpurple border-4 text-white bg-b-darkpurple font-dm-sans font-bold text-sm transition-all duration-500 scale-0 origin-bottom group-hover:scale-100">
+          <p className="absolute w-auto p-2 m-2 min-w-max left-96 rounded-xl border-br-lightpurple border-4 text-white bg-b-darkpurple font-dm-sans font-bold text-sm transition-all duration-500 scale-0 origin-bottom group-hover:scale-100">
             What's that comma doing there? Click it to find out!
-          </div></a>
+          </p></a>
           <nobr>and blog.</nobr>
-
-          </p>
+          </div>
           <div className="flex flex-col sm:flex-row justify-center font-dm-sans place-items-center">
             <Link
               to="/projects"

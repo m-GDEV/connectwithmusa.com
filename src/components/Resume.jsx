@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const included = ["Work Experience", "Education", "Projects", "Awards", "Skills", "Languages"];
 const includedList = included.map((item) => 
-    <li>{item}</li>
+    <li key={item}>{item}</li>
 );
 
 export default function Resume() {
