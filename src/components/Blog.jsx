@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { RssIcon } from "@heroicons/react/solid";
+import * as contentful from 'contentful'
 
 export default function Blog() {
+
+  const [posts, setPosts] = useState([]);
+
+  const client = contentful.createClient({
+    space: 'tkkap2qwga9d',
+    accessToken: 'sTjWeZ_140SZZ_mO31EwE7GBz35zeAVD227g9BTAvus' });
+
+    useEffect(() => {
+      client.getEntries()
+      .then(entries => setPosts(entries.items))
+    },[])
 
     return (
         <section className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">
@@ -23,12 +35,15 @@ export default function Blog() {
               </p>
             </div>
     
-            <div className="flex flex-row w-full bg-white border border-red-500">
- 
+            {posts.map(({fields}) => (
+            <div className="flex flex-col w-full border border-red-500" key={fields}>
+                <h1>{fields.title}</h1>
+                <p>{fields.author}</p>
+                <p> {fields.featureImage} </p>
+                <p>{fields.date}</p>
+                <p>{fields.content}</p>
             </div>
-
-
-
+            ))}             
         </div>
         </section>
       );

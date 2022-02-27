@@ -12,12 +12,12 @@ export default function Navbar() {
   );
 
   const navItemsMobile = sections.map((section) =>
-  <li className="py-2 hover:bg-g-light bg-g-dark px-8 hover:border-b" key={section.toString()}> <Link to={'/' + section} onClick={() => setToggled(!toggled)}>{section.replace(/^\w/, (c) => c.toUpperCase())}</Link> </li>
+  <Link className="py-2 hover:bg-g-light bg-g-dark px-8 hover:border-b block" key={section.toString()} to={'/' + section} onClick={() => setToggled(!toggled)}>{section.replace(/^\w/, (c) => c.toUpperCase())}</Link>
 );
 
   // mobile nav change class onclick with state
   const [toggled, setToggled] = useState(false);
-  const classChange = toggled ? "block" : "hidden";
+  const classChange = toggled ? "scale-100 sm:hidden" : "scale-0 hidden";
 
   return (
     <header className="bg-g-light backrdrop-blur sticky top-0 z-10">
@@ -39,24 +39,23 @@ export default function Navbar() {
         </Link>
       </nav>
       <motion.button className="sm:hidden"
-      whileTap={{ scale: 1.7 }}
       onClick={() => setToggled(!toggled)}>
         <MenuIcon className="w-8 h-8 mr-2" /> 
       </motion.button>
     </div>
-    <div className={classChange}>
-      <ul className="text-white sm:hidden">
-        <li className="py-2 hover:bg-g-light bg-g-dark px-8 hover:border-b"><Link to='/' onClick={() => setToggled(!toggled)}>Home</Link> </li>
+    <div className={classChange + "transition-all duration-500 text-white"}>
+      <ul className={classChange}>
+        <Link className="py-2 hover:bg-g-light bg-g-dark px-8 hover:border-b block" to='/' onClick={() => setToggled(!toggled)}>Home</Link>
         {navItemsMobile}
-        <li className="bg-g-dark py-1 px-6">
           <Link
             onClick={() => setToggled(!toggled)}
             to="/contact"
-            className="text-h-brightgreen font-medium inline-flex items-center bg-b-darkpurple border-0 focus:outline-none py-1 mb-1 px-4 rounded-xl">
-            Contact Me
+            className="py-2 hover:bg-g-light bg-g-dark px-8 hover:border-b block text-h-brightgreen">
+            <button className="font-medium inline-flex items-center bg-b-darkpurple border-0 focus:outline-none py-1 mb-1 px-4 rounded-xl">
+              Contact Me
             <ChatAlt2Icon className="w-5 h-5 ml-1" />
+            </button>
           </Link>
-        </li>
       </ul>
     </div>
     </header>
