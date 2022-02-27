@@ -50,4 +50,5 @@ export const projects = [
     "skills",
     "resume",
     "about",
+    "blog",
   ];

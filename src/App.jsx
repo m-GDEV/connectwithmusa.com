@@ -12,6 +12,7 @@ import Contact from "./components/Contact";
 import Thanks from "./components/Thanks";
 import Footer from "./components/Footer";
 import Missing from "./components/Missing";
+import Blog from "./components/Blog";
 
 export default function App() {
     return (
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="skills" element={<Skills />} />
         <Route path="resume" element={<Resume />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="blog" element={<Blog />} />
         <Route path="thanks" element={<Thanks />} />
         </Routes>
         <Footer />
