@@ -18,7 +18,7 @@ import BlogPost from "./components/BlogPost";
 export default function App() {
 
     return (
-        <main>
+        <main className="font-sans">
         <Navbar />
         <hr className="bg-white h-1 mx-auto" /> 
         <Routes>

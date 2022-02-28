@@ -28,7 +28,7 @@ export default function Blog() {
 
             <div  key={fields.title}>
 
-            <div className="inline-flex justify-left text-base sm:text-lg font-rock-salt mb-6 text-h-brightgreen tracking-widest border border-2 rounded-xl py-2 px-2 border-br-lightpurple">
+            <div className="inline-flex justify-left text-base sm:text-lg font-rock-salt mb-6 text-h-brightgreen tracking-widest border-2 rounded-xl py-2 px-2 border-br-lightpurple">
             <Link to="/blog" className="hover:underline">Blog</Link>
             <p>&nbsp;&gt;&nbsp;</p>
             <p className="hover:underline">{fields.title}</p>
