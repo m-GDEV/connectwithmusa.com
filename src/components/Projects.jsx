@@ -28,7 +28,7 @@ export default function Projects() {
     
       <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-10 place-items-center break-words">
           {projects.map((projects) => (
-            <div className="w-11/12 sm:w-4/5 md:w-full h-full rounded-[25px] bg-b-darkishpurple pt-3 px-8 sm:px-10 border-[3px] border-br-lightpurple" key={projects.title}>
+            <div className="transition-all duration-500 w-11/12 sm:w-4/5 md:w-full h-full rounded-[25px] bg-b-darkishpurple pt-3 px-8 sm:px-10 border-[3px] border-br-lightpurple hover:drop-shadow-2xl" key={projects.title}>
               <h2 className="font-dm-sans text-h-brightgreen text-xl sm:text-2xl mb-1 mt-3">
                 {projects.title}
               </h2>

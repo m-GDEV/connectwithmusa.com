@@ -29,7 +29,7 @@ export default function Resume() {
           </p>
         </div>
         
-        <form className="font-dm-sans text-t-darkyellow outline-none" id="contact"
+        <form className="font-dm-sans text-t-darkyellow outline-none drop-shadow-2xl" id="contact"
             action="https://formsubmit.co/musaa.ahmed7@gmail.com" method="POST">
         {/* https://formsubmit.co */}
         <div className="flex flex-col sm:flex-row justify-center">
@@ -46,7 +46,7 @@ export default function Resume() {
             <input type="hidden" name="_template" value="box" />
         </div>
         
-        <textarea placeholder="Write you message here!" required form="contact" name="message"
+        <textarea placeholder="Write your message here!" required form="contact" name="message"
         className="mt-7 w-full md:w-[41.25rem] h-80 px-6 py-4 rounded-[38px] border-[3px] border-br-lightpurple
         bg-b-darkishpurple text-xl placeholder:text-[#AA9106] outline-none"/>
         <br />

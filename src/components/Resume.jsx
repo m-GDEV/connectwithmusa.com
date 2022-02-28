@@ -27,13 +27,13 @@ export default function Resume() {
           </p>
         </div>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-10 break-words">
-        <div className="bg-b-darkishpurple w-full py-8 px-5 rounded-xl border-[3px] border-br-lightpurple">
+        <div className="bg-b-darkishpurple w-full py-8 px-5 rounded-[38px] border-[3px] border-br-lightpurple  hover:drop-shadow-2xl">
             <h2 className="font-dm-sans font-bold text-3xl mb-4">What's Included</h2>
             <ul className="list-disc text-left ml-10 font-dm-sans text-lg sm:text-xl">
                 {includedList}
             </ul>
         </div>
-        <div className="bg-b-darkishpurple w-full py-8 px-5 rounded-xl border-[3px] border-br-lightpurple">
+        <div className="bg-b-darkishpurple w-full py-8 px-5 rounded-[38px] border-[3px] border-br-lightpurple  hover:drop-shadow-2xl">
             <h2 className="font-dm-sans font-bold text-3xl mb-4">Read It</h2>
             <ul className="text-center font-dm-sans text-md">
                 <li className="py-0.5 xl:mx-20 2xl:mx-32 mb-2 rounded-xl bg-gray-700 text-t-darkyellow flex items-center justify-center">

@@ -13,21 +13,24 @@ import Thanks from "./components/Thanks";
 import Footer from "./components/Footer";
 import Missing from "./components/Missing";
 import Blog from "./components/Blog";
+import BlogPost from "./components/BlogPost";
 
 export default function App() {
+
     return (
         <main>
         <Navbar />
         <hr className="bg-white h-1 mx-auto" /> 
         <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<Missing />} />
-        <Route path="projects" element={<Projects />} />
-        <Route path="skills" element={<Skills />} />
-        <Route path="resume" element={<Resume />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="blog" element={<Blog />} />
-        <Route path="thanks" element={<Thanks />} />
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<Missing />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="skills" element={<Skills />} />
+            <Route path="resume" element={<Resume />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="thanks" element={<Thanks />} />
+            <Route path="blog/:blogPost" element={<BlogPost />} />
         </Routes>
         <Footer />
         </main>

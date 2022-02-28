@@ -27,7 +27,7 @@ export default function Skills() {
         </div>
         <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 mx-6">
           {skills.map((skill) => (
-            <div key={skill} className="p-2 sm:w-1/2 w-full">
+            <div key={skill} className="p-2 sm:w-1/2 w-full hover:drop-shadow-2xl">
               <div className="bg-b-darkishpurple border-[3px] border-br-lightpurple rounded-[25px] flex p-4 h-full items-center">
                 <CheckCircleIcon className="text-green-400 w-6 h-6 flex-shrink-0 mr-4" />
                 <span className="text-lg md:text-xl text-t-darkyellow">

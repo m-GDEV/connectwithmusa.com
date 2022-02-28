@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { RssIcon } from "@heroicons/react/solid";
-import * as contentful from 'contentful'
+import * as contentful from 'contentful';
+import ReactMarkdown from "react-markdown";
+import { Link } from "react-router-dom";
 
 export default function Blog() {
 
@@ -9,7 +11,7 @@ export default function Blog() {
 
   const client = contentful.createClient({
     space: 'tkkap2qwga9d',
-    accessToken: 'sTjWeZ_140SZZ_mO31EwE7GBz35zeAVD227g9BTAvus' });
+    accessToken: 'sTjWeZ_140SZZ_mO31EwE7GBz35zeAVD227g9BTAvus'});
 
     useEffect(() => {
       client.getEntries()
@@ -34,17 +36,21 @@ export default function Blog() {
                 Welcome to my Blog! I typically write about Tech News, Tutorials, and whatever is on my mind :)
               </p>
             </div>
-    
-            {posts.map(({fields}) => (
-            <div className="flex flex-col w-full border border-red-500" key={fields}>
-                <h1>{fields.title}</h1>
-                <p>{fields.author}</p>
-                <p> {fields.featureImage} </p>
-                <p>{fields.date}</p>
-                <p>{fields.content}</p>
-            </div>
-            ))}             
+          {posts.map(({fields}) => (
+            <div className="flex justify-center mb-6" key={fields.title}>
+              <Link to={"/blog/" + fields.slug} className="w-11/12 sm:w-full xl:w-4/6 text-left px-8 py-6 font-dm-sans bg-b-darkishpurple rounded-[38px] border-[3px] border-br-lightpurple drop-shadow-2xl min-h-[10rem]">
+                <h1 className="text-xl sm:text-2xl text-t-darkyellow">{fields.title}</h1>
+                <div className="inline-flex text-lg mt-0.5 mb-2">
+                  <p>Musa Ahmed</p>
+                  <p className="ml-4">{new Date(fields.date).toDateString()}</p>
+                </div>
+                <p className="text-lg text-slate-500">
+                  {fields.description}</p>
+              </Link>
+           </div>
+          ))} 
         </div>
         </section>
       );
 }
+
