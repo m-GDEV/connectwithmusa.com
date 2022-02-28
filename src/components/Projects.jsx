@@ -1,5 +1,5 @@
 import { CodeIcon, ExternalLinkIcon } from "@heroicons/react/solid";
-import React from "react";
+import React, { useEffect } from "react";
 import { projects } from "../data";
 import { motion } from "framer-motion";
 
@@ -7,6 +7,11 @@ import { motion } from "framer-motion";
 // - when you click on a skill, open a modal that shows more info (summary from readme), picture/video demo, and link
 
 export default function Projects() {
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+  },[])
+
   return (
     <section id="projects" className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40 ">

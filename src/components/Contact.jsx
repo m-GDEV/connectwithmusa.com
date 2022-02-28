@@ -1,7 +1,7 @@
 // put links to linkedin and email
 // put form
 import { ChatAlt2Icon, FastForwardIcon } from "@heroicons/react/solid";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Resume() {
@@ -9,6 +9,10 @@ export default function Resume() {
     const val = `New submission from Contact page! - ${new Date(Date.now()).toDateString()}`;
     // checking if url is long enough to match cwm, if not then url is localhost
     const url = window.location.href.substring(34) ? "https://connectwithmusa.com" : "http://localhost:3000";
+
+    useEffect(() => {
+      window.scrollTo({top: 0, behavior: "smooth"});
+    },[])
 
   return (
     <section className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">

@@ -1,5 +1,5 @@
 import { BriefcaseIcon, DocumentTextIcon, ClockIcon, PencilIcon } from "@heroicons/react/solid";
-import React from "react";
+import React,{ useEffect } from "react";
 import { motion } from "framer-motion";
 
 const included = ["Work Experience", "Education", "Projects", "Awards", "Skills", "Languages"];
@@ -8,6 +8,11 @@ const includedList = included.map((item) =>
 );
 
 export default function Resume() {
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+  },[])
+
   return (
     <section className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40 ">

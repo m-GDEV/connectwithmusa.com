@@ -1,4 +1,4 @@
-import React , { useState } from "react";
+import React , { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
 import { motion } from "framer-motion";
 
@@ -8,6 +8,10 @@ export default function About() {
   const [toggled, setToggled] = useState(false);
   // even if user click my name h1, the dino game only shows on screens larger than xl
   const classChange = toggled ? "hidden xl:block top-32 right-20 absolute focus" : "hidden";
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+  },[])
 
   return (
     <section id="about" className="bg-gradient-to-t from-g-dark to-g-light min-h-screen">

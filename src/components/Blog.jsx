@@ -15,7 +15,8 @@ export default function Blog() {
 
     useEffect(() => {
       client.getEntries()
-      .then(entries => setPosts(entries.items))
+      .then(entries => setPosts(entries.items));
+      window.scrollTo({top: 0, behavior: "smooth"});
     },[])
 
     return (
@@ -33,12 +34,12 @@ export default function Blog() {
                 Blog
               </h1>
               <p className="lg:w-2/3 mx-auto leading-relaxed text-lg sm:text-xl font-dm-sans italic">
-                Welcome to my Blog! I typically write about Tech News, Tutorials, and whatever is on my mind :)
+                Welcome to my Blog! I typically write about Tech News, Tutorials, or whatever is on my mind :)
               </p>
             </div>
           {posts.map(({fields}) => (
             <div className="flex justify-center mb-6" key={fields.title}>
-              <Link to={"/blog/" + fields.slug} className="w-11/12 sm:w-full xl:w-4/6 text-left px-8 py-6 font-dm-sans bg-b-darkishpurple rounded-[38px] border-[3px] border-br-lightpurple drop-shadow-2xl min-h-[10rem]">
+              <Link to={"/blog/" + fields.slug} className="w-11/12 sm:w-full xl:w-4/6 text-left px-8 py-6 font-dm-sans bg-b-darkishpurple rounded-[38px] border-[3px] border-br-lightpurple hover:drop-shadow-2xl min-h-[10rem]">
                 <h1 className="text-xl sm:text-2xl text-t-darkyellow">{fields.title}</h1>
                 <div className="inline-flex text-lg mt-0.5 mb-2">
                   <p>Musa Ahmed</p>
