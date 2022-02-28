@@ -24,27 +24,33 @@ export default function Blog() {
     return (
         <section className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">
           <div className="container px-5 py-10 mx-auto text-center lg:px-40 ">
-            <div className="inline-flex sm:text-lg justify-left text-lg font-rock-salt mb-6 text-h-brightgreen tracking-widest">
-                <Link to="/blog" className="hover:underline">Blog</Link>
-                <p>&nbsp;&gt;&nbsp;</p>
-                <p className="hover:underline">{slug}</p>
+          {posts.map(({fields}) => (
+
+            <div  key={fields.title}>
+
+            <div className="inline-flex justify-left text-base sm:text-lg font-rock-salt mb-6 text-h-brightgreen tracking-widest border border-2 rounded-xl py-2 px-2 border-br-lightpurple">
+            <Link to="/blog" className="hover:underline">Blog</Link>
+            <p>&nbsp;&gt;&nbsp;</p>
+            <p className="hover:underline">{fields.title}</p>
             </div>
 
-          {posts.map(({fields}) => (
-            <div className="flex text-lg justify-center mb-6 text-green-500" key={fields.title}>
+            <div className="flex sm:text-lg justify-center mb-6 text-green-500">
               <div className="w-11/12 sm:w-full xl:w-4/6 text-left px-8 py-6 font-dm-sans bg-b-darkishpurple rounded-[38px] border-[3px] 
               border-br-lightpurple drop-shadow-2xl min-h-[10rem]">
-                <img className="rounded-2xl drop-shawdow-2xl mt-2 mb-4" src={fields.imageurl} />
-                <h1 className="text-3xl sm:text-4xl text-t-darkyellow mb-2">{fields.title}</h1>
+                <img className="rounded-2xl drop-shawdow-2xl mt-2 mb-4 max-h-[22rem]" src={fields.imageurl} />
+                <h1 className="text-xl sm:text-4xl text-t-darkyellow mb-2">{fields.title}</h1>
                 <p>✏️ Musa Ahmed</p>
-                <p>⏳ {useReadingTime(fields.content).text}</p>
                 <p>📅 {new Date(fields.date).toDateString()}</p>
-                <p className="text-lg text-slate-500 mb-10">{fields.description}</p>
+                <p>⏳ {useReadingTime(fields.content).text}</p>
+                <p className="text-lg text-slate-500 mb-10 mt-2">{fields.description}</p>
                 <ReactMarkdown className="text-base text-white">{fields.content}</ReactMarkdown>
               </div>
            </div>
+
+           </div>
           ))} 
         </div>
+        
         </section>
       );
 }
