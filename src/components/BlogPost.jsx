@@ -43,7 +43,7 @@ export default function Blog() {
                 <p>📅 {new Date(fields.date).toDateString()}</p>
                 <p>⏳ {useReadingTime(fields.content).text}</p>
                 <p className="text-lg text-slate-500 mb-10 mt-2">{fields.description}</p>
-                <ReactMarkdown className="text-base text-white">{fields.content}</ReactMarkdown>
+                <ReactMarkdown className="post-content text-white">{fields.content}</ReactMarkdown>
               </div>
            </div>
 

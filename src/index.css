@@ -2,3 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 @heroicons;
+
+/* custom styles for the post content */
+@layer components {
+    .post-content h1 {
+        @apply text-4xl;
+        @apply underline;
+        @apply mb-4;
+        @apply font-bold;
+    }
+    .post-content h2 {
+        @apply text-3xl;
+        @apply text-t-darkyellow;
+        @apply underline;
+        @apply mb-2;
+        @apply mt-4;
+        
+    }
+    .post-content h3 {
+        @apply text-2xl;
+        @apply underline;
+        @apply mb-2;
+        @apply mt-4;
+        
+    }
+    .post-content h4 {
+        @apply text-xl;
+        @apply underline;
+        @apply mb-2;
+        @apply mt-4;
+        
+    }
+    .post-content a {
+        @apply text-h-brightgreen;
+        @apply underline;
+    }
+    .post-content ul, ol {
+        @apply list-disc;
+        @apply ml-5
+    }
+    .post-content p {
+        @apply mt-4;
+    }
+    .post-content code {
+        @apply bg-b-darkpurple;
+        @apply py-1;
+        @apply px-2;
+        @apply rounded-xl border;
+        @apply text-base;
+    }
+}
