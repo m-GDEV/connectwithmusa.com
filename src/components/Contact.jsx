@@ -1,17 +1,18 @@
-// put links to linkedin and email
-// put form
 import { ChatAlt2Icon, FastForwardIcon } from "@heroicons/react/solid";
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { sectionDescriptions } from "../data";
 
 export default function Resume() {
 
     const val = `New submission from Contact page! - ${new Date(Date.now()).toDateString()}`;
+    const  pageDesc  =  sectionDescriptions[5];
     // checking if url is long enough to match cwm, if not then url is localhost
     const url = window.location.href.substring(34) ? "https://connectwithmusa.com" : "http://localhost:3000";
 
     useEffect(() => {
       window.scrollTo({top: 0, behavior: "smooth"});
+      document.getElementsByTagName('meta')[3].content = pageDesc;
     },[])
 
   return (
@@ -29,7 +30,7 @@ export default function Resume() {
             Contact
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-lg sm:text-xl font-dm-sans italic">
-            Questions, comments, or concerns? Reach out!
+          {pageDesc}
           </p>
         </div>
         

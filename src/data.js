@@ -42,7 +42,6 @@ export const projects = [
     "C",
     "Git / Github",
     "Linux / Shell Scripting",
-
   ];
 
   export const sections = [
@@ -52,3 +51,16 @@ export const projects = [
     "about",
     "blog",
   ];
+
+  // whats in resume
+  export const included = ["Work Experience", "Education", "Projects", "Awards", "Skills", "Languages"];
+
+  // order same as above except contact page is last
+  export const sectionDescriptions = [
+    "Here you will find a collection of all the noteworthy projects that I've worked on in the past. Each project has a github repository which includes a screenshot and a detailed description.",
+    "Listed below are what I consider some of my most valuable skills.",
+    "Below you will find my resume.",
+    "",
+    "Welcome to my Blog! I typically write about Tech News, Tutorials, or whatever is on my mind :)",
+    "Questions, comments, or concerns? Reach out!"
+  ]

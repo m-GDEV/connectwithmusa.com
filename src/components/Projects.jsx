@@ -2,14 +2,18 @@ import { CodeIcon, ExternalLinkIcon } from "@heroicons/react/solid";
 import React, { useEffect } from "react";
 import { projects } from "../data";
 import { motion } from "framer-motion";
+import  {  sectionDescriptions  }  from  "../data";
 
 // TODO:
 // - when you click on a skill, open a modal that shows more info (summary from readme), picture/video demo, and link
 
 export default function Projects() {
 
+  const  pageDesc  =  sectionDescriptions[0];
+
   useEffect(() => {
     window.scrollTo({top: 0, behavior: "smooth"});
+    document.getElementsByTagName('meta')[3].content = pageDesc;
   },[])
 
   return (
@@ -26,8 +30,7 @@ export default function Projects() {
             Projects I've built
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-lg sm:text-xl font-dm-sans italic">
-            Here you will find a collection of all the noteworthy projects that I've worked on in the past.
-            Each project has a github repository which includes a screenshot and a detailed description. 
+            {pageDesc}
           </p>
         </div>
     

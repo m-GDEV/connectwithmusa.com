@@ -1,3 +1,5 @@
+// linkedin and github links
+
 import React, {useEffect} from "react";
 
 export default function Missing() {

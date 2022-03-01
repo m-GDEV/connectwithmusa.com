@@ -1,6 +1,7 @@
 import React , { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
 import { motion } from "framer-motion";
+import { sectionDescriptions } from "../data";
 
 export default function About() {
 
@@ -11,6 +12,7 @@ export default function About() {
 
   useEffect(() => {
     window.scrollTo({top: 0, behavior: "smooth"});
+    document.getElementsByTagName('meta')[3].content = "Welcome to my personal website. Here you will find my resume, portfolio, and blog.";
   },[])
 
   return (

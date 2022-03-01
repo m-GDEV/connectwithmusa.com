@@ -21,6 +21,10 @@ export default function Blog() {
       window.scrollTo({top: 0, behavior: "smooth"});
     },[])
 
+    function changeDesc(desc) {
+        document.getElementsByTagName('meta')[3].content = desc;
+    }
+
     return (
         <section className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">
           <div className="container px-5 py-10 mx-auto text-center lg:px-40 ">
@@ -35,15 +39,15 @@ export default function Blog() {
             </div>
 
             <div className="flex sm:text-lg justify-center mb-6 text-green-500">
-              <div className="w-11/12 sm:w-full xl:w-4/6 text-left px-8 py-6 font-dm-sans bg-b-darkishpurple rounded-[38px] border-[3px] 
+              <div className="w-full sm:w-full xl:w-4/6 text-left px-8 py-6 font-dm-sans bg-b-darkishpurple rounded-[38px] border-[3px] 
               border-br-lightpurple drop-shadow-2xl min-h-[10rem]">
                 <img className="rounded-2xl drop-shawdow-2xl mt-2 mb-4 max-h-[22rem]" src={fields.imageurl} />
                 <h1 className="text-xl sm:text-4xl text-t-darkyellow mb-2">{fields.title}</h1>
                 <p>✏️ Musa Ahmed</p>
                 <p>📅 {new Date(fields.date).toDateString()}</p>
-                <p>⏳ {useReadingTime(fields.content).text}</p>
-                <p className="text-lg text-slate-500 mb-10 mt-2">{fields.description}</p>
-                <ReactMarkdown className="post-content text-white">{fields.content}</ReactMarkdown>
+                <p>⏳ {useReadingTime(fields.content).text}</p> 
+                <p className="text-lg text-slate-500 mb-10 mt-2" onLoad={changeDesc(fields.description)}>{fields.description}</p>
+                <article><ReactMarkdown className="post-content text-white">{fields.content}</ReactMarkdown></article>
               </div>
            </div>
 

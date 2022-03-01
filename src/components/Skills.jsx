@@ -2,14 +2,18 @@ import { ChipIcon, CheckCircleIcon } from "@heroicons/react/solid";
 import React, { useEffect } from "react";
 import { skills } from "../data";
 import { motion } from "framer-motion";
+import  {  sectionDescriptions  }  from  "../data";
 
 // TODO:
 // - when you click on a skill, open a modal that shows proficiency level, demo project using this, idk other stuff
 
 export default function Skills() {
 
+  const  pageDesc  =  sectionDescriptions[1];
+
   useEffect(() => {
     window.scrollTo({top: 0, behavior: "smooth"});
+    document.getElementsByTagName('meta')[3].content = pageDesc;
   },[])
 
   return (
@@ -27,7 +31,7 @@ export default function Skills() {
             Skills
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-lg sm:text-xl font-dm-sans italic">
-            Listed below are what I consider some of my most valuable skills.
+            {pageDesc}
           </p>
         </div>
         <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 mx-6">

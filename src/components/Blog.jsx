@@ -4,10 +4,12 @@ import { RssIcon } from "@heroicons/react/solid";
 import * as contentful from 'contentful';
 import { useReadingTime } from "react-hook-reading-time";
 import { Link } from "react-router-dom";
+import { sectionDescriptions } from "../data";
 
 export default function Blog() {
 
   const [posts, setPosts] = useState([]);
+  const pageDesc = sectionDescriptions[4];
 
   const client = contentful.createClient({
     space: 'tkkap2qwga9d',
@@ -17,6 +19,7 @@ export default function Blog() {
       client.getEntries()
       .then(entries => setPosts(entries.items));
       window.scrollTo({top: 0, behavior: "smooth"});
+      document.getElementsByTagName('meta')[3].content = pageDesc;
     },[])
 
     return (
@@ -34,7 +37,7 @@ export default function Blog() {
                 Blog
               </h1>
               <p className="lg:w-2/3 mx-auto leading-relaxed text-lg sm:text-xl font-dm-sans italic">
-                Welcome to my Blog! I typically write about Tech News, Tutorials, or whatever is on my mind :)
+                {pageDesc}
               </p>
             </div>
           {posts.map(({fields}) => (

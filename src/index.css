@@ -51,4 +51,10 @@
         @apply rounded-xl border;
         @apply text-base;
     }
+    .post-content strong {
+        @apply font-bold text-h-brightgreen;
+    }
+    .post-content em {
+        @apply text-h-brightgreen;
+    }
 }

@@ -1,16 +1,18 @@
 import { BriefcaseIcon, DocumentTextIcon, ClockIcon, PencilIcon } from "@heroicons/react/solid";
 import React,{ useEffect } from "react";
 import { motion } from "framer-motion";
-
-const included = ["Work Experience", "Education", "Projects", "Awards", "Skills", "Languages"];
-const includedList = included.map((item) => 
-    <li key={item}>{item}</li>
-);
+import  {  sectionDescriptions, included  }  from  "../data";
 
 export default function Resume() {
 
+  const  pageDesc  =  sectionDescriptions[2];
+  const includedList = included.map((item) => 
+    <li key={item}>{item}</li>
+    );
+
   useEffect(() => {
     window.scrollTo({top: 0, behavior: "smooth"});
+    document.getElementsByTagName('meta')[3].content  =  pageDesc;
   },[])
 
   return (
@@ -28,7 +30,7 @@ export default function Resume() {
             Resume
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-lg sm:text-xl font-dm-sans italic">
-            Below you will find my resume.
+            {pageDesc}
           </p>
         </div>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-10 break-words">
