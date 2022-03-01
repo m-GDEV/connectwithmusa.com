@@ -21,11 +21,11 @@ export default function About() {
         <div className=" md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
           <motion.h1 
             whileHover={{scale:0.9, transition: {duration: 0.4}, }} drag dragSnapToOrigin={true}
-            className="mt-80 whitespace-nowrap font-rock-salt text-4xl sm:text-6xl md:text-7xl lg:text-9xl leading-normal mb-6 text-h-brightgreen"
+            className="mt-20 2xl:mt-80 whitespace-nowrap font-rock-salt text-4xl sm:text-6xl md:text-6xl xl:text-9xl leading-normal mb-6 text-h-brightgreen"
             onClick={() => setToggled(!toggled)}>
             Musa Ahmed
           </motion.h1>          
-          <div className="mb-8 mt-2 sm:mt-4 lg:mt-10 font-bold font-dm-sans text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed text-white">
+          <div className="mb-8 mt-2 sm:mt-4 lg:mt-10 font-bold font-dm-sans text-lg sm:text-2xl md:text-2xl xl:text-4xl leading-relaxed text-white">
           Welcome to my personal website. Here you will find my resume, portfolio 
           {/* tf this nobr element is so weird */}
           <a className="group" href="https://www.grammarbook.com/blog/commas/oxford-comma/" rel="noreferrer" target="_blank">,&nbsp;

@@ -3,7 +3,6 @@ import React from 'react';
 
 export default function Missing() {
 
-
     return (
         <section className=" font-dm-sans italic bg-gradient-to-t from-g-dark to-g-light min-h-screen">
           <div className="container px-5 py-24 sm:py-48 mx-auto text-center lg:px-40 flex place-items-center flex-col">
