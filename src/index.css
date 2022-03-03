@@ -48,7 +48,7 @@
         @apply bg-b-darkpurple;
         @apply py-1;
         @apply px-2;
-        @apply rounded-xl border;
+        @apply rounded-xl;
         @apply text-base;
     }
     .post-content strong {
@@ -56,5 +56,8 @@
     }
     .post-content em {
         @apply text-h-brightgreen;
+    }
+    .post-content {
+        @apply break-words;
     }
 }
