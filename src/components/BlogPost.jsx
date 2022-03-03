@@ -41,7 +41,7 @@ export default function Blog() {
             <div className="flex sm:text-lg justify-center mb-6 text-green-500">
               <div className="w-full sm:w-full xl:w-4/6 text-left px-8 py-6 font-dm-sans bg-b-darkishpurple rounded-[38px] border-[3px] 
               border-br-lightpurple drop-shadow-2xl min-h-[10rem]">
-                <img className="rounded-2xl drop-shawdow-2xl mt-2 mb-4 max-h-[22rem]" src={fields.imageurl} />
+                <img className="rounded-2xl drop-shawdow-2xl mt-2 mb-4 max-h-[22rem]" alt={"image for " + fields.title + " post"} src={fields.imageurl} />
                 <h1 className="text-xl sm:text-4xl text-t-darkyellow mb-2">{fields.title}</h1>
                 <p>✏️ Musa Ahmed</p>
                 <p>📅 {new Date(fields.date).toDateString()}</p>
@@ -50,9 +50,9 @@ export default function Blog() {
                 <article><ReactMarkdown className="post-content text-white">{fields.content}</ReactMarkdown></article>
               </div>
            </div>
-
            </div>
           ))} 
+
         </div>
         
         </section>

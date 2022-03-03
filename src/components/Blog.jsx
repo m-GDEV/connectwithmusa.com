@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { RssIcon } from "@heroicons/react/solid";
 import * as contentful from 'contentful';
 import { useReadingTime } from "react-hook-reading-time";
@@ -11,6 +10,9 @@ export default function Blog() {
   const [posts, setPosts] = useState([]);
   const pageDesc = sectionDescriptions[4];
 
+  const [toggled, setToggle] = useState(false);
+  const classchange = toggled ? "rotate-[360deg] transition-all duration-[4000ms]" : "";
+
   const client = contentful.createClient({
     space: 'tkkap2qwga9d',
     accessToken: 'sTjWeZ_140SZZ_mO31EwE7GBz35zeAVD227g9BTAvus'});
@@ -20,19 +22,18 @@ export default function Blog() {
       .then(entries => setPosts(entries.items));
       window.scrollTo({top: 0, behavior: "smooth"});
       document.getElementsByTagName('meta')[3].content = pageDesc;
+      setToggle(true);
     },[])
 
     return (
         <section className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">
           <div className="container px-5 py-10 mx-auto text-center lg:px-40 ">
             <div className="flex flex-col w-full mb-16">
-              <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2 }}
-              >  
+
+            <div className={classchange}>  
               <RssIcon
                 className="mx-auto inline-block w-10 mb-4 text-t-darkyellow" />
-              </motion.div>
+              </div>
               <h1 className="sm:text-3xl text-2xl font-rock-salt mb-4 text-h-brightgreen">
                 Blog
               </h1>

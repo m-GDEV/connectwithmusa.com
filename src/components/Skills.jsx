@@ -1,7 +1,6 @@
 import { ChipIcon, CheckCircleIcon } from "@heroicons/react/solid";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { skills } from "../data";
-import { motion } from "framer-motion";
 import  {  sectionDescriptions  }  from  "../data";
 
 // TODO:
@@ -10,23 +9,24 @@ import  {  sectionDescriptions  }  from  "../data";
 export default function Skills() {
 
   const  pageDesc  =  sectionDescriptions[1];
+  
+  const  [toggled,  setToggle]  =  useState(false);
+  const  classchange  =  toggled  ?  "rotate-[360deg] transition-all duration-[4000ms]"  :  "";
 
   useEffect(() => {
     window.scrollTo({top: 0, behavior: "smooth"});
     document.getElementsByTagName('meta')[3].content = pageDesc;
+    setToggle(true);
   },[])
 
   return (
     <section className="text-white min-h-screen bg-gradient-to-t from-g-dark to-g-light ">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40 ">
         <div className="flex flex-col w-full mb-16">
-          <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 2 }}
-          >  
+          <div  className={classchange}>
           <ChipIcon 
             className="mx-auto inline-block w-10 mb-4 text-t-darkyellow" />
-          </motion.div>
+          </div>
           <h1 className="sm:text-3xl text-2xl font-rock-salt mb-4 text-h-brightgreen">
             Skills
           </h1>

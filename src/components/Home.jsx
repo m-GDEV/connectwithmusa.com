@@ -1,7 +1,5 @@
 import React , { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
-import { motion } from "framer-motion";
-import { sectionDescriptions } from "../data";
 
 export default function About() {
 
@@ -19,12 +17,12 @@ export default function About() {
     <section id="about" className="bg-gradient-to-t from-g-dark to-g-light min-h-screen">
       <div className="sm:mx-auto flex px-20 py-20 md:flex-row flex-col items-center">
         <div className=" md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
-          <motion.h1 
-            whileHover={{scale:0.9, transition: {duration: 0.4}, }} drag dragSnapToOrigin={true}
-            className="mt-20 2xl:mt-80 whitespace-nowrap font-rock-salt text-4xl sm:text-6xl md:text-6xl xl:text-9xl leading-normal mb-6 text-h-brightgreen"
+          <h1
+            className="mt-20 2xl:mt-80 whitespace-nowrap font-rock-salt text-4xl sm:text-6xl md:text-6xl xl:text-9xl leading-normal mb-6 
+            text-h-brightgreen hover:scale-90 duration-500 transition-all"
             onClick={() => setToggled(!toggled)}>
             Musa Ahmed
-          </motion.h1>          
+          </h1>          
           <div className="mb-8 mt-2 sm:mt-4 lg:mt-10 font-bold font-dm-sans text-lg sm:text-2xl md:text-2xl xl:text-4xl leading-relaxed text-white">
           Welcome to my personal website. Here you will find my resume, portfolio 
           {/* tf this nobr element is so weird */}

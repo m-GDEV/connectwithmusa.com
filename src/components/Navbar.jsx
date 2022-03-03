@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { sections } from "../data";
 import { ChatAlt2Icon, MenuIcon } from "@heroicons/react/solid";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -38,10 +37,10 @@ export default function Navbar() {
           <ChatAlt2Icon className="w-5 h-5 ml-1" />
         </Link>
       </nav>
-      <motion.button className="sm:hidden"
+      <button className="sm:hidden" aria-label="mobile menu hamburger toggle"
       onClick={() => setToggled(!toggled)}>
         <MenuIcon className="w-8 h-8 mr-2" /> 
-      </motion.button>
+      </button>
     </div>
     <div className={classChange + "transition-all duration-500 text-white"}>
       <ul className={classChange}>

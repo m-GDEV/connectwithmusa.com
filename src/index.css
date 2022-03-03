@@ -43,6 +43,8 @@
     }
     .post-content p {
         @apply mt-4;
+        @apply text-xl;
+        @apply leading-relaxed;
     }
     .post-content code {
         @apply bg-b-darkpurple;
