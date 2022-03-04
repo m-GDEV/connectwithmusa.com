@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postbuild": "react-snap"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
+    "react-snap": "^1.23.0",
     "vite": "^2.8.0"
   }
 }
