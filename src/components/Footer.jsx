@@ -2,7 +2,7 @@ import { ArrowCircleUpIcon } from "@heroicons/react/solid";
 import React from "react";
 
 
-export default function Contact() {
+export default function Footer() {
     let date = new Date().getFullYear();
 
     const topFunction = () => {

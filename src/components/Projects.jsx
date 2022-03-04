@@ -2,6 +2,7 @@ import { CodeIcon, ExternalLinkIcon } from "@heroicons/react/solid";
 import React, { useEffect, useState } from "react";
 import { projects } from "../data";
 import  {  sectionDescriptions  }  from  "../data";
+import { useLocation } from "react-router";
 
 // TODO:
 // - when you click on a skill, open a modal that shows more info (summary from readme), picture/video demo, and link
@@ -13,11 +14,14 @@ export default function Projects() {
   const  [toggled,  setToggle]  =  useState(false);
   const  classchange  =  toggled  ?  "rotate-[360deg] transition-all duration-[4000ms]"  :  "";
 
+  const path = useLocation().pathname.substring(1).replace(/^\w/, (c) => c.toUpperCase());
+
 
   useEffect(() => {
     window.scrollTo({top: 0, behavior: "smooth"});
     document.getElementsByTagName('meta')[3].content = pageDesc;
     setToggle(true);
+    document.title = `${path} - Musa Ahmed`;
   },[])
 
   return (

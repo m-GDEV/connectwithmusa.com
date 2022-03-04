@@ -1,8 +1,9 @@
 import { ChatAlt2Icon, FastForwardIcon } from "@heroicons/react/solid";
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 import { sectionDescriptions } from "../data";
 
-export default function Resume() {
+export default function Contact() {
 
     const val = `New submission from Contact page! - ${new Date(Date.now()).toDateString()}`;
     const  pageDesc  =  sectionDescriptions[5];
@@ -12,10 +13,13 @@ export default function Resume() {
     const  [toggled,  setToggle]  =  useState(false);
     const  classchange  =  toggled  ?  "rotate-[360deg] transition-all duration-[4000ms]"  :  "";
 
+    const path = useLocation().pathname.substring(1).replace(/^\w/, (c) => c.toUpperCase());
+
     useEffect(() => {
       window.scrollTo({top: 0, behavior: "smooth"});
       document.getElementsByTagName('meta')[3].content = pageDesc;
       setToggle(true);
+      document.title = `${path} - Musa Ahmed`;
     },[])
 
   return (

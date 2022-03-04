@@ -2,6 +2,7 @@ import { ChipIcon, CheckCircleIcon } from "@heroicons/react/solid";
 import React, { useEffect, useState } from "react";
 import { skills } from "../data";
 import  {  sectionDescriptions  }  from  "../data";
+import { useLocation } from "react-router";
 
 // TODO:
 // - when you click on a skill, open a modal that shows proficiency level, demo project using this, idk other stuff
@@ -13,10 +14,13 @@ export default function Skills() {
   const  [toggled,  setToggle]  =  useState(false);
   const  classchange  =  toggled  ?  "rotate-[360deg] transition-all duration-[4000ms]"  :  "";
 
+  const path = useLocation().pathname.substring(1).replace(/^\w/, (c) => c.toUpperCase());
+
   useEffect(() => {
     window.scrollTo({top: 0, behavior: "smooth"});
     document.getElementsByTagName('meta')[3].content = pageDesc;
     setToggle(true);
+    document.title = `${path} - Musa Ahmed`;
   },[])
 
   return (
