@@ -34,7 +34,7 @@ export default function Resume() {
 
   return (
     <section className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">
-      <div className="container px-5 py-10 mx-auto text-center lg:px-40 ">
+      <div className="container px-3 sm:px-5 py-10 mx-auto text-center lg:px-40 ">
         <div className="flex flex-col w-full mb-16">
           <div  className={classchange}>
           <BriefcaseIcon 
@@ -68,11 +68,11 @@ export default function Resume() {
                     Made with&nbsp;<a href="https://rxresu.me/" target="_blank" rel="noreferrer" className="underline">Reactive Resume</a></li>
             </ul>
 
-            <div className="flex flex-row justify-center mt-8 font-dm-sans text-lg items-center">
+            <div className="flex flex-row justify-center mt-8 font-dm-sans text-lg items-center ">
             <a href="/resume-12022022.pdf" download 
-                className="bg-b-darkpurple px-4 py-1 rounded-xl hover:bg-b-brightpurple">Download</a>
+                className="bg-b-darkpurple px-4 py-1 rounded-xl hover:bg-b-brightpurple transition-all duration-500">Download</a>
             <a href="/resume-12022022.pdf" target="_blank" rel="noreferrer"
-                className="ml-4 bg-b-darkpurple px-4 py-1 rounded-xl hover:bg-b-brightpurple">View in browser</a>
+                className="ml-4 bg-b-darkpurple px-4 py-1 rounded-xl hover:bg-b-brightpurple transition-all duration-500">View in browser</a>
             </div>
 
         </div>

@@ -35,7 +35,7 @@ export default function Skills() {
 
   return (
     <section className="text-white min-h-screen bg-gradient-to-t from-g-dark to-g-light ">
-      <div className="container px-5 py-10 mx-auto text-center lg:px-40 ">
+      <div className="container px-3 sm:px-5 py-10 mx-auto text-center lg:px-40 ">
         <div className="flex flex-col w-full mb-16">
           <div  className={classchange}>
           <ChipIcon 
@@ -48,7 +48,7 @@ export default function Skills() {
             {pageDesc}
           </p>
         </div>
-        <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 mx-6">
+        <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 ">
           {skills.map((skill) => (
             <div key={skill} className="p-2 sm:w-1/2 w-full hover:drop-shadow-2xl">
               <div className="bg-b-darkishpurple border-[3px] border-br-lightpurple rounded-[25px] flex p-4 h-full items-center">

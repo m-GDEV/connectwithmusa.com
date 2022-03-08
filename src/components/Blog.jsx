@@ -42,7 +42,7 @@ export default function Blog() {
 
   return (
     <section className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">
-      <div className="container px-5 py-10 mx-auto text-center lg:px-40 ">
+      <div className="container px-3 sm:px-5 py-10 mx-auto text-center lg:px-40 ">
         <div className="flex flex-col w-full mb-16">
           <div className={classchange}>
             <RssIcon className="mx-auto inline-block w-10 mb-4 text-t-darkyellow" />
@@ -58,7 +58,7 @@ export default function Blog() {
           <div className="flex justify-center mb-6" key={fields.title}>
             <Link
               to={"/blog/" + fields.slug}
-              className="w-11/12 sm:w-full xl:w-4/6 text-left px-8 py-6 font-dm-sans bg-b-darkishpurple rounded-[38px] border-[3px] border-br-lightpurple hover:drop-shadow-2xl min-h-[10rem]"
+              className="w-full xl:w-4/6 text-left px-8 py-6 font-dm-sans bg-b-darkishpurple rounded-[38px] border-[3px] border-br-lightpurple hover:drop-shadow-2xl min-h-[10rem]"
             >
               <h1 className="text-xl sm:text-2xl text-t-darkyellow">
                 {fields.title}
@@ -72,7 +72,7 @@ export default function Blog() {
                   ⏳ {useReadingTime(fields.content).text}
                 </p>
               </div>
-              <p className="text-lg text-slate-500">{fields.description}</p>
+              <p className="text-base sm:text-lg text-slate-500">{fields.description}</p>
             </Link>
           </div>
         ))}

@@ -36,7 +36,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">
-      <div className="container px-5 py-10 mx-auto text-center lg:px-40 ">
+      <div className="container px-3 sm:px-5 py-10 mx-auto text-center lg:px-40 ">
         <div className="flex flex-col w-full mb-16">
         <div  className={classchange}> 
           <CodeIcon className="mx-auto inline-block w-10 mb-4 text-t-darkyellow" />
@@ -51,7 +51,7 @@ export default function Projects() {
     
       <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-10 place-items-center break-words">
           {projects.map((projects) => (
-            <div className="flex flex-col text-center transition-all duration-500 w-11/12 sm:w-4/5 md:w-full h-full rounded-[25px] bg-b-darkishpurple pt-3 px-8 sm:px-10 border-[3px] border-br-lightpurple hover:drop-shadow-2xl" key={projects.title}>
+            <div className="flex flex-col text-center transition-all duration-500 w-full sm:w-4/5 md:w-full h-full rounded-[25px] bg-b-darkishpurple pt-3 px-8 sm:px-10 border-[3px] border-br-lightpurple hover:drop-shadow-2xl" key={projects.title}>
               <h2 className="font-dm-sans text-h-brightgreen text-xl sm:text-2xl mb-1 mt-3">
                 {projects.title}
               </h2>

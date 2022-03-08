@@ -28,7 +28,7 @@ export default function BlogPost() {
 
   return (
     <section className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">
-      <div className="container px-5 py-10 mx-auto text-center lg:px-40 ">
+      <div className="container px-2 sm:px-5 py-10 mx-auto text-center lg:px-40 ">
         {posts.map(({ fields }) => (
           <div key={fields.title}>
             <div className="inline-flex justify-left text-base sm:text-lg font-rock-salt mb-6 text-h-brightgreen tracking-widest border-2 rounded-xl py-2 px-2 border-br-lightpurple">
@@ -50,6 +50,7 @@ export default function BlogPost() {
                 <img
                   className="rounded-2xl drop-shawdow-2xl mt-2 mb-4 max-h-[22rem]"
                   alt={"image for " + fields.title + " post"}
+                  loading="lazy"
                   src={fields.imageurl}
                 />
                 <h1 className="text-xl sm:text-4xl text-t-darkyellow mb-2">
