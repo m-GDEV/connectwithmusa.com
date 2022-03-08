@@ -25,7 +25,7 @@ export default function Missing() {
               Sorry about that! Visit this page on desktop for a surprise! Or go <Link to="/" className="underline text-h-brightgreen">Home</Link></p>
             <iframe src="https://m-gdev.github.io/chessboardjs/" frameBorder="0" scrolling="no" loading="lazy" noreferrer="true" title="chess board"
                 className="w-[400px] h-[400px] z-999 rounded-2xl justify-items-center hidden sm:inline-flex"></iframe>
-            <p className="text-h-brightgreen mt-2">(Drag the piece to move)</p>
+            <p className="text-h-brightgreen mt-2 hidden sm:block">(Drag the piece to move)</p>
         </div>
         </section>
     )

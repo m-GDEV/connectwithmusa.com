@@ -13,7 +13,17 @@ export default function Contact() {
     const  [toggled,  setToggle]  =  useState(false);
     const  classchange  =  toggled  ?  "rotate-[360deg] transition-all duration-[4000ms]"  :  "";
 
-    const path = useLocation().pathname.substring(1).replace(/^\w/, (c) => c.toUpperCase());
+    // long ass way to parse pathname, is here so that the title is the same whether the page is /page/ or /page
+    const pathname = useLocation().pathname; // eg. /blog
+
+    const check = (str) => { // checking if the last char in string is "/" eg. /blog/
+      if (str.slice(-1) == "/") {
+        return true;
+      }
+    }
+
+    // if has trailing / then cut that and first one out then capitalize, if no trailing / then cut first one and capitalize
+    const path = check(pathname) ? pathname.slice(1, pathname.length -1).replace(/^\w/, c => c.toUpperCase()) : pathname.slice(1).replace(/^\w/, c => c.toUpperCase());
 
     useEffect(() => {
       window.scrollTo({top: 0, behavior: "smooth"});

@@ -10,13 +10,20 @@ export default function Blog() {
   const pageDesc = sectionDescriptions[4]; // retreiveing data form data.js file about description for this page
 
   const [toggled, setToggle] = useState(false); // toggle for animation state of icon
-  const classchange = toggled
-    ? "rotate-[360deg] transition-all duration-[4000ms]"
-    : ""; // rotate 360 deg for 4s
+  const classchange = toggled ? "rotate-[360deg] transition-all duration-[4000ms]" : ""; // rotate 360 deg for 4s
 
-  const path = useLocation()
-    .pathname.substring(1)
-    .replace(/^\w/, (c) => c.toUpperCase()); // checking the route your on then removing leading / and convert first letter to uppercase
+
+  // long ass way to parse pathname, is here so that the title is the same whether the page is /page/ or /page
+  const pathname = useLocation().pathname; // eg. /blog
+
+  const check = (str) => { // checking if the last char in string is "/" eg. /blog/
+    if (str.slice(-1) == "/") {
+      return true;
+    }
+  }
+
+  // if has trailing / then cut that and first one out then capitalize, if no trailing / then cut first one and capitalize
+  const path = check(pathname) ? pathname.slice(1, pathname.length -1).replace(/^\w/, c => c.toUpperCase()) : pathname.slice(1).replace(/^\w/, c => c.toUpperCase());
 
   const client = contentful.createClient({
     space: "tkkap2qwga9d",
