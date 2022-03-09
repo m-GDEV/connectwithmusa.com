@@ -63,7 +63,9 @@ export default function Projects() {
               </p>
             <a
             className="inline-flex mt-auto justify-center rounded-[20px] mb-4 font-dm-sans py-1 px-12 text-sm bg-b-darkpurple uppercase
-            hover:scale-110 transition-all duration-500">
+            hover:scale-110 transition-all duration-500"
+            href={projects.link}
+            target="_blank">
               Learn More &nbsp;
               <ExternalLinkIcon className="w-5 text-blue-500"/>
             </a>
