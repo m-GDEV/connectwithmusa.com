@@ -7,7 +7,7 @@ import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Resume from "./components/Resume";
-//import About from "./components/About";
+import About from "./components/About";
 import Contact from "./components/Contact";
 import Thanks from "./components/Thanks";
 import Footer from "./components/Footer";
@@ -29,6 +29,7 @@ export default function App() {
             <Route path="resume" element={<Resume />} />
             <Route path="contact" element={<Contact />} />
             <Route path="blog" element={<Blog />} />
+            <Route path="about" element={<About />} />
             <Route path="thanks" element={<Thanks />} />
             <Route path="blog/:blogPost" element={<BlogPost />} />
         </Routes>

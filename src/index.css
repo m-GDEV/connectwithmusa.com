@@ -6,13 +6,13 @@
 /* custom styles for the post content */
 @layer components {
     .post-content h1 {
-        @apply text-4xl;
+        @apply sm:text-4xl text-2xl;
         @apply underline;
         @apply mb-4;
         @apply font-bold;
     }
     .post-content h2 {
-        @apply text-3xl;
+        @apply sm:text-3xl text-xl;
         @apply text-t-darkyellow;
         @apply underline;
         @apply mb-2;
@@ -43,14 +43,14 @@
     }
     .post-content p {
         @apply mt-4;
-        @apply text-xl;
+        @apply text-lg;
         @apply leading-relaxed;
     }
     .post-content code {
         @apply bg-b-darkpurple;
         @apply py-1;
         @apply px-2;
-        @apply rounded-xl;
+        @apply rounded-md;
         @apply text-base;
     }
     .post-content strong {
