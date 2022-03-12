@@ -18,7 +18,6 @@ export default function BlogPost() {
     client
       .getEntries({ "fields.slug": slug, content_type: "blogPost" })
       .then((entries) => setPosts(entries.items));
-    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   function changeMeta(desc, title) {
