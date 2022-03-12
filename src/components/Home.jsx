@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <section id="about" className="bg-gradient-to-t from-g-dark to-g-light min-h-screen">
-      <div className="sm:mx-auto px-20 py-20 ">
+      <div className="sm:mx-auto px-20 py-20">
         <div className=" md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
           <h1
             className="mt-20 2xl:mt-80 whitespace-nowrap font-rock-salt text-4xl sm:text-6xl md:text-6xl xl:text-9xl leading-normal mb-6 
