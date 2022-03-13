@@ -22,7 +22,7 @@ export default function Navbar() {
     <header className="bg-g-light backrdrop-blur sticky top-0 z-10">
     <p className="bg-red-600 text-white w-full text-center font-dm-sans underline"
     > Site under constrution! Please excuse any issues.</p>
-    <div className="container mx-auto flex flex-wrap p-5 md:flex-row items-center justify-between text-white">
+    <div className="lg:container mx-auto flex flex-wrap p-5 md:flex-row items-center justify-between text-white">
       <Link to="/"
         className="ml-3 text-xl sm:text-2xl md:text-xl lg:text-2xl font-rock-salt title-font font-medium hover:text-white text-h-brightgreen mb-1 md:mb-0">
         Musa Ahmed
