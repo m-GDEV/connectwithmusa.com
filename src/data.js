@@ -64,3 +64,4 @@ export const projects = [
     "Welcome to my Blog! I typically write about Tech News, Tutorials, or whatever is on my mind :)",
     "Questions, comments, or concerns? Reach out!"
   ]
+
