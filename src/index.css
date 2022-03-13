@@ -39,7 +39,10 @@
     }
     .post-content ul, ol {
         @apply list-disc;
-        @apply ml-5
+        @apply ml-5;
+    }
+    .post-content li {
+        @apply my-2;
     }
     .post-content p {
         @apply mt-4;
@@ -61,5 +64,8 @@
     }
     .post-content {
         @apply break-words;
+    }
+    .post-content img {
+        @apply rounded-2xl drop-shadow-2xl my-2;
     }
 }
