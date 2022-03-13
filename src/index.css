@@ -24,14 +24,13 @@
         @apply underline;
         @apply mb-2;
         @apply mt-4;
-        
+        @apply text-t-darkyellow;
     }
     .post-content h4 {
         @apply text-xl;
-        @apply underline;
         @apply mb-2;
         @apply mt-4;
-        
+        @apply text-t-darkyellow;
     }
     .post-content a {
         @apply text-h-brightgreen;

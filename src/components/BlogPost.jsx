@@ -57,7 +57,6 @@ export default function BlogPost() {
                 <img
                   className="rounded-2xl drop-shawdow-2xl mt-2 mb-4 max-h-[22rem]"
                   alt={"image for " + fields.title + " post"}
-                  loading="lazy"
                   src={fields.imageurl}
                 />
                 <h1 className="text-xl sm:text-4xl text-t-darkyellow mb-2">
