@@ -2,7 +2,7 @@
 
 import { IdentificationIcon } from "@heroicons/react/solid";
 import React, { useEffect, useState } from "react";
-import { sectionDescriptions, aboutImages } from "../data";
+import { sectionDescriptions, aboutImages, aboutInfo } from "../data";
 import { useLocation } from "react-router";
 
 // TODO:
@@ -72,23 +72,7 @@ export default function About() {
         px-8 py-6 text-left font-dm-sans text-base sm:text-lg"
         >
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat
-            odio facilisis mauris sit amet massa vitae tortor. Hendrerit dolor
-            magna eget est lorem ipsum dolor. At tempor commodo ullamcorper a
-            lacus vestibulum sed. Faucibus scelerisque eleifend donec pretium
-            vulputate sapien nec. Non quam lacus suspendisse faucibus. Duis at
-            tellus at urna. Vestibulum mattis ullamcorper velit sed ullamcorper
-            morbi tincidunt. Volutpat consequat mauris nunc congue nisi. Tortor
-            at auctor urna nunc id cursus metus aliquam eleifend. Imperdiet
-            massa tincidunt nunc pulvinar sapien et ligula ullamcorper
-            malesuada. Ac ut consequat semper viverra nam libero justo. Purus
-            sit amet volutpat consequat mauris. Nisi scelerisque eu ultrices
-            vitae auctor eu augue. Velit aliquet sagittis id consectetur purus
-            ut faucibus pulvinar. Habitasse platea dictumst quisque sagittis
-            purus sit amet. Vel eros donec ac odio. Habitasse platea dictumst
-            vestibulum rhoncus. Magna etiam tempor orci eu lobortis elementum
-            nibh tellus.
+            {aboutInfo}
           </p>
         </div>
       </div>

@@ -63,7 +63,25 @@ export const projects = [
       link: "mailto:musaa.ahmed7@gmail.com",
       username: "musaa.ahmed7@gmail.com"
     }
-  ]
+  ];
+
+  export const aboutInfo = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat
+    odio facilisis mauris sit amet massa vitae tortor. Hendrerit dolor
+    magna eget est lorem ipsum dolor. At tempor commodo ullamcorper a
+    lacus vestibulum sed. Faucibus scelerisque eleifend donec pretium
+    vulputate sapien nec. Non quam lacus suspendisse faucibus. Duis at
+    tellus at urna. Vestibulum mattis ullamcorper velit sed ullamcorper
+    morbi tincidunt. Volutpat consequat mauris nunc congue nisi. Tortor
+    at auctor urna nunc id cursus metus aliquam eleifend. Imperdiet
+    massa tincidunt nunc pulvinar sapien et ligula ullamcorper
+    malesuada. Ac ut consequat semper viverra nam libero justo. Purus
+    sit amet volutpat consequat mauris. Nisi scelerisque eu ultrices
+    vitae auctor eu augue. Velit aliquet sagittis id consectetur purus
+    ut faucibus pulvinar. Habitasse platea dictumst quisque sagittis
+    purus sit amet. Vel eros donec ac odio. Habitasse platea dictumst
+    vestibulum rhoncus. Magna etiam tempor orci eu lobortis elementum
+    nibh tellus.`;
 
   export const sections = [
     "projects",
