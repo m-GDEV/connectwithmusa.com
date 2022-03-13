@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Missing() {
+
+    useEffect(() => {
+      document.title = `404 Missing! - Musa Ahmed`; // change title according to path var onload
+    }, []);
 
   return (
     <Content />

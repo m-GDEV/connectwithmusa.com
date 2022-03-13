@@ -44,6 +44,27 @@ export const projects = [
     "Linux / Shell Scripting",
   ];
 
+  export const aboutImages = [
+    {
+      image: "/images/linkedin.png",
+      alt: "linkedin social link",
+      link: "https://www.linkedin.com/in/musa-ahmed/",
+      username: "musa-ahmed"
+    },
+    {
+      image: "/images/github.png",
+      alt: "github social link",
+      link: "https://github.com/m-GDEV",
+      username: "m-GDEV"
+    },
+    {
+      image: "/images/email.png",
+      alt: "email link",
+      link: "mailto:musaa.ahmed7@gmail.com",
+      username: "musaa.ahmed7@gmail.com"
+    }
+  ]
+
   export const sections = [
     "projects",
     "skills",

@@ -75,6 +75,9 @@ export default function BlogPost() {
                     {fields.content}
                   </ReactMarkdown>
                 </article>
+                <hr className="mt-4 h-1 bg-h-brightgreen border-none"/>
+                <h1 className="text-center sm:text-3xl text-xl mt-2 mb-2 text-t-darkyellow">
+                  Thoughts? Leave me a comment!</h1>
                 <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
               </div>
             </div>
