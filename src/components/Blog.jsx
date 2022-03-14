@@ -65,12 +65,8 @@ export default function Blog() {
               </h1>
               <div className="flex flex-col sm:flex-row text-lg mt-0.5 mb-2 text-green-500">
                 <p>✏️ Musa Ahmed</p>
-                <p className="sm:ml-2">
-                  📅 {new Date(fields.date).toDateString()}
-                </p>
-                <p className="sm:ml-2">
-                  ⏳ {useReadingTime(fields.content).text}
-                </p>
+                <p className="sm:ml-2">📅 {new Date(fields.date).toDateString()}</p>
+                <p className="sm:ml-2">⏳ {useReadingTime(fields.content).text}</p>
               </div>
               <p className="text-base sm:text-lg text-slate-500">{fields.description}</p>
             </Link>

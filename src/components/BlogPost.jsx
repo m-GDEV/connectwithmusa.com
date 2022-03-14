@@ -14,9 +14,9 @@ export default function BlogPost() {
   const disqusConfig = {
     url: `${window.location.href}`,
     identifier: `${slug}`,
-    title: `${slug}` // must change if there are more p's added above this one
+    title: `${slug}`
   }
-
+  
   const client = contentful.createClient({
     space: "tkkap2qwga9d",
     accessToken: "sTjWeZ_140SZZ_mO31EwE7GBz35zeAVD227g9BTAvus",

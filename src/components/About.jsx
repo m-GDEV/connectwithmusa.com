@@ -2,7 +2,12 @@
 
 import { IdentificationIcon } from "@heroicons/react/solid";
 import React, { useEffect, useState } from "react";
-import { sectionDescriptions, aboutImages, aboutInfo } from "../data";
+import {
+  sectionDescriptions,
+  aboutImages,
+  aboutInfo,
+  aboutTechnologies,
+} from "../data";
 import { useLocation } from "react-router";
 
 // TODO:
@@ -54,15 +59,20 @@ export default function About() {
             {pageDesc}
           </p>
         </div>
-        <div className="flex flex-row place-items-center sm:flex-wrap justify-center gap-0 sm:gap-4 break-all sm:break-normal">
+        <div className="flex flex-wrap place-items-center justify-center sm:gap-4 break-all sm:break-normal">
           {aboutImages.map((obj) => (
             <a
               href={obj.link}
               key={obj.link}
+              target="_blank"
               className="w-36 sm:w-48 justify-center flex flex-col place-items-center hover:scale-125 transition-all duration-300
-              drop-shadow-2xl"
+              drop-shadow-2xl mb-4 sm:mb-0"
             >
-              <img src={obj.image} alt={obj.alt} className="w-20 sm:w-24 rounded-2xl" />
+              <img
+                src={obj.image}
+                alt={obj.alt}
+                className="w-20 sm:w-24 rounded-2xl"
+              />
               <p className="underline text-blue-500 mt-2">{obj.username}</p>
             </a>
           ))}
@@ -71,8 +81,18 @@ export default function About() {
           className="mt-8 w-full bg-b-darkishpurple rounded-[38px] border-[3px] border-br-lightpurple hover:drop-shadow-2xl
         px-8 py-6 text-left font-dm-sans text-base sm:text-lg"
         >
-          <p>
-            {aboutInfo}
+          <p>{aboutInfo}</p>
+          <h2 className="text-center text-lg sm:text-xl mt-4 text-h-brightgreen">
+            🧰 Tools and Technologies I've worked with{" "}
+          </h2>
+          <p className="flex flex-wrap justify-center gap-4 mt-2">
+            {aboutTechnologies.map((tech) => (
+              <img
+                className="rounded-lg hover:scale-150 transition-all duration-300"
+                src={tech}
+                alt="logo of a technology i've worked with"
+              />
+            ))}
           </p>
         </div>
       </div>

@@ -65,6 +65,6 @@
         @apply break-words;
     }
     .post-content img {
-        @apply rounded-2xl drop-shadow-2xl my-2;
+        @apply rounded-2xl drop-shadow-2xl my-2 ;
     }
 }
