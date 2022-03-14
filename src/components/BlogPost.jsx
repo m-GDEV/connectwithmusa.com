@@ -14,9 +14,9 @@ export default function BlogPost() {
   const disqusConfig = {
     url: `${window.location.href}`,
     identifier: `${slug}`,
-    title: `${slug}`
-  }
-  
+    title: `${slug}`,
+  };
+
   const client = contentful.createClient({
     space: "tkkap2qwga9d",
     accessToken: "sTjWeZ_140SZZ_mO31EwE7GBz35zeAVD227g9BTAvus",
@@ -51,7 +51,7 @@ export default function BlogPost() {
               onLoad={changeMeta(fields.description, fields.title)}
             >
               <div
-                className="w-full sm:w-full xl:w-11/12 text-left px-8 py-6 font-dm-sans bg-b-darkishpurple rounded-[38px] border-[3px] 
+                className="w-full sm:w-full xl:w-11/12 text-left px-2 sm:px-8 py-6 font-dm-sans bg-b-darkishpurple rounded-[38px] border-[3px] 
               border-br-lightpurple drop-shadow-2xl min-h-[10rem]"
               >
                 <img
@@ -65,7 +65,15 @@ export default function BlogPost() {
                 <p>✏️ Musa Ahmed</p>
                 <p>📅 {new Date(fields.date).toDateString()}</p>
                 <p>⏳ {useReadingTime(fields.content).text}</p>
-                <p>💬 <Disqus.CommentCount shortname={disqusShortname} config={disqusConfig}>Comments</Disqus.CommentCount></p>
+                <p>
+                  💬{" "}
+                  <Disqus.CommentCount
+                    shortname={disqusShortname}
+                    config={disqusConfig}
+                  >
+                    Comments
+                  </Disqus.CommentCount>
+                </p>
                 <p className="text-lg text-slate-500 mb-10 mt-2">
                   {fields.description}
                 </p>
@@ -74,10 +82,14 @@ export default function BlogPost() {
                     {fields.content}
                   </ReactMarkdown>
                 </article>
-                <hr className="mt-4 h-1 bg-h-brightgreen border-none"/>
+                <hr className="mt-4 h-1 bg-h-brightgreen border-none" />
                 <h1 className="text-center sm:text-3xl text-xl mt-2 mb-2 text-t-darkyellow">
-                  Thoughts or Questions? Leave me a comment!</h1>
-                <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+                  Thoughts or Questions? Leave me a comment!
+                </h1>
+                <Disqus.DiscussionEmbed
+                  shortname={disqusShortname}
+                  config={disqusConfig}
+                />
               </div>
             </div>
           </div>

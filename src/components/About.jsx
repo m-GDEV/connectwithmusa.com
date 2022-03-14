@@ -79,7 +79,7 @@ export default function About() {
         </div>
         <div
           className="mt-8 w-full bg-b-darkishpurple rounded-[38px] border-[3px] border-br-lightpurple hover:drop-shadow-2xl
-        px-8 py-6 text-left font-dm-sans text-base sm:text-lg"
+        px-4 sm:px-8 py-6 text-left font-dm-sans text-base sm:text-lg"
         >
           <p>{aboutInfo}</p>
           <h2 className="text-center text-lg sm:text-xl mt-4 text-h-brightgreen">

@@ -1,46 +1,54 @@
 import { CodeIcon, ExternalLinkIcon } from "@heroicons/react/solid";
 import React, { useEffect, useState } from "react";
 import { projects } from "../data";
-import  {  sectionDescriptions  }  from  "../data";
+import { sectionDescriptions } from "../data";
 import { useLocation } from "react-router";
 
 // TODO:
 // - when you click on a skill, open a modal that shows more info (summary from readme), picture/video demo, and link
 
 export default function Projects() {
+  const pageDesc = sectionDescriptions[0];
 
-  const  pageDesc  =  sectionDescriptions[0];
+  const [toggled, setToggle] = useState(false);
+  const classchange = toggled
+    ? "rotate-[360deg] transition-all duration-[4000ms]"
+    : "";
 
-  const  [toggled,  setToggle]  =  useState(false);
-  const  classchange  =  toggled  ?  "rotate-[360deg] transition-all duration-[4000ms]"  :  "";
+  // long ass way to parse pathname, is here so that the title is the same whether the page is /page/ or /page
+  const pathname = useLocation().pathname; // eg. /blog
 
-    // long ass way to parse pathname, is here so that the title is the same whether the page is /page/ or /page
-    const pathname = useLocation().pathname; // eg. /blog
-
-    const check = (str) => { // checking if the last char in string is "/" eg. /blog/
-      if (str.slice(-1) == "/") {
-        return true;
-      }
+  const check = (str) => {
+    // checking if the last char in string is "/" eg. /blog/
+    if (str.slice(-1) == "/") {
+      return true;
     }
-  
-    // if has trailing / then cut that and first one out then capitalize, if no trailing / then cut first one and capitalize
-    const path = check(pathname) ? pathname.slice(1, pathname.length -1).replace(/^\w/, c => c.toUpperCase()) : pathname.slice(1).replace(/^\w/, c => c.toUpperCase());
+  };
 
+  // if has trailing / then cut that and first one out then capitalize, if no trailing / then cut first one and capitalize
+  const path = check(pathname)
+    ? pathname
+        .slice(1, pathname.length - 1)
+        .replace(/^\w/, (c) => c.toUpperCase())
+    : pathname.slice(1).replace(/^\w/, (c) => c.toUpperCase());
 
   useEffect(() => {
-    window.scrollTo({top: 0, behavior: "smooth"});
-    document.getElementsByTagName('meta')[3].content = pageDesc;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.getElementsByTagName("meta")[3].content = pageDesc;
     setToggle(true);
     document.title = `${path} - Musa Ahmed`;
-  },[])
+  }, []);
 
   return (
-    <section id="projects" className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">
+    <section
+      id="projects"
+      className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen"
+    >
       <div className="container px-3 sm:px-5 py-10 mx-auto text-center lg:px-40 ">
         <div className="flex flex-col w-full mb-16">
-        <div  className={classchange}> 
-          <CodeIcon className="mx-auto inline-block w-10 mb-4 text-t-darkyellow" />
-        </div>
+          <div className={classchange}>
+            <CodeIcon className="mx-auto inline-block w-10 mb-4 text-t-darkyellow" />
+          </div>
           <h1 className="sm:text-3xl text-2xl font-medium font-rock-salt mb-4 text-h-brightgreen">
             Projects I've built
           </h1>
@@ -48,10 +56,13 @@ export default function Projects() {
             {pageDesc}
           </p>
         </div>
-    
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-10 place-items-center break-words">
+
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-10 place-items-center break-words">
           {projects.map((projects) => (
-            <div className="flex flex-col text-center transition-all duration-500 w-full sm:w-4/5 md:w-full h-full rounded-[25px] bg-b-darkishpurple pt-3 px-8 sm:px-10 border-[3px] border-br-lightpurple hover:drop-shadow-2xl" key={projects.title}>
+            <div
+              className="flex flex-col text-center transition-all duration-500 w-full sm:w-4/5 md:w-full h-full rounded-[25px] bg-b-darkishpurple pt-3 px-4 sm:px-10 border-[3px] border-br-lightpurple hover:drop-shadow-2xl"
+              key={projects.title}
+            >
               <h2 className="font-dm-sans text-h-brightgreen text-xl sm:text-2xl mb-1 mt-3">
                 {projects.title}
               </h2>
@@ -59,19 +70,20 @@ export default function Projects() {
                 {projects.category}
               </p>
               <p className="font-dm-sans text-sm tracking-wider mb-4">
-              {projects.description}
+                {projects.description}
               </p>
-            <a
-            className="inline-flex mt-auto justify-center rounded-[20px] mb-4 font-dm-sans py-1 px-12 text-sm bg-b-darkpurple uppercase
+              <a
+                className="inline-flex mt-auto justify-center rounded-[20px] mb-4 font-dm-sans py-1 px-12 text-sm bg-b-darkpurple uppercase
             hover:scale-110 transition-all duration-500"
-            href={projects.link}
-            target="_blank">
-              Learn More &nbsp;
-              <ExternalLinkIcon className="w-5 text-blue-500"/>
-            </a>
+                href={projects.link}
+                target="_blank"
+              >
+                Learn More &nbsp;
+                <ExternalLinkIcon className="w-5 text-blue-500" />
+              </a>
             </div>
           ))}
-      </div>
+        </div>
       </div>
     </section>
   );

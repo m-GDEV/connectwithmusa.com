@@ -10,20 +10,26 @@ export default function Blog() {
   const pageDesc = sectionDescriptions[4]; // retreiveing data form data.js file about description for this page
 
   const [toggled, setToggle] = useState(false); // toggle for animation state of icon
-  const classchange = toggled ? "rotate-[360deg] transition-all duration-[4000ms]" : ""; // rotate 360 deg for 4s
-
+  const classchange = toggled
+    ? "rotate-[360deg] transition-all duration-[4000ms]"
+    : ""; // rotate 360 deg for 4s
 
   // long ass way to parse pathname, is here so that the title is the same whether the page is /page/ or /page
   const pathname = useLocation().pathname; // eg. /blog
 
-  const check = (str) => { // checking if the last char in string is "/" eg. /blog/
+  const check = (str) => {
+    // checking if the last char in string is "/" eg. /blog/
     if (str.slice(-1) == "/") {
       return true;
     }
-  }
+  };
 
   // if has trailing / then cut that and first one out then capitalize, if no trailing / then cut first one and capitalize
-  const path = check(pathname) ? pathname.slice(1, pathname.length -1).replace(/^\w/, c => c.toUpperCase()) : pathname.slice(1).replace(/^\w/, c => c.toUpperCase());
+  const path = check(pathname)
+    ? pathname
+        .slice(1, pathname.length - 1)
+        .replace(/^\w/, (c) => c.toUpperCase())
+    : pathname.slice(1).replace(/^\w/, (c) => c.toUpperCase());
 
   const client = contentful.createClient({
     space: "tkkap2qwga9d",
@@ -58,17 +64,23 @@ export default function Blog() {
           <div className="flex justify-center mb-6" key={fields.title}>
             <Link
               to={"/blog/" + fields.slug}
-              className="w-full xl:w-4/6 text-left px-8 py-6 font-dm-sans bg-b-darkishpurple rounded-[38px] border-[3px] border-br-lightpurple hover:drop-shadow-2xl min-h-[10rem]"
+              className="w-full xl:w-4/6 text-left px-4 sm:px-8 py-6 font-dm-sans bg-b-darkishpurple rounded-[38px] border-[3px] border-br-lightpurple hover:drop-shadow-2xl min-h-[10rem]"
             >
               <h1 className="text-xl sm:text-2xl text-t-darkyellow">
                 {fields.title}
               </h1>
               <div className="flex flex-col sm:flex-row text-lg mt-0.5 mb-2 text-green-500">
                 <p>✏️ Musa Ahmed</p>
-                <p className="sm:ml-2">📅 {new Date(fields.date).toDateString()}</p>
-                <p className="sm:ml-2">⏳ {useReadingTime(fields.content).text}</p>
+                <p className="sm:ml-2">
+                  📅 {new Date(fields.date).toDateString()}
+                </p>
+                <p className="sm:ml-2">
+                  ⏳ {useReadingTime(fields.content).text}
+                </p>
               </div>
-              <p className="text-base sm:text-lg text-slate-500">{fields.description}</p>
+              <p className="text-base sm:text-lg text-slate-500">
+                {fields.description}
+              </p>
             </Link>
           </div>
         ))}
