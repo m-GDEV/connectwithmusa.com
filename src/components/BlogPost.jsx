@@ -57,7 +57,7 @@ export default function BlogPost() {
               border-br-lightpurple drop-shadow-2xl min-h-[10rem]"
               >
                 <img
-                  className="rounded-2xl drop-shawdow-2xl mt-2 mb-4 max-h-[22rem]"
+                  className="rounded-2xl drop-shawdow-2xl w-10/12 sm:w-fit mt-2 mb-4 max-h-[22rem]"
                   alt={"image for " + fields.title + " post"}
                   src={fields.imageurl}
                 />
