@@ -28,10 +28,6 @@ export default function Navbar() {
 
   return (
     <header className="bg-g-light backrdrop-blur sticky top-0 z-10">
-      <p className="bg-red-600 text-white w-full text-center font-dm-sans underline">
-        {" "}
-        Site under constrution! Please excuse any issues.
-      </p>
       <div className="lg:container mx-auto flex flex-wrap p-5 md:flex-row items-center justify-between text-white">
         <Link
           to="/"
