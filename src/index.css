@@ -48,12 +48,14 @@
     @apply text-lg;
     @apply leading-relaxed;
   }
+  .post-content pre {
+    @apply my-6 rounded-xl text-sm sm:text-base 2xl:text-lg;
+  }
+  .post-content pre > code {
+    @apply bg-transparent p-0;
+  }
   .post-content code {
-    @apply bg-b-darkpurple;
-    @apply py-1;
-    @apply px-2;
-    @apply rounded-md;
-    @apply text-base;
+    @apply px-2 bg-b-darkpurple rounded-lg py-1 text-sm sm:text-base;
   }
   .post-content strong {
     @apply font-bold text-h-brightgreen;
