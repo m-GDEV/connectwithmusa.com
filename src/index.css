@@ -5,66 +5,66 @@
 
 /* custom styles for the post content */
 @layer components {
-    .post-content h1 {
-        @apply sm:text-4xl text-2xl;
-        @apply underline;
-        @apply mb-4;
-        @apply font-bold;
-    }
-    .post-content h2 {
-        @apply sm:text-3xl text-xl;
-        @apply text-t-darkyellow;
-        @apply underline;
-        @apply mb-2;
-        @apply mt-4;
-        
-    }
-    .post-content h3 {
-        @apply text-2xl;
-        @apply underline;
-        @apply mb-2;
-        @apply mt-4;
-        @apply text-t-darkyellow;
-    }
-    .post-content h4 {
-        @apply text-xl;
-        @apply mb-2;
-        @apply mt-4;
-        @apply text-t-darkyellow;
-    }
-    .post-content a {
-        @apply text-h-brightgreen;
-        @apply underline;
-    }
-    .post-content ul, ol {
-        @apply list-disc;
-        @apply ml-5;
-    }
-    .post-content li {
-        @apply my-2;
-    }
-    .post-content p {
-        @apply mt-4;
-        @apply text-lg;
-        @apply leading-relaxed;
-    }
-    .post-content code {
-        @apply bg-b-darkpurple;
-        @apply py-1;
-        @apply px-2;
-        @apply rounded-md;
-        @apply text-base;
-    }
-    .post-content strong {
-        @apply font-bold text-h-brightgreen;
-    }
-    .post-content em {
-        @apply text-h-brightgreen;
-    }
-    .post-content {
-        @apply break-words;
-    }
-    .post-content img {
-        @apply rounded-2xl drop-shadow-2xl my-2 ;
-    }
+  .post-content h1 {
+    @apply sm:text-4xl text-3xl;
+    @apply underline;
+    @apply mb-4;
+    @apply font-bold;
+  }
+  .post-content h2 {
+    @apply sm:text-3xl text-2xl;
+    @apply text-t-darkyellow;
+    @apply underline;
+    @apply mb-2;
+    @apply mt-4;
+  }
+  .post-content h3 {
+    @apply sm:text-2xl text-xl;
+    @apply underline;
+    @apply mb-2;
+    @apply mt-4;
+    @apply text-t-darkyellow;
+  }
+  .post-content h4 {
+    @apply sm:text-xl text-lg;
+    @apply mb-2;
+    @apply mt-4;
+    @apply text-t-darkyellow;
+  }
+  .post-content a {
+    @apply text-h-brightgreen;
+    @apply underline;
+  }
+  .post-content ul,
+  ol {
+    @apply list-disc;
+    @apply ml-5;
+  }
+  .post-content li {
+    @apply my-2;
+  }
+  .post-content p {
+    @apply mt-4;
+    @apply text-lg;
+    @apply leading-relaxed;
+  }
+  .post-content code {
+    @apply bg-b-darkpurple;
+    @apply py-1;
+    @apply px-2;
+    @apply rounded-md;
+    @apply text-base;
+  }
+  .post-content strong {
+    @apply font-bold text-h-brightgreen;
+  }
+  .post-content em {
+    @apply text-h-brightgreen;
+  }
+  .post-content {
+    @apply break-words;
+  }
+  .post-content img {
+    @apply rounded-2xl drop-shadow-2xl my-2;
+  }
 }
