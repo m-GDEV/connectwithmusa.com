@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { RssIcon } from "@heroicons/react/solid";
 import * as contentful from "contentful";
 import { useReadingTime } from "react-hook-reading-time";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { sectionDescriptions } from "../data";
+import SelectSearch, { fuzzySearch } from "react-select-search";
 
 export default function Blog() {
   const [posts, setPosts] = useState([]); // state for posts form contentful api
@@ -24,6 +25,8 @@ export default function Blog() {
     }
   };
 
+  const navigate = useNavigate(); // hook to switch pages when selecting a post from search
+
   // if has trailing / then cut that and first one out then capitalize, if no trailing / then cut first one and capitalize
   const path = check(pathname)
     ? pathname
@@ -39,12 +42,18 @@ export default function Blog() {
   useEffect(() => {
     client
       .getEntries() // get entries info from contentful
-      .then((entries) => setPosts(entries.items)); // assiging to posts state
+      .then((entries) => setPosts(entries.items));
     window.scrollTo({ top: 0, behavior: "smooth" }); // scroll to top of page smoothly on load
     document.getElementsByTagName("meta")[3].content = pageDesc; // change page desc onload
     setToggle(true); // start the spin animation onload
     document.title = `${path} - Musa Ahmed`; // change title according to path var onload
   }, []);
+
+  // assigning the titles of the posts to an array for the search component
+  const titles = posts.map(({ fields }) => ({
+    name: fields.title,
+    value: fields.slug,
+  }));
 
   return (
     <section className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">
@@ -60,6 +69,17 @@ export default function Blog() {
             {pageDesc}
           </p>
         </div>
+        <SelectSearch
+          options={titles}
+          search
+          filterOptions={fuzzySearch}
+          placeholder="🔎 Search for a post"
+          emptyMessage="⛔ No posts found!"
+          className="select-search"
+          onChange={(optionSelected) => {
+            navigate(`/blog/${optionSelected}`);
+          }}
+        />
         {posts.map(({ fields }) => (
           <div className="flex justify-center mb-6" key={fields.title}>
             <Link

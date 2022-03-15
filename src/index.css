@@ -69,4 +69,21 @@
   .post-content img {
     @apply rounded-2xl drop-shadow-2xl my-2;
   }
+
+  /* styles for search bar on blog post */
+  .select-search {
+    @apply flex text-t-darkyellow justify-center font-dm-sans text-xl 
+    mb-5 place-items-center flex-col hover:drop-shadow-2xl;
+  }
+  .select-search input {
+    @apply px-4 py-4 bg-b-darkpurple border-[3px] 
+    rounded-xl border-br-lightpurple outline-none text-h-brightgreen;
+  }
+  .select-search ul {
+    @apply text-t-darkyellow mt-2;
+  }
+  .select-search li {
+    @apply px-4 py-2 border-[3px] hover:scale-110
+    my-2 rounded-xl bg-b-darkpurple border-br-lightpurple transition-all duration-500;
+  }
 }
