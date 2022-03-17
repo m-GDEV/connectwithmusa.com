@@ -4,20 +4,12 @@ import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router";
 import { useReadingTime } from "react-hook-reading-time";
 import { Link } from "react-router-dom";
-import Disqus from "disqus-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nightOwl as highlightTheme } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function BlogPost() {
   const [posts, setPosts] = useState([]);
   const slug = useParams().blogPost;
-
-  const disqusShortname = "connectwithmusa";
-  const disqusConfig = {
-    url: `${window.location.href}`,
-    identifier: `${slug}`,
-    title: `${slug}`,
-  };
 
   const client = contentful.createClient({
     space: "tkkap2qwga9d",
@@ -67,15 +59,6 @@ export default function BlogPost() {
                 <p>✏️ Musa Ahmed</p>
                 <p>📅 {new Date(fields.date).toDateString()}</p>
                 <p>⏳ {useReadingTime(fields.content).text}</p>
-                <p>
-                  💬{" "}
-                  <Disqus.CommentCount
-                    shortname={disqusShortname}
-                    config={disqusConfig}
-                  >
-                    Comments
-                  </Disqus.CommentCount>
-                </p>
                 <p className="text-lg text-slate-500 mb-10 mt-2">
                   {fields.description}
                 </p>
@@ -105,13 +88,6 @@ export default function BlogPost() {
                   />
                 </article>
                 <hr className="mt-4 h-1 bg-h-brightgreen border-none" />
-                <h1 className="text-center sm:text-3xl text-xl mt-2 mb-2 text-t-darkyellow">
-                  Thoughts or Questions? Leave me a comment!
-                </h1>
-                <Disqus.DiscussionEmbed
-                  shortname={disqusShortname}
-                  config={disqusConfig}
-                />
               </div>
             </div>
           </div>

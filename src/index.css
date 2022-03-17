@@ -67,7 +67,7 @@
     @apply break-words;
   }
   .post-content img {
-    @apply rounded-2xl drop-shadow-2xl my-2;
+    @apply rounded-2xl drop-shadow-2xl px-1 sm:px-0 my-2 xl:max-w-[80%];
   }
 
   /* styles for search bar on blog post */
