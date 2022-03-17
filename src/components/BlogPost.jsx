@@ -4,8 +4,9 @@ import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router";
 import { useReadingTime } from "react-hook-reading-time";
 import { Link } from "react-router-dom";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { nightOwl as highlightTheme } from "react-syntax-highlighter/dist/esm/styles/prism";
+import reactMarkdown from "react-markdown";
+// import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+// import { nightOwl as highlightTheme } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function BlogPost() {
   const [posts, setPosts] = useState([]);
@@ -64,6 +65,10 @@ export default function BlogPost() {
                 </p>
                 <article>
                   <ReactMarkdown
+                    children={fields.content}
+                    className="post-content text-white"
+                  />
+                  {/* <ReactMarkdown
                     className="post-content text-white"
                     children={fields.content}
                     components={{
@@ -85,7 +90,7 @@ export default function BlogPost() {
                         );
                       },
                     }}
-                  />
+                  /> */}
                 </article>
                 <hr className="mt-4 h-1 bg-h-brightgreen border-none" />
               </div>
