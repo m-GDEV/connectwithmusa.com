@@ -27,8 +27,8 @@ export default function Navbar() {
   const classChange = toggled ? "scale-100 sm:hidden" : "scale-0 hidden";
 
   return (
-    <header className="bg-g-light backrdrop-blur sticky top-0 z-10">
-      <div className="lg:container mx-auto flex flex-wrap p-5 md:flex-row items-center justify-between text-white">
+    <header className="bg-g-light sticky top-0  z-10 drop-shadow-2xl">
+      <div className="lg:container z-10 mx-auto flex flex-wrap p-5 md:flex-row items-center justify-between text-white">
         <Link
           to="/"
           className="ml-3 text-xl sm:text-2xl md:text-xl lg:text-2xl font-rock-salt title-font font-medium hover:text-white text-h-brightgreen mb-1 md:mb-0"
