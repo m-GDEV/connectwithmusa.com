@@ -49,10 +49,10 @@
     @apply leading-relaxed;
   }
   .post-content pre {
-    @apply my-6 rounded-xl text-sm sm:text-base 2xl:text-lg;
+    @apply my-6 py-2 px-3 rounded-xl text-sm sm:text-base 2xl:text-lg bg-b-darkpurple;
   }
   .post-content pre > code {
-    @apply bg-transparent p-0;
+    @apply bg-transparent p-0 border-br-lightpurple border-b-2 rounded-none w-full;
   }
   .post-content code {
     @apply px-2 bg-b-darkpurple rounded-lg py-1 text-sm sm:text-base;

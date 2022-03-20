@@ -66,7 +66,6 @@ export default function BlogPost() {
                     className="post-content text-white"
                   />
                 </article>
-                <hr className="mt-4 h-1 bg-h-brightgreen border-none" />
               </div>
             </div>
           </div>
