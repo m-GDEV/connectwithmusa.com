@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router";
 import { useReadingTime } from "react-hook-reading-time";
 import { Link } from "react-router-dom";
+import { ReactCusdis } from "react-cusdis";
 
 export default function BlogPost() {
   const [posts, setPosts] = useState([]);
@@ -18,6 +19,7 @@ export default function BlogPost() {
     client
       .getEntries({ "fields.slug": slug, content_type: "blogPost" })
       .then((entries) => setPosts(entries.items));
+    window.scrollTo({ top: 0, behavior: "smooth" }); // scroll to top of page smoothly on load
   }, []);
 
   function changeMeta(desc, title) {
@@ -66,6 +68,22 @@ export default function BlogPost() {
                     className="post-content text-white"
                   />
                 </article>
+                <hr className="mt-4 h-1 bg-h-brightgreen border-none" />
+                <p className="text-center sm:text-2xl text-xl my-4 text-t-darkyellow">
+                  Thoughts or Questions? Leave me a comment!
+                </p>
+                <div className="w-full bg-g-dark drop-shadow-2xl px-4 py-4 rounded-xl">
+                  <ReactCusdis
+                    attrs={{
+                      host: "https://cusdis.com",
+                      appId: "845136b7-c9b6-44f5-92e6-e183bba9971a",
+                      pageId: fields.slug,
+                      pageTitle: fields.title,
+                      pageUrl: window.location.href,
+                      theme: "dark",
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>

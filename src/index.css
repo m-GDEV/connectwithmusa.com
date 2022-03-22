@@ -49,13 +49,13 @@
     @apply leading-relaxed;
   }
   .post-content pre {
-    @apply my-6 py-2 px-3 rounded-xl text-sm sm:text-base 2xl:text-lg bg-b-darkpurple;
+    @apply my-6 py-2 px-3 rounded-xl text-sm sm:text-base 2xl:text-lg bg-b-darkpurple overflow-x-auto;
   }
   .post-content pre > code {
-    @apply bg-transparent p-0 border-br-lightpurple border-b-2 rounded-none w-full;
+    @apply bg-transparent p-0 rounded-none w-full;
   }
   .post-content code {
-    @apply px-2 bg-b-darkpurple rounded-lg py-1 text-sm sm:text-base;
+    @apply px-2 bg-b-darkpurple rounded-lg py-1 text-sm sm:text-base overflow-x-auto;
   }
   .post-content strong {
     @apply font-bold text-h-brightgreen;
@@ -68,22 +68,5 @@
   }
   .post-content img {
     @apply rounded-2xl drop-shadow-2xl px-1 sm:px-0 my-2 xl:max-w-[80%];
-  }
-
-  /* styles for search bar on blog post */
-  .select-search {
-    @apply flex text-t-darkyellow justify-center font-dm-sans text-xl 
-    mb-5 place-items-center flex-col hover:drop-shadow-2xl;
-  }
-  .select-search input {
-    @apply px-4 py-4 bg-b-darkpurple border-[3px] 
-    rounded-xl border-br-lightpurple outline-none text-h-brightgreen;
-  }
-  .select-search ul {
-    @apply text-t-darkyellow mt-2;
-  }
-  .select-search li {
-    @apply px-4 py-2 border-[3px] hover:scale-110
-    my-2 rounded-xl bg-b-darkpurple border-br-lightpurple transition-all duration-500;
   }
 }

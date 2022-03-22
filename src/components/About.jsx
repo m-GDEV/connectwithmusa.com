@@ -10,9 +10,6 @@ import {
 } from "../data";
 import { useLocation } from "react-router";
 
-// TODO:
-// - when you click on a skill, open a modal that shows proficiency level, demo project using this, idk other stuff
-
 export default function About() {
   const pageDesc = sectionDescriptions[3];
 
@@ -65,13 +62,13 @@ export default function About() {
               href={obj.link}
               key={obj.link}
               target="_blank"
-              className="w-36 sm:w-48 justify-center flex flex-col place-items-center hover:scale-125 transition-all duration-300
+              className="w-28 sm:w-32 xl:w-36 justify-center flex flex-col place-items-center hover:scale-125 transition-all duration-300
               drop-shadow-2xl mb-4 sm:mb-0"
             >
               <img
                 src={obj.image}
                 alt={obj.alt}
-                className="w-20 sm:w-24 rounded-2xl"
+                className="w-16 sm:w-18 xl:w-20 rounded-2xl"
               />
               <p className="underline text-blue-500 mt-2">{obj.username}</p>
             </a>
@@ -90,6 +87,7 @@ export default function About() {
               <img
                 className="rounded-lg hover:scale-150 transition-all duration-300"
                 src={tech}
+                key={tech}
                 alt="logo of a technology i've worked with"
               />
             ))}

@@ -4,7 +4,7 @@ import * as contentful from "contentful";
 import { useReadingTime } from "react-hook-reading-time";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { sectionDescriptions } from "../data";
-import SelectSearch, { fuzzySearch } from "react-select-search";
+import { ReactSearchAutocomplete } from "react-search-autocomplete";
 
 export default function Blog() {
   const [posts, setPosts] = useState([]); // state for posts form contentful api
@@ -34,6 +34,27 @@ export default function Blog() {
         .replace(/^\w/, (c) => c.toUpperCase())
     : pathname.slice(1).replace(/^\w/, (c) => c.toUpperCase());
 
+  // assigning the titles of the posts to an array for the search component
+  const titles = posts.map(({ fields }) => ({
+    id: fields.slug,
+    name: fields.title,
+  }));
+
+  const searchStyling = {
+    backgroundColor: "#1F1D97",
+    height: "2.5rem",
+    zIndex: "100",
+    color: "#FDD700",
+    fontFamily: "DM Sans",
+    fontSize: "1.25rem",
+    lineHeight: "1.75rem",
+    border: "3px solid rgb(105 63 255)",
+    placeholderColor: "#2EFB1C",
+    hoverBackgroundColor: "#3534A1",
+    lineColor: "rgb(105 63 255)",
+    iconColor: "white",
+  };
+
   const client = contentful.createClient({
     space: "tkkap2qwga9d",
     accessToken: "sTjWeZ_140SZZ_mO31EwE7GBz35zeAVD227g9BTAvus",
@@ -49,15 +70,9 @@ export default function Blog() {
     document.title = `${path} - Musa Ahmed`; // change title according to path var onload
   }, []);
 
-  // assigning the titles of the posts to an array for the search component
-  const titles = posts.map(({ fields }) => ({
-    name: fields.title,
-    value: fields.slug,
-  }));
-
   return (
     <section className="text-white bg-gradient-to-t from-g-dark to-g-light min-h-screen">
-      <div className="container px-3 sm:px-5 py-10 mx-auto text-center lg:px-40 ">
+      <div className="container px-3 sm:px-5 py-10 mx-auto text-center lg:px-40">
         <div className="flex flex-col w-full mb-16">
           <div className={classchange}>
             <RssIcon className="mx-auto inline-block w-10 mb-4 text-t-darkyellow" />
@@ -69,17 +84,18 @@ export default function Blog() {
             {pageDesc}
           </p>
         </div>
-        <SelectSearch
-          options={titles}
-          search
-          filterOptions={fuzzySearch}
-          placeholder="🔎 Search for a post"
-          emptyMessage="⛔ No posts found!"
-          className="select-search"
-          onChange={(optionSelected) => {
-            navigate(`/blog/${optionSelected}`);
-          }}
-        />
+
+        <div className="mb-16 max-w-xl mx-auto">
+          <ReactSearchAutocomplete
+            items={titles}
+            placeholder="Search for a post"
+            styling={searchStyling}
+            onSelect={(selected) => {
+              navigate("/blog/" + selected["id"]);
+            }}
+          />
+        </div>
+
         {posts.map(({ fields }) => (
           <div className="flex justify-center mb-6" key={fields.title}>
             <Link
