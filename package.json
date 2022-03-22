@@ -2,7 +2,7 @@
   "name": "connectwithmusa.com",
   "homepage": "https://connectwithmusa.com",
   "private": true,
-  "version": "0.9",
+  "version": "0.99",
   "scripts": {
     "dev": "vite",
     "start": "vite",
@@ -28,5 +28,9 @@
     "react-snap": "^1.23.0",
     "tailwindcss": "^3.0.23",
     "vite": "^2.8.0"
+  },
+  "reactSnap": {
+    "skipThirdPartyRequests:": false,
+    "port": 3000
   }
 }

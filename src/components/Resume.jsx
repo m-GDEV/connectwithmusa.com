@@ -91,14 +91,14 @@ export default function Resume() {
 
             <div className="flex flex-row justify-center mt-8 font-dm-sans text-lg items-center ">
               <a
-                href="/resume-12022022.pdf"
+                href="https://github.com/m-GDEV/m-GDEV/raw/master/resume-12022022.pdf"
                 download
                 className="bg-b-darkpurple px-4 py-1 rounded-xl hover:bg-b-brightpurple transition-all duration-500"
               >
                 Download
               </a>
               <a
-                href="/resume-12022022.pdf"
+                href="https://github.com/m-GDEV/m-GDEV/blob/master/resume-12022022.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="ml-4 bg-b-darkpurple px-4 py-1 rounded-xl hover:bg-b-brightpurple transition-all duration-500"
