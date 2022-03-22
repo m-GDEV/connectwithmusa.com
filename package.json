@@ -31,7 +31,6 @@
   },
   "reactSnap": {
     "skipThirdPartyRequests:": true,
-    "port": 3000,
-    "inlineCss": true
+    "port": 3000
   }
 }
