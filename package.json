@@ -30,7 +30,7 @@
     "vite": "^2.8.0"
   },
   "reactSnap": {
-    "skipThirdPartyRequests:": false,
+    "skipThirdPartyRequests:": true,
     "port": 3000
   }
 }
