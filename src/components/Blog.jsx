@@ -5,6 +5,7 @@ import { useReadingTime } from "react-hook-reading-time";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { sectionDescriptions } from "../data";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
+import { Select, MantineProvider } from "@mantine/core";
 
 export default function Blog() {
   const [posts, setPosts] = useState([]); // state for posts form contentful api
@@ -36,8 +37,8 @@ export default function Blog() {
 
   // assigning the titles of the posts to an array for the search component
   const titles = posts.map(({ fields }) => ({
-    id: fields.slug,
-    name: fields.title,
+    value: fields.slug,
+    label: fields.title,
   }));
 
   const searchStyling = {
@@ -85,7 +86,7 @@ export default function Blog() {
           </p>
         </div>
 
-        <div className="mb-16 max-w-xl mx-auto">
+        {/* <div className="mb-16 max-w-xl mx-auto">
           <ReactSearchAutocomplete
             items={titles}
             placeholder="Search for a post"
@@ -94,7 +95,15 @@ export default function Blog() {
               navigate("/blog/" + selected["id"]);
             }}
           />
-        </div>
+        </div> */}
+        <MantineProvider theme={{ colorScheme: "dark" }}>
+          <Select
+            lable="testing"
+            data={titles}
+            className="w-1/2 mx-auto"
+            searchable
+          />
+        </MantineProvider>
 
         {posts.map(({ fields }) => (
           <div className="flex justify-center mb-6" key={fields.title}>

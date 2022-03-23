@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { sections } from "../data";
 import { ChatAlt2Icon, MenuIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
+import { Burger } from "@mantine/core";
 
 export default function Navbar() {
   // mapping the predefined sections of the site to the navbar
@@ -51,7 +52,7 @@ export default function Navbar() {
           aria-label="mobile menu hamburger toggle"
           onClick={() => setToggled(!toggled)}
         >
-          <MenuIcon className="w-8 h-8 mr-2" />
+          <Burger color="white" opened={toggled} />
         </button>
       </div>
       <div className={classChange + "transition-all duration-500 text-white"}>
