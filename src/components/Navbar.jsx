@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { sections } from "../data";
 import { ChatAlt2Icon, MenuIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
-import { Burger } from "@mantine/core";
+import { Burger, Collapse } from "@mantine/core";
 
 export default function Navbar() {
   // mapping the predefined sections of the site to the navbar
@@ -25,7 +25,6 @@ export default function Navbar() {
 
   // mobile nav change class onclick with state
   const [toggled, setToggled] = useState(false);
-  const classChange = toggled ? "scale-100 sm:hidden" : "scale-0 hidden";
 
   return (
     <header className="bg-g-light sticky top-0  z-10 drop-shadow-2xl">
@@ -55,28 +54,30 @@ export default function Navbar() {
           <Burger color="white" opened={toggled} />
         </button>
       </div>
-      <div className={classChange + "transition-all duration-500 text-white"}>
-        <ul className={classChange}>
-          <Link
-            className="py-2 hover:bg-g-light bg-g-dark px-8 hover:border-b block"
-            to="/"
-            onClick={() => setToggled(!toggled)}
-          >
-            Home
-          </Link>
-          {navItemsMobile}
-          <Link
-            onClick={() => setToggled(!toggled)}
-            to="/contact"
-            className="py-2 hover:bg-g-light bg-g-dark px-8 hover:border-b block text-h-brightgreen"
-          >
-            <button className="font-medium inline-flex items-center bg-b-darkpurple border-0 focus:outline-none py-1 mb-1 px-4 rounded-xl">
-              Contact Me
-              <ChatAlt2Icon className="w-5 h-5 ml-1" />
-            </button>
-          </Link>
-        </ul>
-      </div>
+      <Collapse in={toggled} transitionDuration={300}>
+        <div className="text-white font-dm-sans sm:hidden text-lg">
+          <ul>
+            <Link
+              className="py-2 hover:bg-g-light bg-g-dark px-8 hover:border-b block"
+              to="/"
+              onClick={() => setToggled(!toggled)}
+            >
+              Home
+            </Link>
+            {navItemsMobile}
+            <Link
+              onClick={() => setToggled(!toggled)}
+              to="/contact"
+              className="py-2 hover:bg-g-light bg-g-dark px-8 hover:border-b block text-h-brightgreen"
+            >
+              <button className="font-medium inline-flex items-center bg-b-darkpurple border-0 focus:outline-none py-1 mb-1 px-4 rounded-xl">
+                Contact Me
+                <ChatAlt2Icon className="w-5 h-5 ml-1" />
+              </button>
+            </Link>
+          </ul>
+        </div>
+      </Collapse>
     </header>
   );
 }
