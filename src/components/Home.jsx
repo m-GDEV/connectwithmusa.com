@@ -5,9 +5,7 @@ export default function Home() {
   // dino easter egg toggle
   const [toggled, setToggled] = useState(false);
   // even if user click my name h1, the dino game only shows on screens larger than xl
-  const classChange = toggled
-    ? "hidden xl:block top-32 right-14 absolute bg-g-light border-br-lightpurple border-[3px] drop-shadow-2xl p-4 rounded-2xl"
-    : "hidden";
+  const classChange = toggled ? "translate-x-[0%] " : "translate-x-[150%] ";
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -63,7 +61,13 @@ export default function Home() {
               About Me
             </Link>
           </div>
-          <div className={classChange}>
+          <div
+            className={
+              classChange +
+              `hidden xl:block top-32 right-14 absolute bg-g-light border-br-lightpurple border-[3px] drop-shadow-2xl p-4 rounded-2xl transition-all duration-700 
+              `
+            }
+          >
             <iframe
               src="https://m-gdev.github.io/chrome-dino/"
               frameBorder="0"
