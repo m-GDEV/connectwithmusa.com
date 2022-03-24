@@ -1,3 +1,12 @@
+// title
+// category
+// description
+// link
+// demolink
+// long description IN MARKDOWN
+// must be completely unindented for markdown styling (multiple indents makes it a code block)
+// image
+
 export const projects = [
   {
     title: "ifetch",
@@ -6,7 +15,20 @@ export const projects = [
                     Run in a terminal, it fetches the most important 
                     information about your system including the OS, 
                     Kernel, Shell, and more.`,
-    image: "./images/ifetch.png",
+    longDescription: `
+## What is this?
+ifetch is meant to be an extremely lightweight alternative to other fetch programs such as
+**neofetch, pfetch, ufetch**, etc. It fetches the most important information about your system
+including the **OS, Kernel, Shell**, and more. ifetch ***DOES NOT*** waste time printing custom
+ASCII art for your distro. Instead, ifetch prints a small cute ASCII Tux.
+
+
+## Another fetch program?
+Yes. I made this as a fun personal project and because I wanted to make a more lightweight version of other system fetchers; specifically neofetch.
+This project was made in the spirit of being lightweight and small. In the spirit of being lightweight, ***ifetch is less than 100 lines of code!***
+While writing this program I avoided using any third-party programs to gather the information; further adding to its simplicity and it being lightweight.
+    `,
+    image: "https://github.com/m-GDEV/ifetch/raw/master/demo.png",
     link: "https://github.com/m-GDEV/ifetch",
   },
   {

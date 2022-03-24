@@ -7,12 +7,14 @@ import {
 import React, { useEffect, useState } from "react";
 import { sectionDescriptions, included } from "../data";
 import { useLocation } from "react-router";
+import { Modal, MantineProvider } from "@mantine/core";
 
 export default function Resume() {
   const pageDesc = sectionDescriptions[2];
   const includedList = included.map((item) => <li key={item}>{item}</li>);
 
   const [toggled, setToggle] = useState(false);
+  const [open, setOpen] = useState(false);
   const classchange = toggled
     ? "rotate-[360deg] transition-all duration-[4000ms]"
     : "";
@@ -97,11 +99,27 @@ export default function Resume() {
               >
                 Download
               </a>
+              <button
+                onClick={() => setOpen(true)}
+                className="hidden sm:block ml-4 bg-b-darkpurple px-2 xl:px-4 py-1 rounded-xl hover:bg-b-brightpurple transition-all duration-500"
+              >
+                View in browser
+              </button>
+              <MantineProvider theme={{ colorScheme: "dark" }}>
+                <Modal opened={open} onClose={() => setOpen(false)} size="90%">
+                  <iframe
+                    src="/resume-12022022.pdf"
+                    width="100%"
+                    className="min-h-[80rem]"
+                  ></iframe>
+                </Modal>
+              </MantineProvider>
+
               <a
-                href="/resume-12022022.pdf"
+                href="https://github.com/m-GDEV/m-GDEV/blob/master/resume-12022022.pdf"
                 target="_blank"
                 rel="noreferrer"
-                className="ml-4 bg-b-darkpurple px-4 py-1 rounded-xl hover:bg-b-brightpurple transition-all duration-500"
+                className="sm:hidden ml-4 bg-b-darkpurple px-4 py-1 rounded-xl hover:bg-b-brightpurple transition-all duration-500"
               >
                 View in browser
               </a>

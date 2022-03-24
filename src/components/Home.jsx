@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { ColorInput, MantineProvider } from "@mantine/core";
 
 export default function Home() {
   // dino easter egg toggle
   const [toggled, setToggled] = useState(false);
+  const [bgColor, setbgColor] = useState(
+    "linear-gradient(to top, #050023, #0a0a31, #0e113f, #16144d, #20175c)"
+  );
   // even if user click my name h1, the dino game only shows on screens larger than xl
   const classChange = toggled ? "translate-x-[0%] " : "translate-x-[150%] ";
 
@@ -17,7 +21,10 @@ export default function Home() {
   return (
     <section
       id="about"
-      className="bg-gradient-to-t from-g-dark to-g-light min-h-screen"
+      className=" min-h-screen"
+      style={{
+        background: bgColor,
+      }}
     >
       <div className="sm:mx-auto px-20 py-20">
         <div className=" md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
@@ -80,11 +87,18 @@ export default function Home() {
               className="w-[620px] h-[200px] z-999 rounded-2xl"
             ></iframe>
             <p className="text-white text-2xl text-center mt-2">
-              You found an easter 🥚!
+              You found an easter 🥚
             </p>
-            <p className="text-red-600 text-lg text-center mt-1">
+            <p className="text-red-600 text-lg text-center mt-1 mb-5">
               Click to start playing!
             </p>
+
+            <MantineProvider theme={{ colorScheme: "dark" }}>
+              <ColorInput value={bgColor} onChange={setbgColor} />
+              <p className="text-blue-500 text-lg text-center mt-1">
+                ⬆️ Change the Background Color
+              </p>
+            </MantineProvider>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { projects } from "../data";
 import { sectionDescriptions } from "../data";
 import { useLocation } from "react-router";
+import CustomModal from "./CustomModal";
 
 // TODO:
 // - when you click on a skill, open a modal that shows more info (summary from readme), picture/video demo, and link
@@ -58,29 +59,23 @@ export default function Projects() {
         </div>
 
         <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-10 place-items-center break-words">
-          {projects.map((projects) => (
+          {projects.map((project) => (
             <div
               className="flex flex-col text-center transition-all duration-500 w-full sm:w-4/5 md:w-full h-full rounded-[25px] bg-b-darkishpurple pt-3 px-4 sm:px-10 border-[3px] border-br-lightpurple hover:drop-shadow-2xl"
-              key={projects.title}
+              key={project.title}
             >
               <h2 className="font-dm-sans text-h-brightgreen text-xl sm:text-2xl mb-1 mt-3">
-                {projects.title}
+                {project.title}
               </h2>
               <p className="font-dm-mono text-t-darkyellow italic tracking-[0.285em] uppercase text-xs sm:text-sm mb-4">
-                {projects.category}
+                {project.category}
               </p>
-              <p className="font-dm-sans text-sm tracking-wider mb-4">
-                {projects.description}
+              <p className="font-dm-sans text-sm sm:text-base tracking-wider mb-4">
+                {project.description}
               </p>
-              <a
-                className="inline-flex mt-auto justify-center rounded-[20px] mb-4 font-dm-sans py-1 px-12 text-sm bg-b-darkpurple uppercase
-            hover:scale-110 transition-all duration-500"
-                href={projects.link}
-                target="_blank"
-              >
-                Learn More &nbsp;
-                <ExternalLinkIcon className="w-5 text-blue-500" />
-              </a>
+              <div className="mt-auto">
+                <CustomModal project={project} />
+              </div>
             </div>
           ))}
         </div>

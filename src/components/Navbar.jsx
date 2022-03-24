@@ -46,13 +46,13 @@ export default function Navbar() {
             <ChatAlt2Icon className="w-5 h-5 ml-1" />
           </Link>
         </nav>
-        <button
+        <Burger
+          color="white"
+          opened={toggled}
           className="sm:hidden"
           aria-label="mobile menu hamburger toggle"
           onClick={() => setToggled(!toggled)}
-        >
-          <Burger color="white" opened={toggled} />
-        </button>
+        />
       </div>
       <Collapse in={toggled} transitionDuration={300}>
         <div className="text-white font-dm-sans sm:hidden text-lg">

@@ -9,7 +9,6 @@ import {
   aboutTechnologies,
 } from "../data";
 import { useLocation } from "react-router";
-import { Modal } from "@mantine/core";
 
 export default function About() {
   const pageDesc = sectionDescriptions[3];
@@ -42,8 +41,6 @@ export default function About() {
     setToggle(true);
     document.title = `${path} - Musa Ahmed`;
   }, []);
-
-  const [opened, setOpened] = useState(false);
 
   return (
     <section className="text-white min-h-screen bg-gradient-to-t from-g-dark to-g-light ">
@@ -88,7 +85,7 @@ export default function About() {
           <p className="flex flex-wrap justify-center gap-4 mt-2">
             {aboutTechnologies.map((tech) => (
               <img
-                className="rounded-lg hover:scale-150 transition-all duration-300"
+                className="rounded-lg hover:scale-150 transition-all duration-300 hover:z-10"
                 src={tech}
                 key={tech}
                 alt="logo of a technology i've worked with"
@@ -96,24 +93,6 @@ export default function About() {
             ))}
           </p>
         </div>
-
-        <Modal
-          opened={opened}
-          onClose={() => setOpened(false)}
-          title="introduce yourself!"
-        >
-          <p className="p-6 bg-g-light text-h-brightgreen">
-            This is the modal stuff
-          </p>
-        </Modal>
-
-        <button
-          onClick={() => {
-            setOpened(true);
-          }}
-        >
-          open modal
-        </button>
       </div>
     </section>
   );
