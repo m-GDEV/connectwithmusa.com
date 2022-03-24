@@ -70,7 +70,7 @@ export default function Projects() {
               <p className="font-dm-mono text-t-darkyellow italic tracking-[0.285em] uppercase text-xs sm:text-sm mb-4">
                 {project.category}
               </p>
-              <p className="font-dm-sans text-sm sm:text-base tracking-wider mb-4">
+              <p className="font-dm-sans text-slate-400 text-sm sm:text-base tracking-wider mb-4">
                 {project.description}
               </p>
               <div className="mt-auto">

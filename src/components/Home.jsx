@@ -55,7 +55,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row justify-center font-dm-sans place-items-center">
             <Link
               to="/projects"
-              className="mb-3 sm:mb-0 inline-flex text-white bg-b-darkpurple rounded-xl border-0 py-2 px-6 focus:outline-none hover:bg-b-brightpurple text-lg md:text-xl 
+              className="mb-3 sm:mb-0 inline-flex text-white bg-b-darkpurple rounded-xl border-0 py-2 px-1 sm:px-6 focus:outline-none hover:bg-b-brightpurple text-lg md:text-xl 
               sm:whitespace-nowrap transition-all duration-500"
             >
               Check out my work!

@@ -99,6 +99,8 @@ export default function Resume() {
               >
                 Download
               </a>
+
+              {/* view in browser with modal only for larger than sm screens */}
               <button
                 onClick={() => setOpen(true)}
                 className="hidden sm:block ml-4 bg-b-darkpurple px-2 xl:px-4 py-1 rounded-xl hover:bg-b-brightpurple transition-all duration-500"
@@ -115,11 +117,12 @@ export default function Resume() {
                 </Modal>
               </MantineProvider>
 
+              {/* opens resume in new tab for smaller screens */}
               <a
                 href="https://github.com/m-GDEV/m-GDEV/blob/master/resume-12022022.pdf"
                 target="_blank"
                 rel="noreferrer"
-                className="sm:hidden ml-4 bg-b-darkpurple px-4 py-1 rounded-xl hover:bg-b-brightpurple transition-all duration-500"
+                className="sm:hidden ml-4 bg-b-darkpurple px-1 py-1 text-base rounded-xl hover:bg-b-brightpurple transition-all duration-500"
               >
                 View in browser
               </a>

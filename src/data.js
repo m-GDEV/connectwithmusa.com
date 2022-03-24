@@ -1,13 +1,12 @@
-// title
-// category
-// description
-// link
-// demolink
-// long description IN MARKDOWN
-// must be completely unindented for markdown styling (multiple indents makes it a code block)
-// image
-
 export const projects = [
+  // title
+  // category
+  // description
+  // link
+  // demolink
+  // long description IN MARKDOWN
+  // must be completely unindented for markdown styling (multiple indents makes it a code block)
+  // image
   {
     title: "ifetch",
     category: "Bash / Linux",
@@ -35,15 +34,52 @@ While writing this program I avoided using any third-party programs to gather th
     title: "ShortURL",
     category: "React",
     description: `An open source and privacy friendly URL shortener.`,
-    image: "./project-2.gif",
+    image: "https://i.imgur.com/2xBifzH.png",
     link: "https://github.com/m-GDEV/ShortURL",
+    demoLink: "https://m-gdev.github.io/ShortURL",
   },
   {
     title: "weather-dashboard",
     category: "HTML / CSS / JS",
     description: `This is a simple weather dashboard using HTML, CSS, and Vanilla JS.`,
-    image: "./project-3.gif",
+    image: "https://i.imgur.com/TInvFkD.png",
     link: "https://github.com/m-GDEV/weather-dashboard",
+    demoLink: "https://m-gdev.github.io/weather-dashboard/",
+    longDescription: `
+# Weather Dashboard
+
+This is a simple weather dashboard using HTML, CSS, and Vanilla JS.
+
+This project intends to simplify the process of the getting your local weather
+without having to forego your privacy in the process (ip tracking, logging etc).
+
+### *[Check it out!](https://m-gdev.github.io/weather-dashboard/)*
+
+# Features
+- Uses **OpenWeatherApi**
+- Is a **PWA** ([Progressive Web App](https://web.dev/progressive-web-apps/))
+- User can select measurement unit to display info in
+- Works with ***all*** cities and countries in the world
+- Displays current temperature and humidex
+- Displays wind information
+- Displays sunrise and sunset times
+
+# Deatailed Weather Stats included
+- City name
+- Country
+- Timezone
+- Weather Description (clear sky, cloudy etc.)
+- Current temp
+- Temp high & low
+- Feels like
+- Humidity
+- Wind speed
+- Sunrise & Sunset
+
+# Addtional Info
+- This website uses **cookies** to remember the user's selected city, this information is only stored locally
+- This project uses the **GPL 3.0** License
+    `,
   },
   {
     title: "connectwithmusa.com",
