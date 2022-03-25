@@ -17,7 +17,7 @@ export default function CustomModal(project) {
               opened={open}
               onClose={() => setOpen(false)}
               centered
-              size="90%"
+              size="100%"
             >
               <div className="flex lg:flex-row flex-col font-dm-sans text-xl bg-g-light rounded-xl px-4 py-8 place-items-center">
                 <div className="flex flex-col w-full text-center mx-4">

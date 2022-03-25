@@ -9,7 +9,7 @@ export default function Home() {
     "linear-gradient(to top, #050023, #0a0a31, #0e113f, #16144d, #20175c)"
   );
   // even if user click my name h1, the dino game only shows on screens larger than xl
-  const classChange = toggled ? "translate-x-[0%] " : "translate-x-[150%] ";
+  const classChange = toggled ? "scale-100 " : "scale-0 ";
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
