@@ -5,8 +5,6 @@ import { useParams } from "react-router";
 import { useReadingTime } from "react-hook-reading-time";
 import { Link } from "react-router-dom";
 import { ReactCusdis } from "react-cusdis";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { nightOwl as highlightTheme } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function BlogPost() {
   const [posts, setPosts] = useState([]);
@@ -65,32 +63,9 @@ export default function BlogPost() {
                   {fields.description}
                 </p>
                 <article>
-                  {/* <ReactMarkdown
-                    children={fields.content}
-                    className="post-content text-white"
-                  /> */}
                   <ReactMarkdown
-                    className="post-content text-white"
                     children={fields.content}
-                    components={{
-                      code({ node, inline, className, children, ...props }) {
-                        const match = /language-(\w+)/.exec(className || "");
-                        return !inline && match ? (
-                          <SyntaxHighlighter
-                            children={String(children).replace(/\n$/, "")}
-                            showLineNumbers={true}
-                            style={highlightTheme}
-                            language={match[1]}
-                            PreTag="pre"
-                            {...props}
-                          />
-                        ) : (
-                          <code className={className} {...props}>
-                            {children}
-                          </code>
-                        );
-                      },
-                    }}
+                    className="post-content text-white"
                   />
                 </article>
                 <hr className="mt-4 h-1 bg-h-brightgreen border-none" />
