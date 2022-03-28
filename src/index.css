@@ -7,9 +7,8 @@
 @layer components {
   .post-content h1 {
     @apply sm:text-4xl text-3xl;
-    @apply underline;
     @apply mb-4;
-    @apply font-bold;
+    @apply font-bold text-t-darkyellow underline;
   }
   .post-content h2 {
     @apply sm:text-3xl text-2xl;
@@ -68,5 +67,8 @@
   }
   .post-content img {
     @apply rounded-2xl drop-shadow-2xl px-1 sm:px-0 my-2 xl:max-w-[80%];
+  }
+  .post-content hr {
+    @apply bg-white h-1 mx-auto my-2;
   }
 }

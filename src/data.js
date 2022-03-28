@@ -1,95 +1,11 @@
-export const projects = [
-  // title
-  // category
-  // description
-  // link
-  // demolink
-  // long description IN MARKDOWN
-  // must be completely unindented for markdown styling (multiple indents makes it a code block)
-  // image
-  {
-    title: "ifetch",
-    category: "Bash / Linux",
-    description: `ifetch is a simple Linux "fetch" program. 
-                    Run in a terminal, it fetches the most important 
-                    information about your system including the OS, 
-                    Kernel, Shell, and more.`,
-    longDescription: `
-## What is this?
-ifetch is meant to be an extremely lightweight alternative to other fetch programs such as
-**neofetch, pfetch, ufetch**, etc. It fetches the most important information about your system
-including the **OS, Kernel, Shell**, and more. ifetch ***DOES NOT*** waste time printing custom
-ASCII art for your distro. Instead, ifetch prints a small cute ASCII Tux.
-
-
-## Another fetch program?
-Yes. I made this as a fun personal project and because I wanted to make a more lightweight version of other system fetchers; specifically neofetch.
-This project was made in the spirit of being lightweight and small. In the spirit of being lightweight, ***ifetch is less than 100 lines of code!***
-While writing this program I avoided using any third-party programs to gather the information; further adding to its simplicity and it being lightweight.
-    `,
-    image: "https://github.com/m-GDEV/ifetch/raw/master/demo.png",
-    link: "https://github.com/m-GDEV/ifetch",
-  },
-  {
-    title: "ShortURL",
-    category: "React",
-    description: `An open source and privacy friendly URL shortener.`,
-    image: "https://i.imgur.com/2xBifzH.png",
-    link: "https://github.com/m-GDEV/ShortURL",
-    demoLink: "https://m-gdev.github.io/ShortURL",
-  },
-  {
-    title: "weather-dashboard",
-    category: "HTML / CSS / JS",
-    description: `This is a simple weather dashboard using HTML, CSS, and Vanilla JS.`,
-    image: "https://i.imgur.com/TInvFkD.png",
-    link: "https://github.com/m-GDEV/weather-dashboard",
-    demoLink: "https://m-gdev.github.io/weather-dashboard/",
-    longDescription: `
-# Weather Dashboard
-
-This is a simple weather dashboard using HTML, CSS, and Vanilla JS.
-
-This project intends to simplify the process of the getting your local weather
-without having to forego your privacy in the process (ip tracking, logging etc).
-
-### *[Check it out!](https://m-gdev.github.io/weather-dashboard/)*
-
-# Features
-- Uses **OpenWeatherApi**
-- Is a **PWA** ([Progressive Web App](https://web.dev/progressive-web-apps/))
-- User can select measurement unit to display info in
-- Works with ***all*** cities and countries in the world
-- Displays current temperature and humidex
-- Displays wind information
-- Displays sunrise and sunset times
-
-# Deatailed Weather Stats included
-- City name
-- Country
-- Timezone
-- Weather Description (clear sky, cloudy etc.)
-- Current temp
-- Temp high & low
-- Feels like
-- Humidity
-- Wind speed
-- Sunrise & Sunset
-
-# Addtional Info
-- This website uses **cookies** to remember the user's selected city, this information is only stored locally
-- This project uses the **GPL 3.0** License
-    `,
-  },
-  {
-    title: "connectwithmusa.com",
-    category: "React / Tailwind",
-    description: `My personal website (you're on it right now!)
-                    . Built with React & Tailwind.`,
-    image: "./project-4.gif",
-    link: "https://github.com/m-GDEV/connectwithmusa.com",
-  },
-];
+// title
+// category
+// description
+// link
+// demolink
+// long description IN MARKDOWN
+// must be completely unindented for markdown styling (multiple indents makes it a code block)
+// image
 
 export const skills = [
   "React.js",

@@ -21,7 +21,6 @@ module.exports = {
       fontFamily: {
         "rock-salt": ['"Rock Salt"', "cursive"],
         "dm-sans": ['"DM Sans"', "sans-serif"],
-        "dm-mono": ['"DM Mono"', "monospace"],
       },
     },
   },
