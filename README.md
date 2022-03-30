@@ -5,10 +5,10 @@
 My personal website and side project. You can find a live demo [here](https://connectwithmusa.com).
 
 #### Table of Contents
+* [Screenshot](#screenshot)
 * [Why I Created this Project](#why-i-created-this-project)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
-* [Screenshot](#screenshot)
 * [How to Run the Project](#how-to-run-the-project)
 * [Inspiration](#inspiration)
 * [Contact](#contact)
