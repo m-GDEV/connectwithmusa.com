@@ -1,8 +1,8 @@
 <!-- # Github Project Template -->
 
 # 🌐 Welcome to my personal website - connectwithmusa.com
- ![In development?](https://img.shields.io/badge/-In%20Development-darkpurple?style=flatsquare) ![Website up?](https://img.shields.io/website-up-down-green-red/http/monip.org.svg) <br>
-My personal website and side project. You can find a live demo [here](https://github.com/m-GDEV/connectwithmusa.com).
+ ![In development?](https://img.shields.io/badge/-In%20Development-green?style=flatsquare) ![Website up?](https://img.shields.io/website.svg?down_color=red&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Fconnectwithmusa.com) <br>
+My personal website and side project. You can find a live demo [here](https://connectwithmusa.com).
 
 #### Table of Contents
 * [Why I Created this Project](#why-i-created-this-project)
