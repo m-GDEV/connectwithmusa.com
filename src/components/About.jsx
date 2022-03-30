@@ -68,6 +68,7 @@ export default function About() {
               <img
                 src={obj.image}
                 alt={obj.alt}
+                loading="lazy"
                 className="w-16 sm:w-18 xl:w-20 rounded-2xl"
               />
               <p className="underline text-blue-500 mt-2">{obj.username}</p>
