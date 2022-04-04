@@ -34,7 +34,7 @@ I created this site to really grasp React and the libraries the go with it, this
  - Fully responsive and mobile-friendly design
  - Connection to Github API to fetch repositories
  - Blog posts fetched from Contentful API
- - Contact form using <formsubmit.co>
+ - Contact form using <https://formsubmit.co>
 
 ## How to Run the Project
 Clone the repository and then run the following commands in the directory:
