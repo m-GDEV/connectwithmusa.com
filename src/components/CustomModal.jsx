@@ -77,17 +77,31 @@ export default function CustomModal(project) {
                     <br />
                     {license(array)}
                   </p>
-                  <a
-                    className="flex justify-center rounded-[20px] mb-4 w-full font-dm-sans py-1 px-2 sm:px-0 xl:px-12 
-                    bg-g-light uppercase
-                      underline xl:no-underline text-blue-500 xl:text-white text-xs mt-4 xl:text-sm
+                  <div className="flex flex-row mt-4">
+                    <a
+                      className="inline-flex justify-center rounded-[20px] mb-4 w-9/12 mx-auto font-dm-sans py-1 px-2 sm:px-0 xl:px-12 
+                    bg-g-light uppercase mr-2 
+                      underline xl:no-underline text-blue-500 xl:text-white text-xs mt-auto xl:text-sm
                       hover:scale-105 transition-all hover:z-10 duration-500 border-[3px] border-br-lightpurple"
-                    href={array.html_url}
-                    target="_blank"
-                  >
-                    Source Code
-                    <ExternalLinkIcon className="ml-1 w-5 text-blue-500 hidden xl:block" />
-                  </a>
+                      href={array.html_url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Source Code
+                      <ExternalLinkIcon className="ml-1 w-5 text-blue-500 hidden xl:block" />
+                    </a>
+                    <a
+                      className="inline-flex justify-center rounded-[20px] mb-4 w-9/12 mx-auto font-dm-sans py-1 xl:px-12 bg-g-light border-[3px] border-br-lightpurple
+                      uppercase hover:scale-105 hover:z-10 transition-all duration-500
+                      underline xl:no-underline text-blue-500 xl:text-white text-xs place-items-center xl:text-sm"
+                      href={array.homepage}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Demo
+                      <ExternalLinkIcon className="ml-1 w-5 text-blue-500 hidden xl:block" />
+                    </a>
+                  </div>
                 </div>
 
                 <div className="w-full min-h-[25rem] max-h-[25rem] overflow-y-scroll">
