@@ -32,7 +32,7 @@ export default function Projects() {
     : pathname.slice(1).replace(/^\w/, (c) => c.toUpperCase());
 
   // projects to hide from github
-  const dontShow = ["m-GDEV", "m-GDEV-dmenu", "m-gdev.github.io"];
+  const dontShow = ["m-GDEV", "m-GDEV-dmenu", "m-gdev.github.io", "blog-posts"];
 
   useEffect(() => {
     // window.scrollTo({ top: 0, behavior: "smooth" });
