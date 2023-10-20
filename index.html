@@ -1,98 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <style>
-    body::-webkit-scrollbar {
-      width: 10px;
-    }
+    <style>
+body::-webkit-scrollbar {
+    width: 10px;
+}
 
     body::-webkit-scrollbar-track {
-      background-image: linear-gradient(
-        to top,
-        #050023,
-        #0a0a31,
-        #0e113f,
-        #16144d,
-        #20175c
-      );
+        background-image: linear-gradient(
+            to top,
+            #050023,
+            #0a0a31,
+            #0e113f,
+            #16144d,
+            #20175c
+            );
     }
 
     body::-webkit-scrollbar-thumb {
-      background: #693fff;
-      border-radius: 4rem;
+        background: #693fff;
+        border-radius: 4rem;
     }
 
     body::-webkit-scrollbar-thumb:hover {
-      background: #2efb1c;
+        background: #2efb1c;
     }
-  </style>
+    </style>
 
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Welcome to my personal website. Here you will find my resume, portfolio, and blog."
-    />
-    <meta property="og:title" content="Musa Ahmed" />
-    <meta property="og:url" content="https://connectwithmusa.com" />
-    <meta
-      property="og:description"
-      content="Welcome to my personal website. Here you will find my resume, portfolio, and blog."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/images/site_preview.webp" />
-    <meta property="og:site_name" content="connectwithmusa.com" />
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta
+            name="description"
+            content="Welcome to my personal website. Here you will find my resume, portfolio, and blog."
+            />
+        <meta property="og:title" content="Musa Ahmed" />
+        <meta property="og:url" content="https://connectwithmusa.com" />
+        <meta
+            property="og:description"
+            content="Welcome to my personal website. Here you will find my resume, portfolio, and blog."
+            />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/images/site_preview.webp" />
+        <meta property="og:site_name" content="connectwithmusa.com" />
 
-    <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="/manifest.json" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Rock+Salt&display=swap"
-      rel="stylesheet"
-    />
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Rock+Salt&display=swap"
+            rel="stylesheet"
+            />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-6K4ND3MZ93"
-      type="module"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-6K4ND3MZ93"
+            type="module"
+            ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-      gtag("config", "G-6K4ND3MZ93");
-    </script>
-    
-     <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
-    <script>
-    (function(f, a, t, h, o, m){
-      a[h]=a[h]||function(){
-        (a[h].q=a[h].q||[]).push(arguments)
-      };
-      o=f.createElement('script'),
-      m=f.getElementsByTagName('script')[0];
-      o.async=1; o.src=t; o.id='fathom-script';
-      m.parentNode.insertBefore(o,m)
-    })(document, window, '//gtfn.xyz:10935/tracker.js', 'fathom');
-    fathom('set', 'siteId', 'PMSWD');
-    fathom('trackPageview');
-    </script>
-    <!-- / Fathom -->
+            gtag("config", "G-6K4ND3MZ93");
+        </script>
 
-    <title>Musa Ahmed</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script type="module" src="/src/index.jsx"></script>
-  </body>
+        <title>Musa Ahmed</title>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <script type="module" src="/src/index.jsx"></script>
+    </body>
 </html>
