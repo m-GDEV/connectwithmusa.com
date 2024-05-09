@@ -22,7 +22,7 @@ function Content() {
         Sorry about that! Go <Link to="/" className="underline text-h-brightgreen">Home</Link>
         <br />
         Here is the a Wordle, check it out!</p>
-      <iframe src="https://reactle.vercel.app/" frameBorder="0" scrolling="no" loading="lazy" noreferrer="true" title="chess board"
+      <iframe src="https://not-wordle-omega.vercel.app/" frameBorder="0" scrolling="no" loading="lazy" noreferrer="true" title="not-wordle"
           className="w-full max-w-[35rem] min-h-[40rem] z-999 rounded-2xl"></iframe>
   </div>
   </section>
