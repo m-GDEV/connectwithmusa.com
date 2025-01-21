@@ -1,8 +1,9 @@
 import { CodeIcon, KeyIcon, DesktopComputerIcon } from "@heroicons/react/solid";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import { sectionDescriptions } from "../data";
 import { useLocation } from "react-router";
-import CustomModal from "./CustomModal";
+import { Loading } from "./CustomModal.jsx";
+const CustomModal = lazy(() => import("./CustomModal.jsx"));
 
 export default function Projects() {
     const pageDesc = sectionDescriptions[0];
@@ -28,8 +29,8 @@ export default function Projects() {
     // if has trailing / then cut that and first one out then capitalize, if no trailing / then cut first one and capitalize
     const path = check(pathname)
         ? pathname
-              .slice(1, pathname.length - 1)
-              .replace(/^\w/, (c) => c.toUpperCase())
+        .slice(1, pathname.length - 1)
+        .replace(/^\w/, (c) => c.toUpperCase())
         : pathname.slice(1).replace(/^\w/, (c) => c.toUpperCase());
 
     // projects to hide from github
@@ -166,7 +167,9 @@ function ProjectGrid({ projects, dontShow }) {
                                 {project.description}
                             </p>
                             <div className="mt-auto">
-                                <CustomModal project={project} />
+                                <Suspense fallback={<Loading />}>
+                                    <CustomModal project={project} />
+                                </Suspense>
                             </div>
                         </div>
                     );

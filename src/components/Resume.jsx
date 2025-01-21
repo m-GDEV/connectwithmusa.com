@@ -32,8 +32,8 @@ export default function Resume() {
     // if has trailing / then cut that and first one out then capitalize, if no trailing / then cut first one and capitalize
     const path = check(pathname)
         ? pathname
-              .slice(1, pathname.length - 1)
-              .replace(/^\w/, (c) => c.toUpperCase())
+        .slice(1, pathname.length - 1)
+        .replace(/^\w/, (c) => c.toUpperCase())
         : pathname.slice(1).replace(/^\w/, (c) => c.toUpperCase());
 
     useEffect(() => {
@@ -73,13 +73,13 @@ export default function Resume() {
                         <ul className="text-center font-dm-sans text-md">
                             <li className="py-0.5 xl:mx-20 2xl:mx-32 mb-2 rounded-xl bg-gray-700 text-t-darkyellow flex items-center justify-center">
                                 <ClockIcon className="w-5 h-5 mr-1" />
-                                Last Updated: January 2024
+                                Last Updated: February 2025
                             </li>
                             <li className="py-0.5 xl:mx-20 2xl:mx-32 mb-2 rounded-xl bg-gray-700 text-t-darkyellow flex items-center justify-center">
                                 <DocumentTextIcon className="w-5 h-5 mr-1" />
                                 resume.pdf
                             </li>
-                            <li className="py-0.5 xl:mx-20 2xl:mx-32 rounded-xl bg-gray-700 text-t-darkyellow flex items-center justify-center">
+                            <li className="hidden py-0.5 xl:mx-20 2xl:mx-32 rounded-xl bg-gray-700 text-t-darkyellow flex items-center justify-center">
                                 <PencilIcon className="w-5 h-5 mr-1" />
                                 Made with&nbsp;
                                 <a
